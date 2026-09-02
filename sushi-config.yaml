@@ -1,11 +1,11 @@
-id: inera.core.template
-canonical: https://fhir.inera.se/ig/template
-name: IneraCoreTemplate
-title: "Inera FHIR Implementation Guide Template"
-description: "Mall för Ineras FHIR Implementation Guides."
+id: inera.fhir.careteam
+canonical: https://fhir.inera.se/ig/careteam
+name: IneraFHIRCareTeam
+title: "Inera FHIR CareTeam"
+description: "Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR."
 status: draft
-version: 2.2.1
-fhirVersion: 4.0.1
+version: 0.9
+fhirVersion: 5.0.0
 copyrightYear: 2024+
 releaseLabel: ci-build
 license: CC0-1.0
