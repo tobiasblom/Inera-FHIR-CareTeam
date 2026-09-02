@@ -12,7 +12,7 @@
   <name value="IneraFHIRCareTeam"/>
   <title value="Inera FHIR CareTeam"/>
   <status value="draft"/>
-  <date value="2026-09-02T07:03:46+00:00"/>
+  <date value="2026-09-02T08:14:00+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -130,29 +130,6 @@
       <name value="Fast kontakt"/>
       <description value="Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet."/>
       <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/IneraPatient"/>
-      </reference>
-      <name value="Inera Patient"/>
-      <description value="A template patient profile demonstrating Inera's FHIR profiling conventions.&#xA;Authors should replace this description with the clinical purpose and scope of the profile."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/IneraPatientExample"/>
-      </reference>
-      <name value="Inera Patient Example"/>
-      <description value="A minimal example of a patient conforming to the IneraPatient profile."/>
-      <isExample value="true"/>
-      <profile value="https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

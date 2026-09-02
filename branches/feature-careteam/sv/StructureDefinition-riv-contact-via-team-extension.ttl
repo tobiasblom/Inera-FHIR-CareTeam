@@ -26,7 +26,7 @@
   fhir:name [ fhir:v "RIVContactViaTeamExtension"] ; # 
   fhir:title [ fhir:v "Kontakt via team"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-02T07:03:46+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-02T08:14:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;

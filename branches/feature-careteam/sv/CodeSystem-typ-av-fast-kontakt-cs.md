@@ -31,7 +31,7 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T07:03:46+00:00",
+  "date" : "2026-09-02T08:14:00+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

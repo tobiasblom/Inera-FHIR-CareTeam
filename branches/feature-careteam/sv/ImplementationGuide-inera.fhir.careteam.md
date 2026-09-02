@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-09-02T07:03:46+00:00",
+  "date" : "2026-09-02T08:14:00+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -172,39 +172,6 @@
       "name" : "Fast kontakt",
       "description" : "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet.",
       "isExample" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-IneraPatient.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/IneraPatient"
-      },
-      "name" : "Inera Patient",
-      "description" : "A template patient profile demonstrating Inera's FHIR profiling conventions.\nAuthors should replace this description with the clinical purpose and scope of the profile.",
-      "isExample" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Patient-IneraPatientExample.html"
-      }],
-      "reference" : {
-        "reference" : "Patient/IneraPatientExample"
-      },
-      "name" : "Inera Patient Example",
-      "description" : "A minimal example of a patient conforming to the IneraPatient profile.",
-      "isExample" : true,
-      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient"]
     },
     {
       "extension" : [{

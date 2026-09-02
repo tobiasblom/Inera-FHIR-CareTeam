@@ -9,48 +9,6 @@
     "systems" : ["http://hl7.org/fhir/days-of-week"]
   },
   {
-    "url" : "http://hl7.org/fhir/ValueSet/address-type",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "AddressType",
-    "title" : "AddressType",
-    "description" : "The type of an address (physical / postal).",
-    "systems" : ["http://hl7.org/fhir/address-type"],
-    "oids" : ["2.16.840.1.113883.4.642.3.69"],
-    "sources" : ["2.16.840.1.113883.4.642.3.69"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/address-use",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "AddressUse",
-    "title" : "AddressUse",
-    "description" : "The use of an address.",
-    "systems" : ["http://hl7.org/fhir/address-use"],
-    "oids" : ["2.16.840.1.113883.4.642.3.67"],
-    "sources" : ["2.16.840.1.113883.4.642.3.67"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "AdministrativeGender",
-    "title" : "AdministrativeGender",
-    "description" : "The gender of a person used for administrative purposes.",
-    "systems" : ["http://hl7.org/fhir/administrative-gender"],
-    "oids" : ["2.16.840.1.113883.4.642.3.1"],
-    "sources" : ["2.16.840.1.113883.4.642.3.1"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
     "url" : "http://hl7.org/fhir/ValueSet/all-languages",
     "version" : "5.0.0",
     "status" : "active",
@@ -62,9 +20,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.21"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-IneraPatient.html" : "Inera Patient",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-category",
@@ -80,8 +37,8 @@
     "2.16.840.1.113883.4.642.3.155"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-status",
@@ -97,8 +54,8 @@
     "2.16.840.1.113883.4.642.3.153"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -116,8 +73,8 @@
     "2.16.840.1.113883.4.642.2.115"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
@@ -131,8 +88,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.71"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -146,8 +103,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.73"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -166,36 +123,8 @@
     "uses" : {
     },
     "StructureDefinition-RIVContactPointAvailability.html" : "Tillgänglighet för kontaktväg",
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "IdentifierTypeCodes",
-    "title" : "Identifier Type Codes",
-    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
-    "oids" : ["2.16.840.1.113883.4.642.3.45"],
-    "sources" : ["2.16.840.1.113883.4.642.3.45"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "IdentifierUse",
-    "title" : "IdentifierUse",
-    "description" : "Identifies the purpose for this identifier, if known .",
-    "systems" : ["http://hl7.org/fhir/identifier-use"],
-    "oids" : ["2.16.840.1.113883.4.642.3.57"],
-    "sources" : ["2.16.840.1.113883.4.642.3.57"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -211,56 +140,8 @@
     "2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-IneraPatient.html" : "Inera Patient",
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/link-type",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "LinkType",
-    "title" : "Link Type",
-    "description" : "The type of link between this Patient resource and another Patient/RelatedPerson resource.",
-    "systems" : ["http://hl7.org/fhir/link-type"],
-    "oids" : ["2.16.840.1.113883.4.642.2.234",
-    "2.16.840.1.113883.4.642.3.423",
-    "2.16.840.1.113883.4.642.3.412"],
-    "sources" : ["2.16.840.1.113883.4.642.2.234",
-    "2.16.840.1.113883.4.642.3.423",
-    "2.16.840.1.113883.4.642.3.412"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "MaritalStatusCodes",
-    "title" : "Marital Status Codes",
-    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
-    "oids" : ["2.16.840.1.113883.4.642.3.29"],
-    "sources" : ["2.16.840.1.113883.4.642.3.29"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/name-use",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "NameUse",
-    "title" : "NameUse",
-    "description" : "The use of a human name.",
-    "systems" : ["http://hl7.org/fhir/name-use"],
-    "oids" : ["2.16.840.1.113883.4.642.3.65"],
-    "sources" : ["2.16.840.1.113883.4.642.3.65"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/participant-role",
@@ -279,20 +160,6 @@
     "uses" : {
     },
     "StructureDefinition-RIVManagingTeam-careteam.html" : "Team"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "PatientContactRelationship",
-    "title" : "Patient Contact Relationship ",
-    "description" : "The nature of the relationship between the patient and the contact person.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
-    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
-    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
-    "uses" : {
-    },
-    "StructureDefinition-IneraPatient.html" : "Inera Patient"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",

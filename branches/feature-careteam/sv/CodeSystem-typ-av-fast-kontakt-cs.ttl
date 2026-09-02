@@ -24,7 +24,7 @@
   fhir:title [ fhir:v "Typ av fast kontakt"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-09-02T07:03:46+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-02T08:14:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;

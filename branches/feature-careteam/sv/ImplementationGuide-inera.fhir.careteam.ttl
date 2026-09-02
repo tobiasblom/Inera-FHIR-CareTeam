@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-02T07:03:46+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-02T08:14:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -191,40 +191,6 @@
        fhir:name [ fhir:v "Fast kontakt" ] ;
        fhir:description [ fhir:v "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet." ] ;
        fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient> ;
-         fhir:reference [ fhir:v "StructureDefinition/IneraPatient" ]
-       ] ;
-       fhir:name [ fhir:v "Inera Patient" ] ;
-       fhir:description [ fhir:v "A template patient profile demonstrating Inera's FHIR profiling conventions.\nAuthors should replace this description with the clinical purpose and scope of the profile." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Patient"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/Patient/IneraPatientExample> ;
-         fhir:reference [ fhir:v "Patient/IneraPatientExample" ]
-       ] ;
-       fhir:name [ fhir:v "Inera Patient Example" ] ;
-       fhir:description [ fhir:v "A minimal example of a patient conforming to the IneraPatient profile." ] ;
-       fhir:isExample [ fhir:v true ] ;
-       fhir:profile ( [
-         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient"^^xsd:anyURI ;
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient>
-       ] )
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

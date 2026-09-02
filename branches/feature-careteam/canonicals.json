@@ -20,13 +20,6 @@
   "name" : "IneraFHIRCareTeam"
 },
 {
-  "id" : "IneraPatient",
-  "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient",
-  "version" : "0.9",
-  "name" : "IneraPatient"
-},
-{
   "id" : "RIVCareManager-careteam",
   "type" : "StructureDefinition",
   "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam",

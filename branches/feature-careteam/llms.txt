@@ -34,7 +34,6 @@
 
 ### Resource Profiles
 
-* [Inera Patient](sv/StructureDefinition-IneraPatient.md)
 * [Fast kontakt](sv/StructureDefinition-RIVCareManager-careteam.md)
 * [Team](sv/StructureDefinition-RIVManagingTeam-careteam.md)
 
@@ -53,6 +52,5 @@
 * [Norra teamet (CareTeam)](sv/CareTeam-ExampleManagingTeam.md)
 * [Vårdcentralen Solrosen (Organization)](sv/Organization-ExampleOrganization.md)
 * [ExamplePatient (Patient)](sv/Patient-ExamplePatient.md)
-* [IneraPatientExample (Patient)](sv/Patient-IneraPatientExample.md)
 * [ExamplePractitioner (Practitioner)](sv/Practitioner-ExamplePractitioner.md)
 * [ExamplePractitionerRole (PractitionerRole)](sv/PractitionerRole-ExamplePractitionerRole.md)
