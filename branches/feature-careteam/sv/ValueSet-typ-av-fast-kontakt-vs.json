@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "typ-av-fast-kontakt-vs",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: ValueSet typ-av-fast-kontakt-vs</b></p><a name=\"typ-av-fast-kontakt-vs\"> </a><a name=\"hctyp-av-fast-kontakt-vs\"> </a><ul><li>Include alla koder som definieras i <a href=\"CodeSystem-typ-av-fast-kontakt-cs.html\"><code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code></a><span title=\"Versionen är inte uttryckligen angiven, vilket innebär att den är fast till den version som tillhandahålls i denna specifikation\"> version &#x1F4E6;0.9</span></li></ul></div>"
+  },
+  "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
+  "version" : "0.9",
+  "name" : "TypAvFastKontaktVS",
+  "title" : "Typ av fast kontakt",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T07:03:46+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Tillåtna typer av fast kontakt",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"
+    }]
+  }
+}

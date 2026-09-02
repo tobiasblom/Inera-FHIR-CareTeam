@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "typ-av-careteam-cs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem typ-av-careteam-cs</b></p><a name=\"typ-av-careteam-cs\"> </a><a name=\"hctyp-av-careteam-cs\"> </a><p>Detta case-insensitive kodsystem <code>https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs</code> definierar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">fast-kontakt<a name=\"typ-av-careteam-cs-fast-kontakt\"> </a></td><td>Fast kontakt</td><td>CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare.</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"typ-av-careteam-cs-team\"> </a></td><td>Team</td><td>CareTeam som beskriver ett vård- eller omsorgsteam.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.9"] ; # 
+  fhir:name [ fhir:v "TypAvCareTeamCS"] ; # 
+  fhir:title [ fhir:v "Typ av CareTeam"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-09-02T07:03:46+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Inera AB"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Inera AB" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.inera.se" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SE" ] ;
+       fhir:display [ fhir:v "Sweden" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "fast-kontakt" ] ;
+     fhir:display [ fhir:v "Fast kontakt" ] ;
+     fhir:definition [ fhir:v "CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare." ]
+  ] [
+     fhir:code [ fhir:v "team" ] ;
+     fhir:display [ fhir:v "Team" ] ;
+     fhir:definition [ fhir:v "CareTeam som beskriver ett vård- eller omsorgsteam." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

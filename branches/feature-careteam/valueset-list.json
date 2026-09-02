@@ -1,0 +1,29 @@
+{
+  "codeSystems" : [{
+    "url" : "http://example.org/fhir/ValueSet/veckodag",
+    "version" : "0.9",
+    "status" : "draft",
+    "name" : "WeekdayVS",
+    "title" : "Veckodag",
+    "description" : "Tillåtna veckodagar för kontakttid.",
+    "systems" : ["http://hl7.org/fhir/days-of-week"]
+  },
+  {
+    "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
+    "version" : "0.9",
+    "status" : "active",
+    "name" : "TypAvCareTeamVS",
+    "title" : "Typ av CareTeam",
+    "description" : "ValueSet som innehåller tillåtna typer av CareTeam.",
+    "systems" : ["https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"]
+  },
+  {
+    "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
+    "version" : "0.9",
+    "status" : "active",
+    "name" : "TypAvFastKontaktVS",
+    "title" : "Typ av fast kontakt",
+    "description" : "Tillåtna typer av fast kontakt",
+    "systems" : ["https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"]
+  }]
+}

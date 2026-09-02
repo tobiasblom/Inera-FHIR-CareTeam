@@ -1,0 +1,58 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "typ-av-fast-kontakt-cs",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem typ-av-fast-kontakt-cs</b></p><a name=\"typ-av-fast-kontakt-cs\"> </a><a name=\"hctyp-av-fast-kontakt-cs\"> </a><p>Detta  kodsystem <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code> definierar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"typ-av-fast-kontakt-cs-1\"> </a></td><td>fast vårdkontakt</td><td>namngiven personal inom hälso- och sjukvård som ska bistå och stödja patienten genom att samordna vårdens insatser och övriga kontakter</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"typ-av-fast-kontakt-cs-2\"> </a></td><td>fast läkarkontakt i primärvård</td><td>namngiven läkare på den hälso- eller vårdcentral där patienten är listad, som ansvarar för och samordnar patientens medicinska vård</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"typ-av-fast-kontakt-cs-3\"> </a></td><td>fast omsorgskontakt i hemtjänsten</td><td>namngiven personal inom hemtjänstens verkställande verksamhet som ska bistå och stödja omsorgstagaren och hens anhöriga genom att samordna insatser och övriga kontakter</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"typ-av-fast-kontakt-cs-4\"> </a></td><td>fast vårdkontakt med övergripande samordningsansvar</td><td>en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter</td></tr></table></div>"
+  },
+  "url" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:1.2.752.129.5.1.69"
+  }],
+  "version" : "0.9",
+  "name" : "TypAvFastKontaktCS",
+  "title" : "Typ av fast kontakt",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T07:03:46+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Typ av fast kontakt, dvs en specifik, namngiven person inom vården eller socialtjänsten som har ett ansvar för att ge trygghet, kontinuitet och samordning för en patient eller enskild person. Begreppet är framför allt reglerat i lag och syftar till att patienten/den enskilde vet vem hen ska vända sig till, samt att vården och insatserna blir mer samordnade och individuella.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "1",
+    "display" : "fast vårdkontakt",
+    "definition" : "namngiven personal inom hälso- och sjukvård som ska bistå och stödja patienten genom att samordna vårdens insatser och övriga kontakter"
+  },
+  {
+    "code" : "2",
+    "display" : "fast läkarkontakt i primärvård",
+    "definition" : "namngiven läkare på den hälso- eller vårdcentral där patienten är listad, som ansvarar för och samordnar patientens medicinska vård"
+  },
+  {
+    "code" : "3",
+    "display" : "fast omsorgskontakt i hemtjänsten",
+    "definition" : "namngiven personal inom hemtjänstens verkställande verksamhet som ska bistå och stödja omsorgstagaren och hens anhöriga genom att samordna insatser och övriga kontakter"
+  },
+  {
+    "code" : "4",
+    "display" : "fast vårdkontakt med övergripande samordningsansvar",
+    "definition" : "en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter"
+  }]
+}

@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.inera.se/ig/careteam/CareTeam/ExampleManagingTeam> a fhir:CareTeam ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleManagingTeam"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"^^xsd:anyURI ;
+       fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "sv"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CareTeam ExampleManagingTeam</b></p><a name=\"ExampleManagingTeam\"> </a><a name=\"hcExampleManagingTeam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-RIVManagingTeam-careteam.html\">Team</a></p></div><p><b>identifier</b>: <code>https://example.org/fhir/sid/team-id</code>/TEAM-SOLROSEN-NORRA</p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Koder:{https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs team}\">Team</span></p><p><b>name</b>: Norra teamet</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Member</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-ExamplePractitionerRole.html\">Eva Svensson, sjuksköterska</a></td></tr></table><p><b>telecom</b>: ph: 010-123 45 67</p><p><b>note</b>: </p><blockquote><div><p>Teamets telefonnummer används för kontakt med medarbetare i teamet.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://example.org/fhir/sid/team-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "TEAM-SOLROSEN-NORRA" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "team" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Norra teamet"] ; # 
+  fhir:participant ( [
+     fhir:member [
+       fhir:link <https://fhir.inera.se/ig/careteam/PractitionerRole/ExamplePractitionerRole> ;
+       fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRole" ] ;
+       fhir:display [ fhir:v "Eva Svensson, sjuksköterska" ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Availability ;
+         fhir:availableTime ( [
+           fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+           fhir:availableStartTime [ fhir:v "08:00:00"^^xsd:time ] ;
+           fhir:availableEndTime [ fhir:v "16:00:00"^^xsd:time ]
+         ] )
+       ]
+     ] ) ;
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "010-123 45 67" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Teamets telefonnummer används för kontakt med medarbetare i teamet." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,744 @@
+# Resource Inera FHIR CareTeam
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "inera.fhir.careteam",
+  "language" : "sv",
+  "url" : "https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam",
+  "version" : "0.9",
+  "name" : "IneraFHIRCareTeam",
+  "title" : "Inera FHIR CareTeam",
+  "status" : "draft",
+  "date" : "2026-09-02T07:03:46+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "packageId" : "inera.fhir.careteam",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r5",
+    "version" : "7.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r5",
+    "version" : "5.3.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r5#1.1.2"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CareTeam"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CareTeam-ExampleCareManager.html"
+      }],
+      "reference" : {
+        "reference" : "CareTeam/ExampleCareManager"
+      },
+      "name" : "Exempel fast kontakt",
+      "description" : "Fast vårdkontakt för patient, där kontakt sker via ett team.",
+      "isExample" : true,
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleOrganization.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleOrganization"
+      },
+      "name" : "Exempel vårdenhet",
+      "description" : "Vårdcentral där den fasta vårdkontakten arbetar.",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitioner.html"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitioner"
+      },
+      "name" : "Exempel vårdpersonal",
+      "description" : "Legitimerad sjuksköterska som är fast vårdkontakt.",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-ExamplePatient.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExamplePatient"
+      },
+      "name" : "Exempelpatient",
+      "description" : "Patient som har en fast vårdkontakt.",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-ExamplePractitionerRole.html"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRole"
+      },
+      "name" : "Exempelroll för sjuksköterska",
+      "description" : "Roll som beskriver vårdpersonalens funktion vid vårdenheten.",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CareTeam"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CareTeam-ExampleManagingTeam.html"
+      }],
+      "reference" : {
+        "reference" : "CareTeam/ExampleManagingTeam"
+      },
+      "name" : "Exempelteam",
+      "description" : "Team som den fasta vårdkontakten ingår i och som används för kontakt.",
+      "isExample" : true,
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-RIVCareManager-careteam.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/RIVCareManager-careteam"
+      },
+      "name" : "Fast kontakt",
+      "description" : "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-IneraPatient.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IneraPatient"
+      },
+      "name" : "Inera Patient",
+      "description" : "A template patient profile demonstrating Inera's FHIR profiling conventions.\nAuthors should replace this description with the clinical purpose and scope of the profile.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-IneraPatientExample.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/IneraPatientExample"
+      },
+      "name" : "Inera Patient Example",
+      "description" : "A minimal example of a patient conforming to the IneraPatient profile.",
+      "isExample" : true,
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-riv-contact-via-team-extension.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/riv-contact-via-team-extension"
+      },
+      "name" : "Kontakt via team",
+      "description" : "Anger ett team som en fast kontakt kan nås via.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-RIVManagingTeam-careteam.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/RIVManagingTeam-careteam"
+      },
+      "name" : "Team",
+      "description" : "Profil som beskriver ett vård- eller omsorgsteam i svensk vård och omsorg. Ett team kan vara kopplat till en invånare och kan ha egna kontaktuppgifter. Teamet kan också utgöra kontaktväg eller organisatoriskt sammanhang för en fast kontakt.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-RIVContactPointAvailability.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/RIVContactPointAvailability"
+      },
+      "name" : "Tillgänglighet för kontaktväg",
+      "description" : "Anger när en kontaktväg är tillgänglig.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-typ-av-careteam-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/typ-av-careteam-vs"
+      },
+      "name" : "Typ av CareTeam",
+      "description" : "ValueSet som innehåller tillåtna typer av CareTeam.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-typ-av-careteam-cs.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/typ-av-careteam-cs"
+      },
+      "name" : "Typ av CareTeam",
+      "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-typ-av-fast-kontakt-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/typ-av-fast-kontakt-vs"
+      },
+      "name" : "Typ av fast kontakt",
+      "description" : "Tillåtna typer av fast kontakt",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-typ-av-fast-kontakt-cs.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/typ-av-fast-kontakt-cs"
+      },
+      "name" : "Typ av fast kontakt",
+      "description" : "Typ av fast kontakt, dvs en specifik, namngiven person inom vården eller socialtjänsten som har ett ansvar för att ge trygghet, kontinuitet och samordning för en patient eller enskild person. Begreppet är framför allt reglerat i lag och syftar till att patienten/den enskilde vet vem hen ska vända sig till, samt att vården och insatserna blir mer samordnade och individuella.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-weekday-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/weekday-vs"
+      },
+      "name" : "Veckodag",
+      "description" : "Tillåtna veckodagar för kontakttid.",
+      "isExample" : false
+    }],
+    "page" : {
+      "sourceUrl" : "toc.html",
+      "name" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "sourceUrl" : "index.html",
+        "name" : "index.html",
+        "title" : "Hem",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "introduction.html",
+        "name" : "introduction.html",
+        "title" : "Inledning",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "information-basis.html",
+        "name" : "information-basis.html",
+        "title" : "Informationsunderlag",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "use-cases.html",
+        "name" : "use-cases.html",
+        "title" : "Användningsfall",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "roles-and-responsibilities.html",
+        "name" : "roles-and-responsibilities.html",
+        "title" : "Roller och ansvar",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "mappings.html",
+        "name" : "mappings.html",
+        "title" : "Mappning till profiler",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "rest-interactions.html",
+        "name" : "rest-interactions.html",
+        "title" : "REST-interaktioner och sökparametrar",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "expected-responses.html",
+        "name" : "expected-responses.html",
+        "title" : "Förväntade svar",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "capabilitystatement.html",
+        "name" : "capabilitystatement.html",
+        "title" : "CapabilityStatement",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "error-handling.html",
+        "name" : "error-handling.html",
+        "title" : "Felhantering",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "security.html",
+        "name" : "security.html",
+        "title" : "Säkerhet och behörighet",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "testing.html",
+        "name" : "testing.html",
+        "title" : "Testning och validering",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "about.html",
+        "name" : "about.html",
+        "title" : "Om",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "downloads.html",
+        "name" : "downloads.html",
+        "title" : "Nedladdningar",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "version-history.html",
+        "name" : "version-history.html",
+        "title" : "Versionshistorik",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "copyrightyear"
+      },
+      "value" : "2024+"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "releaselabel"
+      },
+      "value" : "ci-build"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "show-inherited-invariants"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "usage-stats-opt-out"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "i18n-default-lang"
+      },
+      "value" : "sv"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "autoload-resources"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/examples"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/extensions"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/models"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/operations"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/profiles"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/maps"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/testing"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/history"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "template/config"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/assets"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/images"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid-template"
+      },
+      "value" : "template/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid-template"
+      },
+      "value" : "input/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-qa"
+      },
+      "value" : "temp/qa"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-temp"
+      },
+      "value" : "temp/pages"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-output"
+      },
+      "value" : "output"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-tx-cache"
+      },
+      "value" : "input-cache/txcache"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-suppressed-warnings"
+      },
+      "value" : "input/ignoreWarnings.txt"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-history"
+      },
+      "value" : "https://fhir.inera.se/ig/careteam/history.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-html"
+      },
+      "value" : "template-page.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-md"
+      },
+      "value" : "template-page-md.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-contact"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-context"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-copyright"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-jurisdiction"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-license"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-publisher"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-version"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-wg"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "active-tables"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "fmm-definition"
+      },
+      "value" : "http://hl7.org/fhir/versions.html#maturity"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "propagate-status"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludelogbinaryformat"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "tabbed-snapshots"
+      },
+      "value" : "true"
+    }]
+  }
+}
+
+```

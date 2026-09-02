@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "typ-av-careteam-vs",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: ValueSet typ-av-careteam-vs</b></p><a name=\"typ-av-careteam-vs\"> </a><a name=\"hctyp-av-careteam-vs\"> </a><ul><li>Include alla koder som definieras i <a href=\"CodeSystem-typ-av-careteam-cs.html\"><code>https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs</code></a><span title=\"Versionen är inte uttryckligen angiven, vilket innebär att den är fast till den version som tillhandahålls i denna specifikation\"> version &#x1F4E6;0.9</span></li></ul></div>"
+  },
+  "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
+  "version" : "0.9",
+  "name" : "TypAvCareTeamVS",
+  "title" : "Typ av CareTeam",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T07:03:46+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "ValueSet som innehåller tillåtna typer av CareTeam.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"
+    }]
+  }
+}

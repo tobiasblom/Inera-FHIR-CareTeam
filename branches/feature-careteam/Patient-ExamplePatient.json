@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Patient",
+  "id" : "ExamplePatient",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Patient ExamplePatient</b></p><a name=\"ExamplePatient\"> </a><a name=\"hcExamplePatient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anna Andersson  Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#197805232391)</p><hr/></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:1.2.752.129.2.1.3.1",
+    "value" : "197805232391"
+  }],
+  "name" : [{
+    "family" : "Andersson",
+    "given" : ["Anna"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1978-05-23"
+}

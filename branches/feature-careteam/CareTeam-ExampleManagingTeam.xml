@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="ExampleManagingTeam"/>
+  <meta>
+    <profile value="https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: CareTeam ExampleManagingTeam</b></p><a name="ExampleManagingTeam"> </a><a name="hcExampleManagingTeam"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-RIVManagingTeam-careteam.html">Team</a></p></div><p><b>identifier</b>: <code>https://example.org/fhir/sid/team-id</code>/TEAM-SOLROSEN-NORRA</p><p><b>status</b>: Active</p><p><b>category</b>: <span title="Koder:{https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs team}">Team</span></p><p><b>name</b>: Norra teamet</p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Member</b></td></tr><tr><td style="display: none">*</td><td><a href="PractitionerRole-ExamplePractitionerRole.html">Eva Svensson, sjuksköterska</a></td></tr></table><p><b>telecom</b>: ph: 010-123 45 67</p><p><b>note</b>: </p><blockquote><div><p>Teamets telefonnummer används för kontakt med medarbetare i teamet.</p>
+</div></blockquote></div>
+  </text>
+  <identifier>
+    <system value="https://example.org/fhir/sid/team-id"/>
+    <value value="TEAM-SOLROSEN-NORRA"/>
+  </identifier>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"/>
+      <code value="team"/>
+    </coding>
+  </category>
+  <name value="Norra teamet"/>
+  <participant>
+    <member>
+      <reference value="PractitionerRole/ExamplePractitionerRole"/>
+      <display value="Eva Svensson, sjuksköterska"/>
+    </member>
+  </participant>
+  <telecom>
+    <extension url="https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability">
+      <valueAvailability>
+        <availableTime>
+          <daysOfWeek value="mon"/>
+          <daysOfWeek value="tue"/>
+          <daysOfWeek value="wed"/>
+          <daysOfWeek value="thu"/>
+          <daysOfWeek value="fri"/>
+          <availableStartTime value="08:00:00"/>
+          <availableEndTime value="16:00:00"/>
+        </availableTime>
+      </valueAvailability>
+    </extension>
+    <system value="phone"/>
+    <value value="010-123 45 67"/>
+  </telecom>
+  <note>
+    <text value="Teamets telefonnummer används för kontakt med medarbetare i teamet."/>
+  </note>
+</CareTeam>

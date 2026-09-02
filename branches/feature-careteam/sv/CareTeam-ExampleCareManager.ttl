@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.inera.se/ig/careteam/CareTeam/ExampleCareManager> a fhir:CareTeam ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleCareManager"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam"^^xsd:anyURI ;
+       fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "sv"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CareTeam ExampleCareManager</b></p><a name=\"ExampleCareManager\"> </a><a name=\"hcExampleCareManager\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-RIVCareManager-careteam.html\">Fast kontakt</a></p></div><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Koder:{https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs fast-kontakt}\">Fast kontakt</span></p><p><b>subject</b>: <a href=\"Patient-ExamplePatient.html\">Anna Andersson</a></p><p><b>period</b>: 2026-01-15 --&gt; (pågående)</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Role</b></td><td><b>Member</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Koder:{https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt 1}\">fast vårdkontakt</span></td><td><a href=\"PractitionerRole-ExamplePractitionerRole.html\">Eva Svensson, sjuksköterska</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Eva Svensson är Annas fasta vårdkontakt och nås via Norra teamet.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "fast-kontakt" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://fhir.inera.se/ig/careteam/Patient/ExamplePatient> ;
+     fhir:reference [ fhir:v "Patient/ExamplePatient" ] ;
+     fhir:display [ fhir:v "Anna Andersson" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2026-01-15"^^xsd:date ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://fhir.inera.se/ig/careteam/CareTeam/ExampleManagingTeam> ;
+         fhir:reference [ fhir:v "CareTeam/ExampleManagingTeam" ] ;
+         fhir:display [ fhir:v "Norra teamet" ]
+       ]
+     ] ) ;
+     fhir:role [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "fast vårdkontakt" ]
+       ] )
+     ] ;
+     fhir:member [
+       fhir:link <https://fhir.inera.se/ig/careteam/PractitionerRole/ExamplePractitionerRole> ;
+       fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRole" ] ;
+       fhir:display [ fhir:v "Eva Svensson, sjuksköterska" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Eva Svensson är Annas fasta vårdkontakt och nås via Norra teamet." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

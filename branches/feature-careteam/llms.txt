@@ -1,0 +1,58 @@
+# inera.fhir.careteam#0.9: Inera FHIR CareTeam(sv)
+
+## Pages
+
+* [Hem](sv/index.md)
+* [REST-interaktioner och sökparametrar](sv/rest-interactions.md)
+* [Testning och validering](sv/testing.md)
+* [Om](sv/about.md)
+* [Versionshistorik](sv/version-history.md)
+* [Roller och ansvar](sv/roles-and-responsibilities.md)
+* [Sammanfattning av artefakter](sv/artifacts.md)
+* [Säkerhet och behörighet](sv/security.md)
+* [Mappning till profiler](sv/mappings.md)
+* [Inledning](sv/introduction.md)
+* [CapabilityStatement](sv/capabilitystatement.md)
+* [Användningsfall](sv/use-cases.md)
+* [Förväntade svar](sv/expected-responses.md)
+* [Nedladdningar](sv/downloads.md)
+* [Felhantering](sv/error-handling.md)
+* [Informationsunderlag](sv/information-basis.md)
+
+## Resources
+
+### CodeSystems
+
+* [Typ av CareTeam](sv/CodeSystem-typ-av-careteam-cs.md)
+* [Typ av fast kontakt](sv/CodeSystem-typ-av-fast-kontakt-cs.md)
+
+### ValueSets
+
+* [Typ av CareTeam](sv/ValueSet-typ-av-careteam-vs.md)
+* [Typ av fast kontakt](sv/ValueSet-typ-av-fast-kontakt-vs.md)
+* [Veckodag](sv/ValueSet-weekday-vs.md)
+
+### Resource Profiles
+
+* [Inera Patient](sv/StructureDefinition-IneraPatient.md)
+* [Fast kontakt](sv/StructureDefinition-RIVCareManager-careteam.md)
+* [Team](sv/StructureDefinition-RIVManagingTeam-careteam.md)
+
+### Extensions
+
+* [Tillgänglighet för kontaktväg](sv/StructureDefinition-RIVContactPointAvailability.md)
+* [Kontakt via team](sv/StructureDefinition-riv-contact-via-team-extension.md)
+
+### ImplementationGuides
+
+* [Inera FHIR CareTeam](sv/ImplementationGuide-inera.fhir.careteam.md)
+
+### Examples
+
+* [ExampleCareManager (CareTeam)](sv/CareTeam-ExampleCareManager.md)
+* [Norra teamet (CareTeam)](sv/CareTeam-ExampleManagingTeam.md)
+* [Vårdcentralen Solrosen (Organization)](sv/Organization-ExampleOrganization.md)
+* [ExamplePatient (Patient)](sv/Patient-ExamplePatient.md)
+* [IneraPatientExample (Patient)](sv/Patient-IneraPatientExample.md)
+* [ExamplePractitioner (Practitioner)](sv/Practitioner-ExamplePractitioner.md)
+* [ExamplePractitionerRole (PractitionerRole)](sv/PractitionerRole-ExamplePractitionerRole.md)

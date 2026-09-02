@@ -1,0 +1,58 @@
+# inera.fhir.careteam#0.9: Inera FHIR CareTeam(sv)
+
+## Pages
+
+* [Hem](index.md)
+* [REST-interaktioner och sökparametrar](rest-interactions.md)
+* [Testning och validering](testing.md)
+* [Om](about.md)
+* [Versionshistorik](version-history.md)
+* [Roller och ansvar](roles-and-responsibilities.md)
+* [Sammanfattning av artefakter](artifacts.md)
+* [Säkerhet och behörighet](security.md)
+* [Mappning till profiler](mappings.md)
+* [Inledning](introduction.md)
+* [CapabilityStatement](capabilitystatement.md)
+* [Användningsfall](use-cases.md)
+* [Förväntade svar](expected-responses.md)
+* [Nedladdningar](downloads.md)
+* [Felhantering](error-handling.md)
+* [Informationsunderlag](information-basis.md)
+
+## Resources
+
+### CodeSystems
+
+* [Typ av CareTeam](CodeSystem-typ-av-careteam-cs.md)
+* [Typ av fast kontakt](CodeSystem-typ-av-fast-kontakt-cs.md)
+
+### ValueSets
+
+* [Typ av CareTeam](ValueSet-typ-av-careteam-vs.md)
+* [Typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
+* [Veckodag](ValueSet-weekday-vs.md)
+
+### Resource Profiles
+
+* [Inera Patient](StructureDefinition-IneraPatient.md)
+* [Fast kontakt](StructureDefinition-RIVCareManager-careteam.md)
+* [Team](StructureDefinition-RIVManagingTeam-careteam.md)
+
+### Extensions
+
+* [Tillgänglighet för kontaktväg](StructureDefinition-RIVContactPointAvailability.md)
+* [Kontakt via team](StructureDefinition-riv-contact-via-team-extension.md)
+
+### ImplementationGuides
+
+* [Inera FHIR CareTeam](ImplementationGuide-inera.fhir.careteam.md)
+
+### Examples
+
+* [ExampleCareManager (CareTeam)](CareTeam-ExampleCareManager.md)
+* [Norra teamet (CareTeam)](CareTeam-ExampleManagingTeam.md)
+* [Vårdcentralen Solrosen (Organization)](Organization-ExampleOrganization.md)
+* [ExamplePatient (Patient)](Patient-ExamplePatient.md)
+* [IneraPatientExample (Patient)](Patient-IneraPatientExample.md)
+* [ExamplePractitioner (Practitioner)](Practitioner-ExamplePractitioner.md)
+* [ExamplePractitionerRole (PractitionerRole)](PractitionerRole-ExamplePractitionerRole.md)

@@ -1,0 +1,22 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "ExamplePractitioner",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Practitioner ExamplePractitioner</b></p><a name=\"ExamplePractitioner\"> </a><a name=\"hcExamplePractitioner\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.752.29.4.19</code>/SE2321000016-ABC123, <code>urn:oid:1.2.752.129.2.1.4.1</code>/196912302345</p><p><b>name</b>: Eva Svensson </p><p><b>gender</b>: Female</p></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:1.2.752.29.4.19",
+    "value" : "SE2321000016-ABC123"
+  },
+  {
+    "system" : "urn:oid:1.2.752.129.2.1.4.1",
+    "value" : "196912302345"
+  }],
+  "name" : [{
+    "family" : "Svensson",
+    "given" : ["Eva"]
+  }],
+  "gender" : "female"
+}

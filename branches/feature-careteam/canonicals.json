@@ -1,0 +1,78 @@
+[{
+  "id" : "weekday-vs",
+  "type" : "ValueSet",
+  "url" : "http://example.org/fhir/ValueSet/veckodag",
+  "version" : "0.9",
+  "name" : "WeekdayVS"
+},
+{
+  "id" : "typ-av-careteam-cs",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",
+  "version" : "0.9",
+  "name" : "TypAvCareTeamCS"
+},
+{
+  "id" : "inera.fhir.careteam",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam",
+  "version" : "0.9",
+  "name" : "IneraFHIRCareTeam"
+},
+{
+  "id" : "IneraPatient",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient",
+  "version" : "0.9",
+  "name" : "IneraPatient"
+},
+{
+  "id" : "RIVCareManager-careteam",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam",
+  "version" : "0.9",
+  "name" : "RIVCareManager"
+},
+{
+  "id" : "RIVContactPointAvailability",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability",
+  "version" : "0.9",
+  "name" : "RIVContactPointAvailability"
+},
+{
+  "id" : "RIVManagingTeam-careteam",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam",
+  "version" : "0.9",
+  "name" : "RIVManagingTeam"
+},
+{
+  "id" : "riv-contact-via-team-extension",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension",
+  "version" : "0.9",
+  "name" : "RIVContactViaTeamExtension"
+},
+{
+  "id" : "typ-av-careteam-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
+  "version" : "0.9",
+  "name" : "TypAvCareTeamVS"
+},
+{
+  "id" : "typ-av-fast-kontakt-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
+  "version" : "0.9",
+  "name" : "TypAvFastKontaktVS"
+},
+{
+  "id" : "typ-av-fast-kontakt-cs",
+  "type" : "CodeSystem",
+  "url" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt",
+  "version" : "0.9",
+  "name" : "TypAvFastKontaktCS",
+  "oids" : ["1.2.752.129.5.1.69"]
+}]

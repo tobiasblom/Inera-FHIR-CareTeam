@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.inera.se/ig/careteam/PractitionerRole/ExamplePractitionerRole> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExamplePractitionerRole"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: PractitionerRole ExamplePractitionerRole</b></p><a name=\"ExamplePractitionerRole\"> </a><a name=\"hcExamplePractitionerRole\"> </a><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Eva Svensson </a></p><p><b>organization</b>: <a href=\"Organization-ExampleOrganization.html\">Organization Vårdcentralen Solrosen</a></p><p><b>code</b>: <span title=\"Koder:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}\">Nurse</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:link <https://fhir.inera.se/ig/careteam/Practitioner/ExamplePractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitioner" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://fhir.inera.se/ig/careteam/Organization/ExampleOrganization> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrganization" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "nurse" ] ;
+       fhir:display [ fhir:v "Nurse" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

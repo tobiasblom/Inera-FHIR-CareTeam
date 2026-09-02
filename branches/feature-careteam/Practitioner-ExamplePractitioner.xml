@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="ExamplePractitioner"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: Practitioner ExamplePractitioner</b></p><a name="ExamplePractitioner"> </a><a name="hcExamplePractitioner"> </a><p><b>identifier</b>: <code>urn:oid:1.2.752.29.4.19</code>/SE2321000016-ABC123, <code>urn:oid:1.2.752.129.2.1.4.1</code>/196912302345</p><p><b>name</b>: Eva Svensson </p><p><b>gender</b>: Female</p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:1.2.752.29.4.19"/>
+    <value value="SE2321000016-ABC123"/>
+  </identifier>
+  <identifier>
+    <system value="urn:oid:1.2.752.129.2.1.4.1"/>
+    <value value="196912302345"/>
+  </identifier>
+  <name>
+    <family value="Svensson"/>
+    <given value="Eva"/>
+  </name>
+  <gender value="female"/>
+</Practitioner>

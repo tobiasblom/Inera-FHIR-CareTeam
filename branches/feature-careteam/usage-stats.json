@@ -1,0 +1,95 @@
+{
+  "package": "inera.fhir.careteam",
+  "version": "0.9",
+  "fhirVersion": "5.0.0",
+  "jurisdiction": "SE",
+  "extensions": [
+    {
+      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability",
+      "title": "Tillgänglighet för kontaktväg",
+      "types": [
+        "Availability",
+        "id",
+        "Extension",
+        "Element",
+        "string",
+        "Extension",
+        "code",
+        "boolean",
+        "time",
+        "time",
+        "Element",
+        "string",
+        "Extension",
+        "string",
+        "Period"
+      ]
+    },
+    {
+      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension",
+      "title": "Kontakt via team",
+      "types": [
+        "Reference"
+      ]
+    }
+  ],
+  "profiles": {
+    "Patient": [
+      {
+        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/IneraPatient",
+        "title": "Inera Patient"
+      }
+    ],
+    "CareTeam": [
+      {
+        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam",
+        "title": "Fast kontakt"
+      },
+      {
+        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam",
+        "title": "Team"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability": [
+      "CareTeam.telecom"
+    ],
+    "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension": [
+      "CareTeam.participant"
+    ]
+  }
+}

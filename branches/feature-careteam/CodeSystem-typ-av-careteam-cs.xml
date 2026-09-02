@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="typ-av-careteam-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: CodeSystem typ-av-careteam-cs</b></p><a name="typ-av-careteam-cs"> </a><a name="hctyp-av-careteam-cs"> </a><p>Detta case-insensitive kodsystem <code>https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs</code> definierar följande koder:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">fast-kontakt<a name="typ-av-careteam-cs-fast-kontakt"> </a></td><td>Fast kontakt</td><td>CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare.</td></tr><tr><td style="white-space:nowrap">team<a name="typ-av-careteam-cs-team"> </a></td><td>Team</td><td>CareTeam som beskriver ett vård- eller omsorgsteam.</td></tr></table></div>
+  </text>
+  <url value="https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"/>
+  <version value="0.9"/>
+  <name value="TypAvCareTeamCS"/>
+  <title value="Typ av CareTeam"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T07:03:46+00:00"/>
+  <publisher value="Inera AB"/>
+  <contact>
+    <name value="Inera AB"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.inera.se"/>
+    </telecom>
+  </contact>
+  <description value="Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="SE"/>
+      <display value="Sweden"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="fast-kontakt"/>
+    <display value="Fast kontakt"/>
+    <definition value="CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare."/>
+  </concept>
+  <concept>
+    <code value="team"/>
+    <display value="Team"/>
+    <definition value="CareTeam som beskriver ett vård- eller omsorgsteam."/>
+  </concept>
+</CodeSystem>

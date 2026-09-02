@@ -1,0 +1,70 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Tillgänglighet för kontaktväg","Anger när en kontaktväg är tillgänglig.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Extension.id","Extension.id","","","",0,1,"","","","id {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Extension.value[x]","Extension.value[x]","","","",1,1,"Y","","","Availability {[]} {[]}
+","Kontaktvägens tillgänglighet","Anger under vilka veckodagar och tider kontaktvägen är tillgänglig.","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ext-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"Extension.value[x].id","Extension.value[x].id","","","",0,1,"","","","id {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"Extension.value[x].extension","Extension.value[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Extension.value[x].availableTime","Extension.value[x].availableTime","","","",1,*,"Y","","Y","Element {[]} {[]}
+","Tillgänglig tid","Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig.","","A collection of times that the {item} is available.","","","","","","","",,,,,"",,,,"Availability.availableTime",0,*,"","av-1:Cannot include start/end times when selecting all day availability. {allDay.exists().not() or (allDay implies availableStartTime.exists().not() and availableEndTime.exists().not())}
+ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}"
+"Extension.value[x].availableTime.id","Extension.value[x].availableTime.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"Extension.value[x].availableTime.extension","Extension.value[x].availableTime.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Extension.value[x].availableTime.daysOfWeek","Extension.value[x].availableTime.daysOfWeek","","","",1,*,"Y","","Y","code {[]} {[]}
+","Veckodag","Veckodag då kontaktvägen är tillgänglig.","","Indicates which days of the week are available between the start and end Times.","","","","","","","",,"required","The purpose for which an extended contact detail should be used.","http://hl7.org/fhir/ValueSet/days-of-week|5.0.0","",,,,"Availability.availableTime.daysOfWeek",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].availableTime.allDay","Extension.value[x].availableTime.allDay","","","",0,1,"","","Y","boolean {[]} {[]}
+","Always available? i.e. 24 hour service","Always available? i.e. 24 hour service.","","Is this always available? (hence times are irrelevant) i.e. 24 hour service.","","","","","","","",,,,,"",,,,"Availability.availableTime.allDay",0,1,"av-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].availableTime.availableStartTime","Extension.value[x].availableTime.availableStartTime","","","",0,1,"Y","","Y","time {[]} {[]}
+","Starttid","Tidpunkt då tillgängligheten börjar.","The timezone is expected to be specified or implied by the context this datatype is used.","The opening time of day. Note: If the AllDay flag is set, then this time is ignored.","","","","","","","",,,,,"",,,,"Availability.availableTime.availableStartTime",0,1,"av-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].availableTime.availableEndTime","Extension.value[x].availableTime.availableEndTime","","","",0,1,"Y","","Y","time {[]} {[]}
+","Sluttid","Tidpunkt då tillgängligheten upphör.","The timezone is expected to be specified or implied by the context this datatype is used.","The closing time of day. Note: If the AllDay flag is set, then this time is ignored.","","","","","","","",,,,,"",,,,"Availability.availableTime.availableEndTime",0,1,"av-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].notAvailableTime","Extension.value[x].notAvailableTime","","","",0,*,"","","Y","Element {[]} {[]}
+","Not available during this time due to provided reason","Not available during this time due to provided reason.","","The {item} is not available during this period of time due to the provided reason.","","","","","","","",,,,,"",,,,"Availability.notAvailableTime",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].notAvailableTime.id","Extension.value[x].notAvailableTime.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"Extension.value[x].notAvailableTime.extension","Extension.value[x].notAvailableTime.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Extension.value[x].notAvailableTime.description","Extension.value[x].notAvailableTime.description","","","",0,1,"","","Y","string {[]} {[]}
+","Reason presented to the user explaining why time not available","Reason presented to the user explaining why time not available.","The reason will generally be provided to give the textual reason for displaying when the {item} is not available, e.g. 'Closed public holidays' or 'Independence Day'. In cases such as this, the `during` might not be included and local knowledge would be required in such cases (as don't desire to keep updating when the holiday occurs each year).
+
+e.g.2: 'Closed for maintenance over the summer' for this example you would want to include the `during` period, unless this was a university hospital and the ""summer"" period was well known, but would recommend its inclusion anyway.","The reason that can be presented to the user as to why this time is not available.","","","","","","","",,,,,"",,,,"Availability.notAvailableTime.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Extension.value[x].notAvailableTime.during","Extension.value[x].notAvailableTime.during","","","",0,1,"","","Y","Period {[]} {[]}
+","Service not available during this period","Service not available during this period.","","The {item} is not available (seasonally or for a public holiday) during this period.","","","","","","","",,,,,"",,,,"Availability.notAvailableTime.during",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"

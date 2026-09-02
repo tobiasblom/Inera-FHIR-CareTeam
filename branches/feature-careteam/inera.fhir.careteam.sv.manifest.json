@@ -1,0 +1,7 @@
+{
+  "version" : "0.9",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20260902070346",
+  "name" : "inera.fhir.careteam",
+  "jurisdiction" : "urn:iso:std:iso:3166#SE"
+}

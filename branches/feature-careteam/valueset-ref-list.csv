@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+http://example.org/fhir/ValueSet/veckodag,0.9,draft,,WeekdayVS,Veckodag,"Tillåtna veckodagar för kontakttid.",,"hl7.fhir.r5.core"
+https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs,0.9,active,,TypAvCareTeamVS,Typ av CareTeam,"ValueSet som innehåller tillåtna typer av CareTeam.",,"Internal"
+https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs,0.9,active,,TypAvFastKontaktVS,Typ av fast kontakt,"Tillåtna typer av fast kontakt","StructureDefinition/RIVCareManager-careteam","Internal"

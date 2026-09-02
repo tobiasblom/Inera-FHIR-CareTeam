@@ -1,0 +1,23 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExamplePractitionerRole",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: PractitionerRole ExamplePractitionerRole</b></p><a name=\"ExamplePractitionerRole\"> </a><a name=\"hcExamplePractitionerRole\"> </a><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Eva Svensson </a></p><p><b>organization</b>: <a href=\"Organization-ExampleOrganization.html\">Organization Vårdcentralen Solrosen</a></p><p><b>code</b>: <span title=\"Koder:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}\">Nurse</span></p></div>"
+  },
+  "active" : true,
+  "practitioner" : {
+    "reference" : "Practitioner/ExamplePractitioner"
+  },
+  "organization" : {
+    "reference" : "Organization/ExampleOrganization"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/practitioner-role",
+      "code" : "nurse",
+      "display" : "Nurse"
+    }]
+  }]
+}

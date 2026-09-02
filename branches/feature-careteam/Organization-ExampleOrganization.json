@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Organization",
+  "id" : "ExampleOrganization",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Organization ExampleOrganization</b></p><a name=\"ExampleOrganization\"> </a><a name=\"hcExampleOrganization\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.752.29.4.19</code>/SE2321000016-VC123</p><p><b>name</b>: Vårdcentralen Solrosen</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td>Storgatan 12 Stockholm 12345 SE (work)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:1.2.752.29.4.19",
+    "value" : "SE2321000016-VC123"
+  }],
+  "name" : "Vårdcentralen Solrosen",
+  "contact" : [{
+    "address" : {
+      "use" : "work",
+      "type" : "physical",
+      "line" : ["Storgatan 12"],
+      "city" : "Stockholm",
+      "postalCode" : "12345",
+      "country" : "SE"
+    }
+  }]
+}

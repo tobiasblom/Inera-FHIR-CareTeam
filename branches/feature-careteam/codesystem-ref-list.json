@@ -1,0 +1,39 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/days-of-week",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "Days Of Week",
+    "description" : "The days of the week.",
+    "oids" : ["2.16.840.1.113883.4.642.4.513",
+    "2.16.840.1.113883.4.642.2.302",
+    "2.16.840.1.113883.4.642.1.507"],
+    "uses" : {
+    },
+    "ValueSet-weekday-vs.html" : "Veckodag"
+  },
+  {
+    "url" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",
+    "version" : "0.9",
+    "status" : "active",
+    "name" : "TypAvCareTeamCS",
+    "title" : "Typ av CareTeam",
+    "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam.",
+    "uses" : {
+    },
+    "ValueSet-typ-av-careteam-vs.html" : "Typ av CareTeam"
+  },
+  {
+    "url" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt",
+    "version" : "0.9",
+    "status" : "active",
+    "name" : "TypAvFastKontaktCS",
+    "title" : "Typ av fast kontakt",
+    "description" : "Typ av fast kontakt, dvs en specifik, namngiven person inom vården eller socialtjänsten som har ett ansvar för att ge trygghet, kontinuitet och samordning för en patient eller enskild person. Begreppet är framför allt reglerat i lag och syftar till att patienten/den enskilde vet vem hen ska vända sig till, samt att vården och insatserna blir mer samordnade och individuella.",
+    "oids" : ["1.2.752.129.5.1.69"],
+    "uses" : {
+    },
+    "ValueSet-typ-av-fast-kontakt-vs.html" : "Typ av fast kontakt"
+  }]
+}
