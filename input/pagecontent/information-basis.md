@@ -1,23 +1,19 @@
 # Informationsunderlag
 
-Denna sida beskriver informationsunderlaget som denna Implementation Guide bygger på. Detaljerade begrepps- och informationsmodeller, samt fullständiga processbeskrivningar, återfinns i den informationsspecifikation som anges nedan — de upprepas inte här för att undvika dubbeldokumentation som kan glida isär över tid.
+Denna Implementation Guide bygger på det informatikarbete som genomförts för informationsmängden **Fasta kontakter** inom projektet Sammanhållen planering på 1177.
 
-*Ange vilken informationsspecifikation denna IG baseras på.*
+Det informatiska underlaget beskriver begrepp, informationsbehov och informationsstruktur för fasta kontakter. IG:n realiserar relevanta delar av detta underlag med HL7 FHIR.
 
-| | |
-|---|---|
-| **Informationsspecifikation** | *[Namn på informationsspecifikationen]([länk till publicerat dokument])* |
-| **Version** | *[Version/datum för den informationsspecifikation som denna IG realiserar]* |
+De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. I stället hänvisas till de informatiska leveranser som ligger till grund för profileringen, för att undvika dubbeldokumentation som kan glida isär över tid.
 
-**Länkar:**
+| Dokument | Version | Innehåll |
+|---|---|---|
+| **Fasta kontakter – Begrepps- och informationsmodell** | 1.1, 2025-12-04 | Begreppsmodell, definitioner samt informationsmodell med klasser, attribut, datatyper, identifierare och kodverk. |
+| **Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering** | 1.1, 2025-12-04 | Bakgrund, beskrivning av olika typer av fasta kontakter, informationsbehov, kartläggning av regional förmåga och övergripande teknisk inriktning. |
 
-- *[Länk till publicerad informationsspecifikation]*
-- *[Länk till begreppsmodell]*
-- *[Länk till informationsmodell]*
-- *[Länk till ev. externa mappningsdokument]*
+## Källor
 
-Se [Mappning till profiler](mappings.html) för vilka delar av informationsspecifikationen som denna IG realiserar och eventuella avvikelser eller tillägg i FHIR-realiseringen.
+- [Fasta kontakter – Begrepps- och informationsmodell](LÄNK)
+- [Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering](LÄNK)
 
----
-
-> **Vägledning för författare:** Håll denna sida kort. Användningsfall samt roller och ansvar beskrivs under [Användningsfall](use-cases.html) och [Roller och ansvar](roles-and-responsibilities.html).
+Se [Mappning till profiler](mappings.html) för hur informationsunderlaget har realiserats med FHIR-resurser och profiler samt för dokumentation av relevanta designbeslut och avvikelser.
