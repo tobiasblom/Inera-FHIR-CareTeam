@@ -202,17 +202,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="inledning">Inledning</h1>
 
-<p><em>Detta är beskrivningen av [Domännamn] i tjänstedomänen [tjänstedomän/supportprocess]. Denna Implementation Guide (IG) är baserad på RIVTA 2.1 [R2] och regleras genom arkitekturella beslut [R1].</em></p>
+<p>Denna Implementation Guide (IG) beskriver det FHIR-baserade informationsutbytet för <strong>Fasta kontakter</strong> inom Ineras informationsförsörjning.</p>
 
-<p><em>Denna IG är en kravspecifikation. Den ska fungera som ett teknikneutralt, formellt regelverk som reglerar integrationskrav för parter (tjänstekonsumenter och tjänsteproducenter) som avser ansluta system för samverkan enligt denna IG. IG:n är också ett viktigt underlag för skapandet av de tekniska artefakterna (FHIR-profiler och StructureDefinitions).</em></p>
+<p>IG:n utgår från det informationsbehov som tagits fram inom arbetet med Sammanhållen planering på 1177. Informationsbehovet beskriver vilken information som behöver kunna delas om en persons fasta kontakter för att informationen ska kunna användas och presenteras av Ineras konsumerande tjänster.</p>
 
-<p><em>Detta dokument kompletterar reglerna i de tekniska artefakterna. Tjänsteproducenter och tjänstekonsumenter ska med andra ord följa såväl de maskintolkbara reglerna i FHIR-profilerna, som de regler som uttrycks verbalt i detta dokument.</em></p>
+<p>IG:n är en kravspecifikation för informationsutbytet. Den beskriver de krav som informationsproducenter behöver uppfylla för att leverera information om fasta kontakter på ett enhetligt sätt med HL7 FHIR.</p>
+
+<p>Profileringen är konsumentdriven. Det innebär att IG:n definierar vilken information en producent behöver kunna tillhandahålla för att mottagande tjänster ska kunna tolka och använda informationen. IG:n reglerar inte hur informationen lagras, dokumenteras eller struktureras internt i producentens verksamhetssystem.</p>
+
+<p>Kraven uttrycks både genom maskintolkbara FHIR-artefakter, såsom profiler, ValueSets och CodeSystems, och genom kompletterande dokumentation i denna IG. För att uppfylla specifikationen behöver en implementation följa både de maskintolkbara reglerna och de krav och förtydliganden som beskrivs i dokumentationen.</p>
 
 <hr />
 
-<blockquote>
-  <p><strong>Vägledning för författare:</strong> Informationsunderlaget, användningsfall, roller och ansvar samt mappning till profiler beskrivs under Funktionellt (se <a href="information-basis.html">Informationsunderlag</a>, <a href="use-cases.html">Användningsfall</a>, <a href="roles-and-responsibilities.html">Roller och ansvar</a> och <a href="mappings.html">Mappning till profiler</a>). Tekniska detaljer om REST-anrop, sökparametrar och konformanskrav hör hemma under Implementering (se t.ex. <a href="capabilitystatement.html">CapabilityStatement</a>).</p>
-</blockquote>
+<h2 id="läsanvisning">Läsanvisning</h2>
+
+<p>Under <strong>Funktionellt</strong> beskrivs bakgrunden till informationsutbytet och hur informationsbehovet har realiserats:</p>
+
+<ul>
+  <li><a href="information-basis.html">Informationsunderlag</a> beskriver det informatiska underlag som ligger till grund för profileringen.</li>
+  <li><a href="use-cases.html">Användningsfall</a> beskriver de situationer där informationen utbyts.</li>
+  <li><a href="roles-and-responsibilities.html">Roller och ansvar</a> beskriver ansvarsfördelningen mellan aktörerna i informationsutbytet.</li>
+  <li><a href="mappings.html">Mappning till profiler</a> beskriver hur informationsbehovet har realiserats med FHIR-resurser och profiler.</li>
+</ul>
+
+<p>Under <strong>Implementering</strong> finns den tekniska information som behövs för att implementera och testa informationsutbytet, bland annat REST-interaktioner, sökparametrar, förväntade svar, felhantering och konformanskrav.</p>
 
 
 
@@ -242,7 +255,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-08 07:27:00 +0000">
+  <span title="2026-09-08 07:52:00 +0000">
     2026-09-08
   </span>
 

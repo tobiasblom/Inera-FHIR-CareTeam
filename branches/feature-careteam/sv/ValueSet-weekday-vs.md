@@ -32,7 +32,7 @@ Denna värdemängd används inte här; den kan användas på andra ställen (t.e
   "name" : "WeekdayVS",
   "title" : "Veckodag",
   "status" : "draft",
-  "date" : "2026-09-08T07:27:40+00:00",
+  "date" : "2026-09-08T07:52:55+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

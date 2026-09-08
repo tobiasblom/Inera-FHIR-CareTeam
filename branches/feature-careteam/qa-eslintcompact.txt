@@ -3,7 +3,8 @@ IneraFHIRCareTeam
 
 Generic: line 0, col 0, Error - There are multiple resources with the same title [Typ av CareTeam].  This is not allowed because it produces duplicate entries in the table of contents. (BUSINESSRULE)
 Generic: line 0, col 0, Error - There are multiple resources with the same title [Typ av fast kontakt].  This is not allowed because it produces duplicate entries in the table of contents. (BUSINESSRULE)
-Generic: line 0, col 0, Error - The link '[länk till publicerat dokument]' for "Namn på informationsspecifikationen" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'LÄNK' for "Fasta kontakter – Begrepps- och informationsmodell" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'LÄNK' for "Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'StructureDefinition-[Profil].html' for "Profil.element" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'StructureDefinition-[Profil].html' for "Profil.element" cannot be resolved (NOTFOUND)
 /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-careteam-cs.json: line 1, col 1509, Warning - En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras (NOTFOUND)
