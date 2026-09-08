@@ -4,29 +4,59 @@
 
 # Hem
 
-### [Domännamn]
+### Fasta kontakter
 
-**Ange ett namn som ringar in det avgränsade område som denna IG realiserar, t.ex. "Fasta kontakter" eller "Öppenvårdsemiss".**
+Denna Implementation Guide beskriver hur information om fasta kontakter representeras och utbyts med HL7 FHIR inom Ineras informationsförsörjning.
 
-**Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte, snarare än projekt-, organisations- eller versionsnamn. Domännamnet (canonical URL) ska ligga under en långsiktigt förvaltad Inera-domän, `https://fhir.inera.se/ig/<namn>`, och ska inte innehålla versionsnummer eftersom versioner hanteras i FHIR-paketet och Implementation Guidens metadata. Använd samma namn konsekvent i paketnamn, repository, canonical URL och dokumentation för att underlätta identifiering och återanvändning."**
+Med **fast kontakt** avses en namngiven person inom vård eller omsorg som har tilldelats en samordnande roll för en patient eller omsorgstagare i syfte att skapa trygghet och kontinuitet. Begreppet används i informatikleveransen som ett övergripande begrepp för olika typer av fasta kontakter.
+
+Guiden beskriver de FHIR-profiler, terminologier och tekniska regler som en informationsproducent behöver följa för att informationen ska kunna tas emot och användas av Ineras konsumerande tjänster.
 
 -------
 
 ### Omfattning
 
-**Definiera vad som ingår i denna IG och beskriv eventuella avgränsningar. Specificera vilka användningsfall, kliniska scenarier eller informationsutbyten som beskrivs. Om denna IG är avsedd att användas som en basprofil/gemensam profil för mer specialiserade guider, beskriv det här.**
+Implementation Guiden realiserar informationsbehovet för fasta kontakter som identifierats inom arbetet med Sammanhållen planering på 1177.
+
+Informationsutbytet omfattar bland annat information om:
+
+* vilken typ av fast kontakt det är
+* den person som är utsedd till fast kontakt
+* organisation eller enhet där kontakten verkar
+* team som kontakten tillhör, när det är relevant
+* kontaktvägar och kontakttider
+* när den fasta kontakten börjar och, i förekommande fall, slutar gälla
+* kompletterande information som kan vägleda den som behöver ta kontakt
+
+Informationsmodellen omfattar bland annat fast vårdkontakt, fast vårdkontakt med övergripande samordningsansvar, fast läkarkontakt i primärvården och fast omsorgskontakt i hemtjänsten samt möjlighet att beskriva andra typer av fasta kontakter.
+
+IG:n beskriver informationsutbytet och ställer inte krav på hur informationen ska lagras eller hanteras internt i producentens verksamhetssystem.
 
 -------
 
 ### Syfte
 
-**Beskriv målet med denna IG. Förklara vilket problem den löser och hur den passar in i det bredare Inera- och e-hälsolandskapet. Hänvisa till nationella eller regionala program, standarder eller mandat som motiverat arbetet.**
+Syftet med Implementation Guiden är att möjliggöra ett enhetligt och strukturerat informationsutbyte om fasta kontakter mellan informationsproducenter och Ineras tjänster.
+
+Genom en gemensam FHIR-baserad specifikation kan information från olika vård- och omsorgsaktörer representeras på ett enhetligt sätt och användas av nationella konsumenter, exempelvis för presentation för invånare.
+
+Profileringen är konsumentdriven. Det innebär att profilerna beskriver vilken information en producent behöver kunna tillhandahålla för att den mottagande tjänsten ska kunna tolka och använda informationen. De beskriver inte producentens interna informationsmodell eller lagring.
 
 -------
 
 ### Målgrupp
 
-**Ange målgrupper för IG:n, (speciellt viktigt om IG:n vänder sig till andra målgrupper än systemarkitekter och utvecklare, t ex levernatörer av vissa system, eller verksamhetsarkitektrer inom en viss verksamhet). Hänvisa gärna nya läsare till [Inledning](introduction.md) och implementatörer till relevanta tekniska avsnitt, exempelvis [REST-interaktioner och sökparametrar](rest-interactions.md).**
+Implementation Guiden vänder sig främst till personer som utvecklar eller ansvarar för system som ska producera eller konsumera information om fasta kontakter, exempelvis:
+
+* system- och lösningsarkitekter
+* utvecklare
+* integrationsspecialister
+* informationsarkitekter
+* systemleverantörer och tekniska förvaltningar hos anslutande organisationer
+
+För en övergripande beskrivning av sammanhang, informationsbehov och avgränsningar, se [Inledning](introduction.md).
+
+För teknisk information om hur API:et används, se [REST-interaktioner och sökparametrar](rest-interactions.md).
 
 -------
 
@@ -38,7 +68,9 @@ På [Inera Terminologitjänst](https://www.inera.se/tjanster/alla-tjanster-a-o/t
 
 ### Beroenden
 
-**Om denna IG har ett beroende till t ex SE-core, definierat av HL7 Sweden ska detta beskrivas här. Detta återspeglas även i de profiler som ärver från eller refererar till SECore-profiler.**
+Denna IG bygger på FHIR-profiler och andra artefakter från de beroenden som anges i Implementation Guidens paketdefinition.
+
+[Beskriv här de viktigaste externa IG-beroendena när dessa har fastställts, exempelvis Inera Core eller profiler från HL7 Sweden.]
 
 -------
 

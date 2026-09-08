@@ -218,7 +218,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             per 
-2026-09-02
+2026-09-08
 
           
         
@@ -249,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#hem" id="markdown-toc-hem">Hem</a>    <ul>
-      <li><a href="#domännamn" id="markdown-toc-domännamn">[Domännamn]</a></li>
+      <li><a href="#fasta-kontakter" id="markdown-toc-fasta-kontakter">Fasta kontakter</a></li>
       <li><a href="#omfattning" id="markdown-toc-omfattning">Omfattning</a></li>
       <li><a href="#syfte" id="markdown-toc-syfte">Syfte</a></li>
       <li><a href="#målgrupp" id="markdown-toc-målgrupp">Målgrupp</a></li>
@@ -264,28 +264,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="hem">Hem</h1>
 
-<h3 id="domännamn">[Domännamn]</h3>
+<h3 id="fasta-kontakter">Fasta kontakter</h3>
 
-<p><em>Ange ett namn som ringar in det avgränsade område som denna IG realiserar, t.ex. "Fasta kontakter" eller "Öppenvårdsemiss".</em></p>
+<p>Denna Implementation Guide beskriver hur information om fasta kontakter representeras och utbyts med HL7 FHIR inom Ineras informationsförsörjning.</p>
 
-<p><em>Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte, snarare än projekt-, organisations- eller versionsnamn. Domännamnet (canonical URL) ska ligga under en långsiktigt förvaltad Inera-domän, <code class="language-plaintext highlighter-rouge">https://fhir.inera.se/ig/&lt;namn&gt;</code>, och ska inte innehålla versionsnummer eftersom versioner hanteras i FHIR-paketet och Implementation Guidens metadata. Använd samma namn konsekvent i paketnamn, repository, canonical URL och dokumentation för att underlätta identifiering och återanvändning."</em></p>
+<p>Med <strong>fast kontakt</strong> avses en namngiven person inom vård eller omsorg som har tilldelats en samordnande roll för en patient eller omsorgstagare i syfte att skapa trygghet och kontinuitet. Begreppet används i informatikleveransen som ett övergripande begrepp för olika typer av fasta kontakter.</p>
+
+<p>Guiden beskriver de FHIR-profiler, terminologier och tekniska regler som en informationsproducent behöver följa för att informationen ska kunna tas emot och användas av Ineras konsumerande tjänster.</p>
 
 <hr />
 
 <h3 id="omfattning">Omfattning</h3>
 
-<p><em>Definiera vad som ingår i denna IG och beskriv eventuella avgränsningar. Specificera vilka användningsfall, kliniska scenarier eller informationsutbyten som beskrivs. Om denna IG är avsedd att användas som en basprofil/gemensam profil för mer specialiserade guider, beskriv det här.</em></p>
+<p>Implementation Guiden realiserar informationsbehovet för fasta kontakter som identifierats inom arbetet med Sammanhållen planering på 1177.</p>
+
+<p>Informationsutbytet omfattar bland annat information om:</p>
+
+<ul>
+  <li>vilken typ av fast kontakt det är</li>
+  <li>den person som är utsedd till fast kontakt</li>
+  <li>organisation eller enhet där kontakten verkar</li>
+  <li>team som kontakten tillhör, när det är relevant</li>
+  <li>kontaktvägar och kontakttider</li>
+  <li>när den fasta kontakten börjar och, i förekommande fall, slutar gälla</li>
+  <li>kompletterande information som kan vägleda den som behöver ta kontakt</li>
+</ul>
+
+<p>Informationsmodellen omfattar bland annat fast vårdkontakt, fast vårdkontakt med övergripande samordningsansvar, fast läkarkontakt i primärvården och fast omsorgskontakt i hemtjänsten samt möjlighet att beskriva andra typer av fasta kontakter.</p>
+
+<p>IG:n beskriver informationsutbytet och ställer inte krav på hur informationen ska lagras eller hanteras internt i producentens verksamhetssystem.</p>
 
 <hr />
 
 <h3 id="syfte">Syfte</h3>
 
-<p><em>Beskriv målet med denna IG. Förklara vilket problem den löser och hur den passar in i det bredare Inera- och e-hälsolandskapet. Hänvisa till nationella eller regionala program, standarder eller mandat som motiverat arbetet.</em></p>
+<p>Syftet med Implementation Guiden är att möjliggöra ett enhetligt och strukturerat informationsutbyte om fasta kontakter mellan informationsproducenter och Ineras tjänster.</p>
+
+<p>Genom en gemensam FHIR-baserad specifikation kan information från olika vård- och omsorgsaktörer representeras på ett enhetligt sätt och användas av nationella konsumenter, exempelvis för presentation för invånare.</p>
+
+<p>Profileringen är konsumentdriven. Det innebär att profilerna beskriver vilken information en producent behöver kunna tillhandahålla för att den mottagande tjänsten ska kunna tolka och använda informationen. De beskriver inte producentens interna informationsmodell eller lagring.</p>
 
 <hr />
 
 <h3 id="målgrupp">Målgrupp</h3>
-<p><em>Ange målgrupper för IG:n, (speciellt viktigt om IG:n vänder sig till andra målgrupper än systemarkitekter och utvecklare, t ex levernatörer av vissa system, eller verksamhetsarkitektrer inom en viss verksamhet). Hänvisa gärna nya läsare till  <a href="introduction.html">Inledning</a> och implementatörer till relevanta tekniska avsnitt, exempelvis <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a>.</em></p>
+<p>Implementation Guiden vänder sig främst till personer som utvecklar eller ansvarar för system som ska producera eller konsumera information om fasta kontakter, exempelvis:</p>
+
+<ul>
+  <li>system- och lösningsarkitekter</li>
+  <li>utvecklare</li>
+  <li>integrationsspecialister</li>
+  <li>informationsarkitekter</li>
+  <li>systemleverantörer och tekniska förvaltningar hos anslutande organisationer</li>
+</ul>
+
+<p>För en övergripande beskrivning av sammanhang, informationsbehov och avgränsningar, se <a href="introduction.html">Inledning</a>.</p>
+
+<p>För teknisk information om hur API:et används, se <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a>.</p>
 
 <hr />
 
@@ -297,7 +331,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beroenden">Beroenden</h3>
 
-<p><em>Om denna IG har ett beroende till t ex SE-core, definierat av HL7 Sweden ska detta beskrivas här. Detta återspeglas även i de profiler som ärver från eller refererar till SECore-profiler.</em></p>
+<p>Denna IG bygger på FHIR-profiler och andra artefakter från de beroenden som anges i Implementation Guidens paketdefinition.</p>
+
+<p>[Beskriv här de viktigaste externa IG-beroendena när dessa har fastställts, exempelvis Inera Core eller profiler från HL7 Sweden.]</p>
 
 <hr />
 
@@ -343,8 +379,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-02 08:14:00 +0000">
-    2026-09-02
+  <span title="2026-09-08 07:27:00 +0000">
+    2026-09-08
   </span>
 
           <br/>

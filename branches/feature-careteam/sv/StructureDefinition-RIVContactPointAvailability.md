@@ -65,7 +65,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVContactPoint
   "name" : "RIVContactPointAvailability",
   "title" : "Tillgänglighet för kontaktväg",
   "status" : "draft",
-  "date" : "2026-09-02T08:14:00+00:00",
+  "date" : "2026-09-08T07:27:40+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
