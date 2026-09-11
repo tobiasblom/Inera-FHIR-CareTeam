@@ -197,22 +197,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#användningsfall" id="markdown-toc-användningsfall">Användningsfall</a>    <ul>
+      <li><a href="#hämta-en-persons-fasta-kontakter" id="markdown-toc-hämta-en-persons-fasta-kontakter">Hämta en persons fasta kontakter</a>        <ul>
+          <li><a href="#utlösande-händelse" id="markdown-toc-utlösande-händelse">Utlösande händelse</a></li>
+          <li><a href="#aktörer" id="markdown-toc-aktörer">Aktörer</a></li>
+          <li><a href="#förlopp" id="markdown-toc-förlopp">Förlopp</a></li>
+          <li><a href="#resultat" id="markdown-toc-resultat">Resultat</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="användningsfall">Användningsfall</h1>
 
-<p><em>Beskriv varje användningsfall som denna IG stöder. För varje användningsfall, förklara vad som utlöser det, vilka aktörer som deltar och vilket resultat det leder till.</em></p>
+<p>Denna implementationsguide stödjer informationsutbyte där en konsumerande tjänst behöver hämta information om en persons fasta kontakter från en informationsproducent. De verksamhetsprocesser där en fast kontakt utses, ändras eller avslutas sker i producentens verksamhetssystem och omfattas inte av denna IG. Resultatet av dessa processer påverkar däremot vilken information som ska kunna lämnas vid en efterföljande förfrågan.</p>
 
-<h4 id="användningsfallets-namn">[Användningsfallets namn]</h4>
+<h2 id="hämta-en-persons-fasta-kontakter">Hämta en persons fasta kontakter</h2>
 
-<p><em>Beskriv användningsfallet. Exempel: "En vårdgivare behöver hämta en patients fasta kontakter för att avgöra vem som ska kontaktas vid en vårdhändelse."</em></p>
+<p>En konsumerande tjänst behöver få tillgång till aktuella uppgifter om en persons fasta kontakter för att kunna presentera eller använda informationen.</p>
 
-<hr />
+<h3 id="utlösande-händelse">Utlösande händelse</h3>
 
-<blockquote>
-  <p><strong>Vägledning för författare:</strong> Roller och ansvar för de aktörer som deltar i användningsfallen beskrivs under <a href="roles-and-responsibilities.html">Roller och ansvar</a>.</p>
-</blockquote>
+<p>Användningsfallet initieras när en konsument behöver information om vilka fasta kontakter som finns registrerade för en viss person.</p>
+
+<p>Det kan exempelvis ske när informationen ska presenteras för en invånare eller användas av en behörig användare i en annan konsumerande tjänst.</p>
+
+<h3 id="aktörer">Aktörer</h3>
+
+<p><strong>Informationskonsument</strong><br />
+System eller tjänst som efterfrågar information om en persons fasta kontakter.</p>
+
+<p><strong>Informationsproducent</strong><br />
+System eller tjänst som tillhandahåller information om fasta kontakter enligt denna IG.</p>
+
+<h3 id="förlopp">Förlopp</h3>
+
+<ol>
+  <li>Konsumenten identifierar den person vars fasta kontakter ska hämtas.</li>
+  <li>Konsumenten skickar en förfrågan till producentens FHIR-API.</li>
+  <li>Producenten söker fram de fasta kontakter som motsvarar förfrågan.</li>
+  <li>Producenten returnerar informationen representerad enligt profilerna i denna IG.</li>
+  <li>Konsumenten tolkar informationen och använder den i sitt aktuella sammanhang.</li>
+</ol>
+
+<h3 id="resultat">Resultat</h3>
+
+<p>Konsumenten får information om personens fasta kontakter, inklusive den information som krävs för att förstå vilken typ av kontakt det är, vem kontakten är och hur kontakten kan nås, i den utsträckning informationen finns tillgänglig och får lämnas till konsumenten.</p>
+
+<p>Om inga fasta kontakter motsvarar förfrågan returneras ett giltigt svar utan matchande kontakter.</p>
+
+<p>Se <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a> för den tekniska realiseringen av förfrågan och <a href="expected-responses.html">Förväntade svar</a> för hur olika svarssituationer hanteras.</p>
 
 
 
@@ -242,7 +280,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-11 06:20:00 +0000">
+  <span title="2026-09-11 06:27:00 +0000">
     2026-09-11
   </span>
 
