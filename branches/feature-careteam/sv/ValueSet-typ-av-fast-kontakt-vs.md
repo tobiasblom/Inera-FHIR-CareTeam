@@ -33,7 +33,7 @@ Tillåtna typer av fast kontakt
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T07:52:55+00:00",
+  "date" : "2026-09-11T06:20:50+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

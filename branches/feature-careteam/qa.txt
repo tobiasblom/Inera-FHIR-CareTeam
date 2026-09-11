@@ -3,7 +3,7 @@ IneraFHIRCareTeam : Validation Results
 
 err = 8, warn = 25, info = 36
 IG Publisher Version: 2.3.3 Out of date - current version is 2.3.4
-Generated Tue Sep 08 07:53:47 UTC 2026. FHIR version 5.0.0 for inera.fhir.careteam#0.9 (canonical = https://fhir.inera.se/ig/careteam)
+Generated Fri Sep 11 06:21:42 UTC 2026. FHIR version 5.0.0 for inera.fhir.careteam#0.9 (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 6 / 0 / 0
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManager : 0 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleManagingTeam : 0 / 0 / 1

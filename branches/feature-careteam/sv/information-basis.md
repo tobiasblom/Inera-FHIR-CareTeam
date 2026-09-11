@@ -4,11 +4,11 @@
 
 # Informationsunderlag
 
-Denna Implementation Guide bygger på det informatikarbete som genomförts för informationsmängden **Fasta kontakter** inom projektet Sammanhållen planering på 1177.
+Denna implementationsguide bygger på det informatikarbete som genomförts för informationsmängden **Fasta kontakter** inom uppdraget Sammanhållen planering på 1177.
 
 Det informatiska underlaget beskriver begrepp, informationsbehov och informationsstruktur för fasta kontakter. IG:n realiserar relevanta delar av detta underlag med HL7 FHIR.
 
-De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. I stället hänvisas till de informatiska leveranser som ligger till grund för profileringen, för att undvika dubbeldokumentation som kan glida isär över tid.
+De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. I stället hänvisas till de informatiska leveranser som ligger till grund för profileringen.
 
 | | | |
 | :--- | :--- | :--- |
