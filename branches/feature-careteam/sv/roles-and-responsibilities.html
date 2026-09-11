@@ -197,12 +197,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#roller-och-ansvar" id="markdown-toc-roller-och-ansvar">Roller och ansvar</a>    <ul>
+      <li><a href="#förväntningar-vid-implementation" id="markdown-toc-förväntningar-vid-implementation">Förväntningar vid implementation</a>        <ul>
+          <li><a href="#informationsproducent" id="markdown-toc-informationsproducent">Informationsproducent</a></li>
+          <li><a href="#informationskonsument" id="markdown-toc-informationskonsument">Informationskonsument</a></li>
+        </ul>
+      </li>
+      <li><a href="#samspel-mellan-rollerna" id="markdown-toc-samspel-mellan-rollerna">Samspel mellan rollerna</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="roller-och-ansvar">Roller och ansvar</h1>
 
-<p><em>Lista de system eller mänskliga roller som deltar i användningsfallen (se <a href="use-cases.html">Användningsfall</a>). Beskriv för varje roll dess verksamhetsansvar i sammanhanget för denna IG — vem som ansvarar för vad, inte hur anropen tekniskt går till.</em></p>
+<p>Denna implementationsguide beskriver informationsutbyte mellan en <strong>informationsproducent</strong> och en <strong>informationskonsument</strong>.</p>
+
+<p>Rollerna avser systemens ansvar i informationsutbytet.</p>
 
 <table>
   <thead>
@@ -213,46 +226,51 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><em>[Rollens namn]</em></td>
-      <td><em>Beskriv rollen och ansvarsområdena för denna aktör.</em></td>
+      <td><strong>Informationsproducent</strong></td>
+      <td>Tillhandahåller information om fasta kontakter för en person och ansvarar för att information som lämnas följer profiler och övriga krav i denna IG.</td>
     </tr>
     <tr>
-      <td><em>[Rollens namn]</em></td>
-      <td><em>Beskriv rollen och ansvarsområdena för denna aktör.</em></td>
+      <td><strong>Informationskonsument</strong></td>
+      <td>Efterfrågar information om fasta kontakter och ansvarar för att kunna ta emot, tolka och använda information som följer denna IG.</td>
     </tr>
   </tbody>
 </table>
 
-<p><em>Ange för varje roll vad den förväntas kunna göra vid implementering av denna IG, t.ex. med HL7 FHIR:s terminologi för förmågor där det är lämpligt.</em></p>
+<h2 id="förväntningar-vid-implementation">Förväntningar vid implementation</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Roll</th>
-      <th>Förväntning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>[Rollens namn]</em></td>
-      <td><em>Ange förväntningen, t.ex. "SHALL kunna producera en [Resurs] som uppfyller [Profil]."</em></td>
-    </tr>
-    <tr>
-      <td><em>[Rollens namn]</em></td>
-      <td><em>Ange förväntningen, t.ex. "SHALL kunna konsumera och bearbeta en [Resurs] som uppfyller [Profil]."</em></td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="informationsproducent">Informationsproducent</h3>
 
-<p>Fr.o.m. FHIR R5 kan <code class="language-plaintext highlighter-rouge">CapabilityStatement</code> uttrycka denna typ av förväntningar formellt via elementet <code class="language-plaintext highlighter-rouge">obligations</code>. Om denna IG definierar formella CapabilityStatements, se <a href="capabilitystatement.html">CapabilityStatement</a> under Implementering.</p>
+<p>En informationsproducent ska:</p>
 
-<p><em>Referera till eller återge kortfattat det arbetsflöde där dessa roller interagerar — vad som utlöser flödet, i vilken ordning rollerna agerar och vad resultatet blir. Se <a href="information-basis.html">Informationsunderlag</a> för den fullständiga, auktoritativa beskrivningen.</em></p>
+<ul>
+  <li>kunna ta emot de förfrågningar som definieras för informationsutbytet</li>
+  <li>kunna identifiera den person som förfrågan avser</li>
+  <li>kunna returnera information om fasta kontakter enligt de FHIR-profiler som definieras i denna IG</li>
+  <li>följa de kardinaliteter, terminologibindningar och övriga konformanskrav som gäller för profilerna</li>
+  <li>endast lämna information som får tillgängliggöras för den aktuella konsumenten</li>
+</ul>
 
-<hr />
+<p>IG:n ställer inte krav på hur informationen lagras eller struktureras internt hos producenten.</p>
 
-<blockquote>
-  <p><strong>Vägledning för författare:</strong> Referera till relevanta nationella föreskrifter eller RIVTA-tjänstekontrakt där det är tillämpligt.</p>
-</blockquote>
+<h3 id="informationskonsument">Informationskonsument</h3>
+
+<p>En informationskonsument ska:</p>
+
+<ul>
+  <li>kunna begära information om fasta kontakter enligt de interaktioner som definieras i denna IG</li>
+  <li>kunna ta emot och bearbeta resurser som följer profilerna i denna IG</li>
+  <li>kunna hantera de element som markerats som Must Support enligt den betydelse som definieras i IG:n</li>
+  <li>kunna hantera ett giltigt svar även när inga fasta kontakter motsvarar förfrågan</li>
+  <li>använda informationen i enlighet med de behörighets- och åtkomstregler som gäller för den aktuella tjänsten</li>
+</ul>
+
+<h2 id="samspel-mellan-rollerna">Samspel mellan rollerna</h2>
+
+<p>Informationsutbytet initieras när en informationskonsument behöver information om en persons fasta kontakter.</p>
+
+<p>Konsumenten skickar en förfrågan till producenten. Producenten identifierar relevant information och returnerar ett svar enligt profilerna i denna IG. Konsumenten kan därefter använda informationen i sitt eget sammanhang, exempelvis för presentation i en användartjänst.</p>
+
+<p>Se <a href="use-cases.html">Användningsfall</a> för den funktionella beskrivningen av flödet och <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a> för den tekniska realiseringen.</p>
 
 
 
@@ -282,7 +300,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-11 06:27:00 +0000">
+  <span title="2026-09-11 07:06:00 +0000">
     2026-09-11
   </span>
 
