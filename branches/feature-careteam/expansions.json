@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "4a0658ba-49d1-44dd-be58-cc09ab9f697a",
+  "id" : "f0763f7a-12b3-49e0-89ab-d1b891882ebb",
   "meta" : {
-    "lastUpdated" : "2026-09-21T07:49:30.833+00:00"
+    "lastUpdated" : "2026-09-21T07:54:52.175+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "Typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b39af295-2e5f-48df-9f18-c23339c70dea",
-        "timestamp" : "2026-09-21T07:49:59+00:00",
+        "identifier" : "urn:uuid:5c3b2b91-76e7-4baa-8142-0d5f49f93af8",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -77,7 +77,7 @@
       "title" : "Typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -86,8 +86,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:2b1e9e38-f0de-49eb-919f-df35cb340218",
-        "timestamp" : "2026-09-21T07:50:00+00:00",
+        "identifier" : "urn:uuid:3ab37ff5-e033-4efa-ae99-b80b2ceebeee",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -135,7 +135,7 @@
       "title" : "Typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -144,8 +144,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5acf8326-8457-4b46-946e-b66d663f131c",
-        "timestamp" : "2026-09-21T07:50:00+00:00",
+        "identifier" : "urn:uuid:86a09dd9-bcbd-4163-9f0b-9e944bdd8fd4",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -201,7 +201,7 @@
       "title" : "Typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -210,8 +210,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f8e7d68d-484e-4d58-972c-287ebc0700c4",
-        "timestamp" : "2026-09-21T07:50:00+00:00",
+        "identifier" : "urn:uuid:40a04b74-8a0c-401d-8c5f-82fb67ada27f",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -266,7 +266,7 @@
       "name" : "WeekdayVS",
       "title" : "Veckodag",
       "status" : "draft",
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -275,8 +275,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:eb538b3e-c05f-4090-b498-145c529a2398",
-        "timestamp" : "2026-09-21T07:50:00+00:00",
+        "identifier" : "urn:uuid:e7bc30ae-aaa5-4fc2-a04f-4c318979b52c",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -343,7 +343,7 @@
       "name" : "WeekdayVS",
       "title" : "Veckodag",
       "status" : "draft",
-      "date" : "2026-09-21T07:49:30+00:00",
+      "date" : "2026-09-21T07:54:52+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -352,8 +352,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b316a17b-c94c-4e57-a583-6f2e7516aef6",
-        "timestamp" : "2026-09-21T07:50:00+00:00",
+        "identifier" : "urn:uuid:972f2b3b-3580-4195-9518-0e5d12012d17",
+        "timestamp" : "2026-09-21T07:55:20+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{

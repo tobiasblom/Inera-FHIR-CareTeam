@@ -17,8 +17,10 @@ De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. 
 
 ## Källor
 
-* [Fasta kontakter – Begrepps- och informationsmodell](LÄNK)
-* [Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering](LÄNK)
+Båda dokumenten nedan finns publicerade på Ineras samarbetsyta för **Fasta kontakter**:
+
+* [Fasta kontakter – Begrepps- och informationsmodell](https://inera.atlassian.net/wiki/spaces/SP1177/pages/5323817048/Fasta+kontakter)
+* [Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering](https://inera.atlassian.net/wiki/spaces/SP1177/pages/5323817048/Fasta+kontakter)
 
 Se [Mappning till profiler](mappings.md) för hur informationsunderlaget har realiserats med FHIR-resurser och profiler samt för dokumentation av relevanta designbeslut och avvikelser.
 
