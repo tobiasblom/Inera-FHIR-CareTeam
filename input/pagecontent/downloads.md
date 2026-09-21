@@ -1,5 +1,9 @@
 # Nedladdningar
 
+> **Observera:** Nedladdningsbara paket och övriga tekniska artefakter är ännu inte färdigställda. Lösningsarkitekturen för informationsutbytet är fortfarande under framtagande och innehållet på denna sida kommer att kompletteras när den tekniska lösningen har fastställts.
+
+<!--
+
 Följande nedladdningar är tillgängliga för denna Implementation Guide.
 
 ### Fullständigt IG-paket
@@ -13,3 +17,5 @@ Se [Testning och validering](testing.html) för instruktioner om hur paketet anv
 ---
 
 > **Vägledning för författare:** Lägg till länkar till eventuella ytterligare artefakter som är relevanta för din IG, såsom exempelsamlingar, mappningskalkylblad eller integrationsguider.
+
+-->
