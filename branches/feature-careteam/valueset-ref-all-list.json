@@ -122,8 +122,8 @@
     "2.16.840.1.113883.4.642.3.506"],
     "uses" : {
     },
-    "StructureDefinition-RIVContactPointAvailability.html" : "Tillgänglighet för kontaktväg",
     "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVContactPointAvailability.html" : "Tillgänglighet för kontaktväg",
     "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
   },
   {
