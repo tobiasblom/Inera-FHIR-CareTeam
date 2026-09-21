@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "RIVManagingTeam"] ; # 
   fhir:title [ fhir:v "Team"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-11T07:06:47+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-21T07:30:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -1290,8 +1290,8 @@
        fhir:isSummary [ fhir:v true ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "RIVManagingTeam-to-team-im" ] ;
-         fhir:map [ fhir:v "Personal.id,Personal.namn,Personal.befattning" ] ;
-         fhir:comment [ fhir:v "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner." ]
+         fhir:map [ fhir:v "Personal" ] ;
+         fhir:comment [ fhir:v "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används." ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "FiveWs.actor" ]
@@ -2626,16 +2626,8 @@
        fhir:mustSupport [ fhir:v true ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "RIVManagingTeam-to-team-im" ] ;
-         fhir:map [ fhir:v "Personal.id" ] ;
-         fhir:comment [ fhir:v "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner." ]
-       ] [
-         fhir:identity [ fhir:v "RIVManagingTeam-to-team-im" ] ;
-         fhir:map [ fhir:v "Personal.namn" ] ;
-         fhir:comment [ fhir:v "Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner." ]
-       ] [
-         fhir:identity [ fhir:v "RIVManagingTeam-to-team-im" ] ;
-         fhir:map [ fhir:v "Personal.befattning" ] ;
-         fhir:comment [ fhir:v "Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole." ]
+         fhir:map [ fhir:v "Personal" ] ;
+         fhir:comment [ fhir:v "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används." ]
        ] )
      ] [
        fhir:id [ fhir:v "CareTeam.telecom" ] ;

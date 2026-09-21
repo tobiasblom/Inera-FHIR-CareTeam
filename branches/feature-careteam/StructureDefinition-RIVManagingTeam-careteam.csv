@@ -112,7 +112,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 Member is optional because some participants may be known only by their role, particularly in draft plans.","","","","","","","","",,,,,"",,,,"CareTeam.participant.member",0,1,"ctm-1
 ctm-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","Personal.id,Personal.namn,Personal.befattning","FiveWs.actor",".role","REL.5 (or PRT-5 : ( PRV-4 {provider participations} ) / PRT-5 : ( PRV-4  {non-provider person participations} ) / PRT-5 : ( PRV-4 = (patient non-subject of care) ) / PRT-8?)"
+","Personal","FiveWs.actor",".role","REL.5 (or PRT-5 : ( PRV-4 {provider participations} ) / PRT-5 : ( PRV-4  {non-provider person participations} ) / PRT-5 : ( PRV-4 = (patient non-subject of care) ) / PRT-8?)"
 "CareTeam.participant.onBehalfOf","CareTeam.participant.onBehalfOf","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization|5.0.0]]}
 ","Organization of the practitioner","The organization of the practitioner.","","Practitioners can be associated with multiple organizations.  This element indicates which organization they were acting on behalf of.","","","","","","","",,,,,"",,,,"CareTeam.participant.onBehalfOf",0,1,"ctm-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

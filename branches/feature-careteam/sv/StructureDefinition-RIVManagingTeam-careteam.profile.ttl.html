@@ -271,7 +271,7 @@ TTL-profil
           
 
             per 
-2026-09-11
+2026-09-21
 
           
         
@@ -313,7 +313,7 @@ TTL-profil
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;RIVManagingTeam&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Team&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
-  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-09-11T07:06:47+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-09-21T07:30:27+00:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Inera AB&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">fhir:contact</a> ( [
      <a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Inera AB&quot; ] ;
@@ -1584,8 +1584,8 @@ TTL-profil
        <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.isSummary">fhir:isSummary</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ] ;
        <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">fhir:mapping</a> ( [
          <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;RIVManagingTeam-to-team-im&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal.id,Personal.namn,Personal.befattning&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner.&quot; ]
+         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal&quot; ] ;
+         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används.&quot; ]
        ] [
          <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;w5&quot; ] ;
          <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;FiveWs.actor&quot; ]
@@ -2920,16 +2920,8 @@ TTL-profil
        <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mustSupport">fhir:mustSupport</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ] ;
        <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">fhir:mapping</a> ( [
          <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;RIVManagingTeam-to-team-im&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal.id&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner.&quot; ]
-       ] [
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;RIVManagingTeam-to-team-im&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal.namn&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner.&quot; ]
-       ] [
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;RIVManagingTeam-to-team-im&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal.befattning&quot; ] ;
-         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole.&quot; ]
+         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Personal&quot; ] ;
+         <a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används.&quot; ]
        ] )
      ] [
        <a href="http://hl7.org/fhir/R5/types.html#Element#XElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;CareTeam.telecom&quot; ] ;
@@ -3046,8 +3038,8 @@ TTL-profil
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-11 07:06:00 +0000">
-    2026-09-11
+  <span title="2026-09-21 07:30:00 +0000">
+    2026-09-21
   </span>
 
           <br/>

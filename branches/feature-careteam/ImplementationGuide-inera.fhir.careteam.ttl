@@ -12,14 +12,14 @@
   fhir:language [ fhir:v "sv"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"sv\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"sv\"><p class=\"res-header-id\"><b>Genererad berättande text: ImplementationGuide inera.fhir.careteam</b></p><a name=\"inera.fhir.careteam\"> </a><a name=\"hcinera.fhir.careteam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Språk: sv</p></div><h2>IneraFHIRCareTeam</h2><p>Den officiella URL:en för denna implementationsguide är: </p><pre>https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam</pre><div><p>Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR.</p>\n</div></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"sv\" lang=\"sv\"><p class=\"res-header-id\"><b>Genererad berättande text: ImplementationGuide inera.fhir.careteam</b></p><a name=\"inera.fhir.careteam\"> </a><a name=\"hcinera.fhir.careteam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Språk: sv</p></div><h2>IneraFHIRCareTeam</h2><p>Den officiella URL:en för denna implementationsguide är: </p><pre>https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam</pre><div><p>Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR.</p>\n</div></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [ fhir:v "https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.9"] ; # 
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-11T07:06:47+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-21T07:30:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;

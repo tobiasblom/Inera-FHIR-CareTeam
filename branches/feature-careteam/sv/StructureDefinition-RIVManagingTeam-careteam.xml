@@ -35,7 +35,7 @@
   <name value="RIVManagingTeam"/>
   <title value="Team"/>
   <status value="draft"/>
-  <date value="2026-09-11T07:06:47+00:00"/>
+  <date value="2026-09-21T07:30:27+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -1167,8 +1167,8 @@
       <isSummary value="true"/>
       <mapping>
         <identity value="RIVManagingTeam-to-team-im"/>
-        <map value="Personal.id,Personal.namn,Personal.befattning"/>
-        <comment value="Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."/>
+        <map value="Personal"/>
+        <comment value="Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."/>
       </mapping>
       <mapping>
         <identity value="w5"/>
@@ -2353,18 +2353,8 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="RIVManagingTeam-to-team-im"/>
-        <map value="Personal.id"/>
-        <comment value="Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."/>
-      </mapping>
-      <mapping>
-        <identity value="RIVManagingTeam-to-team-im"/>
-        <map value="Personal.namn"/>
-        <comment value="Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner."/>
-      </mapping>
-      <mapping>
-        <identity value="RIVManagingTeam-to-team-im"/>
-        <map value="Personal.befattning"/>
-        <comment value="Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole."/>
+        <map value="Personal"/>
+        <comment value="Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."/>
       </mapping>
     </element>
     <element id="CareTeam.telecom">

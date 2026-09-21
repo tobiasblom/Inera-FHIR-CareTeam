@@ -271,7 +271,7 @@ JSON-profil
           
 
             per 
-2026-09-11
+2026-09-21
 
           
         
@@ -304,7 +304,7 @@ JSON-profil
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a>" : "RIVManagingTeam",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a>" : "Team",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-09-11T07:06:47+00:00",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-09-21T07:30:27+00:00",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a>" : "Inera AB",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>" : [
     {
@@ -1718,8 +1718,8 @@ JSON-profil
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a>" : "RIVManagingTeam-to-team-im",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal.id,Personal.namn,Personal.befattning",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."
+            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal",
+            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."
           },
           {
             "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a>" : "w5",
@@ -3217,18 +3217,8 @@ JSON-profil
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a>" : "RIVManagingTeam-to-team-im",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal.id",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."
-          },
-          {
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a>" : "RIVManagingTeam-to-team-im",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal.namn",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner."
-          },
-          {
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a>" : "RIVManagingTeam-to-team-im",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal.befattning",
-            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole."
+            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a>" : "Personal",
+            "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>" : "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."
           }
         ]
       },
@@ -3366,8 +3356,8 @@ JSON-profil
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-11 07:06:00 +0000">
-    2026-09-11
+  <span title="2026-09-21 07:30:00 +0000">
+    2026-09-21
   </span>
 
           <br/>

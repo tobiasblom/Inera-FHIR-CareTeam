@@ -271,7 +271,7 @@ XML-profil
           
 
             per 
-2026-09-11
+2026-09-21
 
           
         
@@ -329,7 +329,7 @@ XML-profil
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;RIVManagingTeam&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Team&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-09-11T07:06:47+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-09-21T07:30:27+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inera AB&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inera AB&quot;/&gt;
@@ -1598,9 +1598,9 @@ Member is optional because some participants may be known only by their role, pa
       &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.isSummary">isSummary</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;RIVManagingTeam-to-team-im&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal.id,Personal.namn,Personal.befattning&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>
-                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner.&quot;/&gt;
+                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används.&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;w5&quot;/&gt;
@@ -2923,21 +2923,9 @@ Ranks need not be sequential and not all repetitions must have a rank.  For exam
       &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;RIVManagingTeam-to-team-im&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal.id&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>
-                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner.&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;RIVManagingTeam-to-team-im&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal.namn&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>
-                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner.&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;RIVManagingTeam-to-team-im&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Personal.befattning&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping.comment">comment</a>
-                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole.&quot;/&gt;
+                 <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används.&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.mapping">mapping</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.differential.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;CareTeam.telecom&quot;&gt;
@@ -3062,8 +3050,8 @@ Ranks need not be sequential and not all repetitions must have a rank.  For exam
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-11 07:06:00 +0000">
-    2026-09-11
+  <span title="2026-09-21 07:30:00 +0000">
+    2026-09-21
   </span>
 
           <br/>

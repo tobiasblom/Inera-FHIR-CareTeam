@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "weekday-vs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: ValueSet weekday-vs</b></p><a name=\"weekday-vs\"> </a><a name=\"hcweekday-vs\"> </a><ul><li>Include alla koder som definieras i <a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html\"><code>http://hl7.org/fhir/days-of-week</code></a><span title=\"Versionen är inte uttryckligen angiven, vilket innebär att den är fast till 5.0.0, versionen som hittas via paketreferenserna\"> version ?5.0.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: ValueSet weekday-vs</b></p><a name=\"weekday-vs\"> </a><a name=\"hcweekday-vs\"> </a><ul><li>Include alla koder som definieras i <a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html\"><code>http://hl7.org/fhir/days-of-week</code></a><span title=\"Versionen är inte uttryckligen angiven, vilket innebär att den är fast till 5.0.0, versionen som hittas via paketreferenserna\"> version &#x1F4E6;5.0.0</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [ fhir:v "http://example.org/fhir/ValueSet/veckodag"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.9"] ; # 
   fhir:name [ fhir:v "WeekdayVS"] ; # 
   fhir:title [ fhir:v "Veckodag"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-11T07:06:47+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-21T07:30:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;

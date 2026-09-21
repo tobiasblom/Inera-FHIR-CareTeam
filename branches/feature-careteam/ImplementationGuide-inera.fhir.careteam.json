@@ -4,14 +4,14 @@
   "language" : "sv",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"sv\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"sv\"><p class=\"res-header-id\"><b>Genererad berättande text: ImplementationGuide inera.fhir.careteam</b></p><a name=\"inera.fhir.careteam\"> </a><a name=\"hcinera.fhir.careteam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Språk: sv</p></div><h2>IneraFHIRCareTeam</h2><p>Den officiella URL:en för denna implementationsguide är: </p><pre>https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam</pre><div><p>Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR.</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"sv\" lang=\"sv\"><p class=\"res-header-id\"><b>Genererad berättande text: ImplementationGuide inera.fhir.careteam</b></p><a name=\"inera.fhir.careteam\"> </a><a name=\"hcinera.fhir.careteam\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Språk: sv</p></div><h2>IneraFHIRCareTeam</h2><p>Den officiella URL:en för denna implementationsguide är: </p><pre>https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam</pre><div><p>Denna implementationsguide beskriver hur informationsmängden Fasta kontakter kan uttryckas med HL7 FHIR.</p>\n</div></div>"
   },
   "url" : "https://fhir.inera.se/ig/careteam/ImplementationGuide/inera.fhir.careteam",
   "version" : "0.9",
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-09-11T07:06:47+00:00",
+  "date" : "2026-09-21T07:30:27+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

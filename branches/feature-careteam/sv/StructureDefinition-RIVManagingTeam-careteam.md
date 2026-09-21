@@ -83,7 +83,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-09-11T07:06:47+00:00",
+  "date" : "2026-09-21T07:30:27+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -237,18 +237,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",
-        "map" : "Personal.id",
-        "comment" : "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."
-      },
-      {
-        "identity" : "RIVManagingTeam-to-team-im",
-        "map" : "Personal.namn",
-        "comment" : "Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner."
-      },
-      {
-        "identity" : "RIVManagingTeam-to-team-im",
-        "map" : "Personal.befattning",
-        "comment" : "Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole."
+        "map" : "Personal",
+        "comment" : "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."
       }]
     },
     {
