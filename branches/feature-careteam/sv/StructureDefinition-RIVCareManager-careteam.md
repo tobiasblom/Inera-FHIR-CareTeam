@@ -88,7 +88,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVCareManager-
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-09-21T07:54:52+00:00",
+  "date" : "2026-09-21T08:04:47+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

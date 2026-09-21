@@ -203,148 +203,61 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#version-history" id="markdown-toc-version-history">Version History</a>    <ul>
-      <li><a href="#221--2026-08-27" id="markdown-toc-221--2026-08-27">[2.2.1] — 2026-08-27</a>        <ul>
-          <li><a href="#bug-fixes" id="markdown-toc-bug-fixes">Bug Fixes</a></li>
+  <li><a href="#versionshistorik" id="markdown-toc-versionshistorik">Versionshistorik</a>    <ul>
+      <li><a href="#09--2026-09-21" id="markdown-toc-09--2026-09-21">0.9 – 2026-09-21</a>        <ul>
+          <li><a href="#innehåll" id="markdown-toc-innehåll">Innehåll</a></li>
+          <li><a href="#kända-återstående-delar" id="markdown-toc-kända-återstående-delar">Kända återstående delar</a></li>
         </ul>
       </li>
-      <li><a href="#220--2026-08-27" id="markdown-toc-220--2026-08-27">[2.2.0] — 2026-08-27</a>        <ul>
-          <li><a href="#features" id="markdown-toc-features">Features</a></li>
-          <li><a href="#bug-fixes-1" id="markdown-toc-bug-fixes-1">Bug Fixes</a></li>
-        </ul>
-      </li>
-      <li><a href="#200--2026-06-25" id="markdown-toc-200--2026-06-25">[2.0.0] — 2026-06-25</a>        <ul>
-          <li><a href="#features-1" id="markdown-toc-features-1">Features</a></li>
-        </ul>
-      </li>
-      <li><a href="#101--2026-06-24" id="markdown-toc-101--2026-06-24">[1.0.1] — 2026-06-24</a>        <ul>
-          <li><a href="#bug-fixes-2" id="markdown-toc-bug-fixes-2">Bug Fixes</a></li>
-        </ul>
-      </li>
-      <li><a href="#100--2026-06-24" id="markdown-toc-100--2026-06-24">[1.0.0] — 2026-06-24</a>        <ul>
-          <li><a href="#features-2" id="markdown-toc-features-2">Features</a></li>
-        </ul>
-      </li>
-      <li><a href="#010--2026-06-16" id="markdown-toc-010--2026-06-16">[0.1.0] — 2026-06-16</a>        <ul>
-          <li><a href="#features-3" id="markdown-toc-features-3">Features</a></li>
-        </ul>
-      </li>
+      <li><a href="#tidigare-utkast" id="markdown-toc-tidigare-utkast">Tidigare utkast</a></li>
     </ul>
   </li>
 </ul>
 
 </div>
-<h1 id="version-history">Version History</h1>
+<h1 id="versionshistorik">Versionshistorik</h1>
 
-<p>This page is maintained automatically by <a href="https://github.com/googleapis/release-please">release-please</a>.
-Entries are generated from commit messages that follow <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.</p>
+<p>Denna sida beskriver versionshistoriken för Implementation Guiden <strong>Fasta kontakter</strong>.</p>
 
-<hr />
-
-<h2 id="221--2026-08-27">[2.2.1] — 2026-08-27</h2>
-
-<h3 id="bug-fixes">Bug Fixes</h3>
-
-<ul>
-  <li>Reservindexet som byggs när IG Publisher inte genererar <code class="language-plaintext highlighter-rouge">history.html</code>
-skrevs bara till <code class="language-plaintext highlighter-rouge">index.html</code>. Publishern stämplar in en länk till
-<code class="language-plaintext highlighter-rouge">&lt;canonical&gt;/history.html</code> på varje sida, så den länken gav 404 medan
-<code class="language-plaintext highlighter-rouge">&lt;canonical&gt;/</code> fungerade. Filen skrivs nu under båda namnen</li>
-</ul>
+<p>IG:n är under utveckling. Versionshistoriken kompletteras i samband med att nya versioner av specifikationen tas fram och publiceras.</p>
 
 <hr />
 
-<h2 id="220--2026-08-27">[2.2.0] — 2026-08-27</h2>
+<h2 id="09--2026-09-21">0.9 – 2026-09-21</h2>
 
-<p>Version 2.1.0 sattes i <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> men släpptes aldrig — den fick
-ingen tagg och ingen changelog-post. Ändringarna därifrån ingår i den här
-releasen.</p>
+<p><strong>Status:</strong> Utkast</p>
 
-<h3 id="features">Features</h3>
+<h3 id="innehåll">Innehåll</h3>
 
 <ul>
-  <li>Byte till <code class="language-plaintext highlighter-rouge">fhir2.base.template</code>, HL7:s språkmedvetna bastemplate. Sidorna
-genereras under <code class="language-plaintext highlighter-rouge">output/sv/</code> med en omdirigering i roten, och template-
-texterna följer språkinställningen</li>
-  <li>Omstrukturerad meny: Hem, Inledning, Funktionellt, Implementering, Om och
-Artefakter, med nya sidor för användningsfall, roller och ansvar,
-REST-interaktioner, förväntade svar, felhantering, säkerhet och testning</li>
-  <li>Vägledande kommentarer för profilering inbäddade i exempelprofilen</li>
-  <li>QA-skriptet utbrutet till <code class="language-plaintext highlighter-rouge">.github/scripts/qa-comment.js</code> med en testsvit
-som körs vid varje push och pull request</li>
+  <li>FHIR-profiler för informationsutbyte om fasta kontakter framtagna.</li>
+  <li>Profil för <strong>Fast kontakt</strong> (<code class="language-plaintext highlighter-rouge">RIVCareManager</code>) baserad på FHIR-resursen <code class="language-plaintext highlighter-rouge">CareTeam</code>.</li>
+  <li>Profil för <strong>Team</strong> (<code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>) baserad på FHIR-resursen <code class="language-plaintext highlighter-rouge">CareTeam</code>.</li>
+  <li>Terminologi och extensions som används av profilerna framtagna.</li>
+  <li>FSH-mappningar mellan informationsmodellen och profilerna framtagna.</li>
+  <li>Dokumentation av informationsunderlag, användningsfall samt roller och ansvar tillagd.</li>
+  <li>Dokumentation av mappningen mellan informationsmodellen och FHIR-realiseringen påbörjad.</li>
+  <li>Profilerna tekniskt validerade med SUSHI.</li>
 </ul>
 
-<h3 id="bug-fixes-1">Bug Fixes</h3>
+<h3 id="kända-återstående-delar">Kända återstående delar</h3>
+
+<p>Implementeringsdelen av IG:n är ännu inte färdigställd. Bland annat återstår beskrivning av:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">i18n-default-lang</code> ersätter det felstavade <code class="language-plaintext highlighter-rouge">i18n-default-language</code>, som
-publishern ignorerade tyst. Det var orsaken till att ett tidigare försök
-med fhir2 lade alla sidor under <code class="language-plaintext highlighter-rouge">/en</code> trots att svenska var konfigurerat</li>
-  <li>QA-kommentaren rapporterade noll fel och noll varningar för bygget som
-hade sex varningar. Siffrorna hämtas nu från publisherns egen summering i
-<code class="language-plaintext highlighter-rouge">build.log</code> och detaljerna från <code class="language-plaintext highlighter-rouge">output/qa.txt</code>; en trasig eller saknad
-källa redovisas öppet i stället för att visas som ett rent bygge</li>
-  <li><code class="language-plaintext highlighter-rouge">history.html</code> söks även i språkkatalogen, så releasesteget använder
-publisherns riktiga versionslista i stället för reservindexet</li>
-  <li>Nedladdningslänken pekar på canonical och paketet kopieras till IG-roten
-vid release</li>
-  <li>Platshållaren <code class="language-plaintext highlighter-rouge">&lt;namn&gt;</code> i <code class="language-plaintext highlighter-rouge">index.md</code> tolkades som ett HTML-element</li>
+  <li>REST-interaktioner och sökparametrar</li>
+  <li>förväntade svar</li>
+  <li>CapabilityStatement</li>
+  <li>felhantering</li>
+  <li>säkerhet och behörighet</li>
+  <li>testning och validering</li>
 </ul>
 
 <hr />
 
-<h2 id="200--2026-06-25">[2.0.0] — 2026-06-25</h2>
+<h2 id="tidigare-utkast">Tidigare utkast</h2>
 
-<h3 id="features-1">Features</h3>
-
-<ul>
-  <li>Svenska sidtexter och menyrubriker i alla mallsidor</li>
-  <li>Återgång till <code class="language-plaintext highlighter-rouge">fhir.base.template</code> (eliminerar <code class="language-plaintext highlighter-rouge">/en</code>-routing och aktiv bugg i fhir2.base.template)</li>
-  <li><code class="language-plaintext highlighter-rouge">i18n-default-language: sv</code> konfigurerat</li>
-</ul>
-
-<hr />
-
-<h2 id="101--2026-06-24">[1.0.1] — 2026-06-24</h2>
-
-<h3 id="bug-fixes-2">Bug Fixes</h3>
-
-<ul>
-  <li>Read IG metadata from build output instead of sushi-config.yaml</li>
-  <li>Fix <code class="language-plaintext highlighter-rouge">is_release</code> flag in fhir-portal dispatch to use tag ref check</li>
-  <li>Align dispatch payload fields with fhir-portal registry workflow</li>
-</ul>
-
-<hr />
-
-<h2 id="100--2026-06-24">[1.0.0] — 2026-06-24</h2>
-
-<h3 id="features-2">Features</h3>
-
-<ul>
-  <li>Multi-branch CI: <code class="language-plaintext highlighter-rouge">develop</code>, <code class="language-plaintext highlighter-rouge">feature/**</code> and <code class="language-plaintext highlighter-rouge">support/&lt;M&gt;.x</code> branches each build and deploy to their own subdirectory</li>
-  <li>fhir-portal integration: optionally push built IG to <code class="language-plaintext highlighter-rouge">inera-ab/fhir-portal</code> and notify index rebuild via <code class="language-plaintext highlighter-rouge">repository_dispatch</code></li>
-  <li>QA report posted as PR comment by <code class="language-plaintext highlighter-rouge">pr-qa.yml</code></li>
-  <li><code class="language-plaintext highlighter-rouge">cleanup.yml</code> removes build directories for deleted branches</li>
-  <li><code class="language-plaintext highlighter-rouge">release-please.yml</code> for automated version bumping and changelog (manual trigger)</li>
-  <li>WCAG 2.1 AA accessibility fixes in <code class="language-plaintext highlighter-rouge">inera.css</code></li>
-</ul>
-
-<hr />
-
-<h2 id="010--2026-06-16">[0.1.0] — 2026-06-16</h2>
-
-<h3 id="features-3">Features</h3>
-
-<ul>
-  <li>Initial IG template structure with Inera branding</li>
-  <li><code class="language-plaintext highlighter-rouge">IneraPatient</code> example profile with personnummer identifier slice</li>
-  <li>Navigation pages: Workflow, Logical Models, Mappings, Examples, Terminology, Downloads</li>
-  <li>GitHub Actions for SUSHI validation, full IG Publisher build, and GitHub Pages deployment</li>
-  <li>ig-registry integration via <code class="language-plaintext highlighter-rouge">package-list.json</code></li>
-  <li>WCAG 2.1 AA-compliant CSS</li>
-</ul>
-
+<p>Tidigare arbetsversioner har använts under framtagandet av profiler, terminologi och mappningar. Dessa har inte publicerats som formella versioner av Implementation Guiden.</p>
 
 
 
@@ -373,7 +286,7 @@ vid release</li>
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-09-21 07:54:00 +0000">
+  <span title="2026-09-21 08:04:00 +0000">
     2026-09-21
   </span>
 
