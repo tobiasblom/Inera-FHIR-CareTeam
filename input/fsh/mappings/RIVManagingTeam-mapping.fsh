@@ -23,8 +23,4 @@ Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR
 
 * telecom.extension[availability].valueAvailability.availableTime.availableEndTime -> "Kontakttid.sluttid" "Tidpunkt då kontakttiden slutar."
 
-* participant.member -> "Personal.id" "Teamdeltagare kan representeras som PractitionerRole eller Practitioner. Personalens identifierare finns på Practitioner.identifier, direkt eller via PractitionerRole.practitioner."
-
-* participant.member -> "Personal.namn" "Personalens namn finns på Practitioner.name, direkt eller via PractitionerRole.practitioner."
-
-* participant.member -> "Personal.befattning" "Personalens befattning kan uttryckas på PractitionerRole.code när deltagaren representeras via PractitionerRole."
+* participant.member -> "Personal" "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."
