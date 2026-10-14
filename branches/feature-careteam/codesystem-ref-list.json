@@ -1,5 +1,18 @@
 {
   "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/care-team-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "CareTeamStatus",
+    "title" : "Care Team Status",
+    "description" : "Indicates the status of the care team.",
+    "oids" : ["2.16.840.1.113883.4.642.4.154",
+    "2.16.840.1.113883.4.642.1.145"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-care-team-status.html" : "Care Team Status"
+  },
+  {
     "url" : "http://hl7.org/fhir/days-of-week",
     "version" : "5.0.0",
     "status" : "active",

@@ -2,8 +2,6 @@
 
 ## Extension: Tillgänglighet för kontaktväg 
 
-Anger när en kontaktväg är tillgänglig.
-
 **Context of Use**
 
 **Usage info**
@@ -24,15 +22,17 @@ Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages
 *  [Statistik/referenser](#tabs-summ) 
 *  [Alla](#tabs-all) 
 
+Denna struktur är härledd från [Extension](http://hl7.org/fhir/R5/extensibility.html#Extension) 
+
 #### Terminologibindningar
 
 #### Begränsningar
 
-** Sammanfattning **
+Denna struktur är härledd från [Extension](http://hl7.org/fhir/R5/extensibility.html#Extension) 
 
-Enkel extension med typen Availability: Anger när en kontaktväg är tillgänglig.
+ **Differentialvy** 
 
- **DifferentialvyDifferential View** 
+Denna struktur är härledd från [Extension](http://hl7.org/fhir/R5/extensibility.html#Extension) 
 
  **Ögonblicksbildsvy** 
 
@@ -40,9 +40,7 @@ Enkel extension med typen Availability: Anger när en kontaktväg är tillgängl
 
 #### Begränsningar
 
-** Sammanfattning **
-
-Enkel extension med typen Availability: Anger när en kontaktväg är tillgänglig.
+Denna struktur är härledd från [Extension](http://hl7.org/fhir/R5/extensibility.html#Extension) 
 
  
 
@@ -65,7 +63,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVContactPoint
   "name" : "RIVContactPointAvailability",
   "title" : "Tillgänglighet för kontaktväg",
   "status" : "draft",
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

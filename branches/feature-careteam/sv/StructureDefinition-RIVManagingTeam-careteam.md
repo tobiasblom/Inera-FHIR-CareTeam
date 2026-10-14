@@ -2,9 +2,6 @@
 
 ## Resursprofil: Team 
 
- 
-Profil som beskriver ett vård- eller omsorgsteam i svensk vård och omsorg. Ett team kan vara kopplat till en invånare och kan ha egna kontaktuppgifter. Teamet kan också utgöra kontaktväg eller organisatoriskt sammanhang för en fast kontakt. 
-
 **Användningar:**
 
 * Referera till denna Profil: [Kontakt via team](StructureDefinition-riv-contact-via-team-extension.md)
@@ -26,20 +23,15 @@ Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages
 
 #### Begränsningar
 
+Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.html) 
+
+#### Terminologibindningar (differential)
+
 #### Terminologibindningar
 
 #### Begränsningar
 
-** Sammanfattning **
-
-Obligatorisk: 2 elements
- Måste stödjas: 14 elements
-
-**Extensions**
-
-Denna struktur refererar till dessa extensions:
-
-* [https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability](StructureDefinition-RIVContactPointAvailability.md)
+Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.html) 
 
  **Vy med nyckelelement** 
 
@@ -49,22 +41,17 @@ Denna struktur refererar till dessa extensions:
 
  **Differentialvy** 
 
+Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.html) 
+
+#### Terminologibindningar (differential)
+
  **ÖgonblicksbildsvyView** 
 
 #### Terminologibindningar
 
 #### Begränsningar
 
-** Sammanfattning **
-
-Obligatorisk: 2 elements
- Måste stödjas: 14 elements
-
-**Extensions**
-
-Denna struktur refererar till dessa extensions:
-
-* [https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability](StructureDefinition-RIVContactPointAvailability.md)
+Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.html) 
 
  
 
@@ -83,7 +70,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -135,13 +122,63 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
   "differential" : {
     "element" : [{
       "id" : "CareTeam",
-      "path" : "CareTeam"
+      "path" : "CareTeam",
+      "short" : "Team",
+      "definition" : "Ett vård- eller omsorgsteam vid en vårdande enhet eller omsorgsenhet. Teamet kan vara organiserat kring en invånare, ha egna kontaktvägar och utgöra kontaktväg för en fast kontakt."
+    },
+    {
+      "id" : "CareTeam.id",
+      "path" : "CareTeam.id",
+      "short" : "Resursens logiska id",
+      "definition" : "Logiskt id som tilldelas av den server som lagrar resursen. Id:t ändras inte under resursens livstid."
+    },
+    {
+      "id" : "CareTeam.meta",
+      "path" : "CareTeam.meta",
+      "short" : "Metadata om resursen",
+      "definition" : "Metadata som hanteras av infrastrukturen, till exempel versions-id och tidpunkt för senaste ändring."
+    },
+    {
+      "id" : "CareTeam.implicitRules",
+      "path" : "CareTeam.implicitRules",
+      "short" : "Regler som innehållet skapats enligt",
+      "definition" : "Referens till regler som följdes när resursen skapades och som mottagaren måste känna till för att tolka innehållet. Förväntas inte användas."
+    },
+    {
+      "id" : "CareTeam.language",
+      "path" : "CareTeam.language",
+      "short" : "Språk för resursens innehåll",
+      "definition" : "Det språk som resursens textinnehåll är skrivet på."
+    },
+    {
+      "id" : "CareTeam.text",
+      "path" : "CareTeam.text",
+      "short" : "Läsbar sammanfattning",
+      "definition" : "Sammanfattning av resursens innehåll i läsbar form, avsedd för visning för människor."
+    },
+    {
+      "id" : "CareTeam.contained",
+      "path" : "CareTeam.contained",
+      "short" : "Inbäddade resurser",
+      "definition" : "Resurser som ingår i denna resurs och saknar egen identitet utanför den. Bör undvikas när de refererade resurserna kan hämtas separat."
+    },
+    {
+      "id" : "CareTeam.extension",
+      "path" : "CareTeam.extension",
+      "short" : "Tillägg",
+      "definition" : "Ytterligare information som inte ingår i basresursen, uttryckt med extensioner."
+    },
+    {
+      "id" : "CareTeam.modifierExtension",
+      "path" : "CareTeam.modifierExtension",
+      "short" : "Tillägg som ändrar tolkningen",
+      "definition" : "Extensioner som ändrar betydelsen av resursen eller av element i den. Mottagaren får inte ignorera dem. Förväntas inte användas."
     },
     {
       "id" : "CareTeam.identifier",
       "path" : "CareTeam.identifier",
-      "short" : "Identifierare för team",
-      "definition" : "Identifierare som kan användas för att identifiera teamet.",
+      "short" : "Teamets id",
+      "definition" : "Unik identifierare för teamet.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",
@@ -150,10 +187,24 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
       }]
     },
     {
+      "id" : "CareTeam.status",
+      "path" : "CareTeam.status",
+      "definition" : "Anger teamets status: active betyder att teamet är aktuellt, inactive att det har upphört, suspended att det tillfälligt inte är aktuellt, proposed att det är föreslaget men inte fastställt och entered-in-error att resursen har registrerats felaktigt och inte ska användas.",
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "CareTeamStatus"
+        }],
+        "strength" : "required",
+        "description" : "Status för teamet.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/care-team-status|5.0.0"
+      }
+    },
+    {
       "id" : "CareTeam.category",
       "path" : "CareTeam.category",
-      "short" : "Kategori av CareTeam",
-      "definition" : "Anger att resursen avser ett team.",
+      "short" : "Kategori: team",
+      "definition" : "Anger att resursen beskriver ett team och skiljer den från andra användningar av CareTeam, till exempel fast kontakt. Värdet är fast och är alltid koden team.",
       "min" : 1,
       "max" : "1",
       "patternCodeableConcept" : {
@@ -162,19 +213,66 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
           "code" : "team"
         }]
       },
-      "mustSupport" : true
+      "mustSupport" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "CareTeamCategory"
+        }],
+        "strength" : "example",
+        "description" : "Kategori av CareTeam.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/care-team-category"
+      }
     },
     {
       "id" : "CareTeam.category.coding",
       "path" : "CareTeam.category.coding",
+      "short" : "Kod som anger kategori",
+      "definition" : "Kodad kategori från kodsystemet Typ av CareTeam. Värdet är fast.",
       "min" : 1,
       "max" : "1"
+    },
+    {
+      "id" : "CareTeam.category.coding.system",
+      "path" : "CareTeam.category.coding.system",
+      "short" : "Kodsystem",
+      "definition" : "Identifierar det kodsystem som koden kommer från."
+    },
+    {
+      "id" : "CareTeam.category.coding.version",
+      "path" : "CareTeam.category.coding.version",
+      "short" : "Version av kodsystemet",
+      "definition" : "Version av kodsystemet, om det är relevant."
+    },
+    {
+      "id" : "CareTeam.category.coding.code",
+      "path" : "CareTeam.category.coding.code",
+      "short" : "Kod",
+      "definition" : "Koden för kategorin."
+    },
+    {
+      "id" : "CareTeam.category.coding.display",
+      "path" : "CareTeam.category.coding.display",
+      "short" : "Klartext för koden",
+      "definition" : "Kodens benämning i klartext, avsedd för visning."
+    },
+    {
+      "id" : "CareTeam.category.coding.userSelected",
+      "path" : "CareTeam.category.coding.userSelected",
+      "short" : "Vald direkt av användare",
+      "definition" : "Anger om koden valts direkt av en användare. Förväntas inte användas."
+    },
+    {
+      "id" : "CareTeam.category.text",
+      "path" : "CareTeam.category.text",
+      "short" : "Kategorin i klartext",
+      "definition" : "Kategorin uttryckt i klartext."
     },
     {
       "id" : "CareTeam.name",
       "path" : "CareTeam.name",
       "short" : "Teamets namn",
-      "definition" : "Namn på det vård- eller omsorgsteam som beskrivs.",
+      "definition" : "Teamets namn i den form det ska visas för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",
@@ -185,8 +283,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
     {
       "id" : "CareTeam.subject",
       "path" : "CareTeam.subject",
-      "short" : "Invånare som teamet gäller för",
-      "definition" : "Invånare som teamet gäller för. Kan utelämnas om teamet inte är direkt kopplat till en specifik invånare.",
+      "short" : "Invånare",
+      "definition" : "Den invånare som teamet är organiserat kring. Utelämnas om teamet inte är kopplat till en specifik invånare.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
@@ -201,34 +299,42 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
     {
       "id" : "CareTeam.period",
       "path" : "CareTeam.period",
+      "short" : "Giltighetsperiod",
+      "definition" : "Den period under vilken teamet gäller. Om subject är angivet avser perioden teamets koppling till invånaren, annars teamets giltighet i allmänhet.",
       "mustSupport" : true
     },
     {
       "id" : "CareTeam.period.start",
       "path" : "CareTeam.period.start",
       "short" : "Startdatum",
-      "definition" : "Det datum då teamet börjar gälla i det aktuella sammanhanget.",
+      "definition" : "Datum då teamet börjar gälla.",
       "mustSupport" : true
     },
     {
       "id" : "CareTeam.period.end",
       "path" : "CareTeam.period.end",
       "short" : "Slutdatum",
-      "definition" : "Det datum då teamet upphör att gälla i det aktuella sammanhanget.",
+      "definition" : "Datum då teamet upphör att gälla. Saknas slutdatum gäller teamet tills vidare.",
       "mustSupport" : true
     },
     {
       "id" : "CareTeam.participant",
       "path" : "CareTeam.participant",
       "short" : "Deltagare i teamet",
-      "definition" : "Aktörer som ingår i eller representerar teamet. Deltagare kan exempelvis vara vård- och omsorgspersonal, roll/funktion eller annan relevant aktör.",
+      "definition" : "Vård- eller omsorgspersonal som ingår i teamet.",
       "mustSupport" : true
+    },
+    {
+      "id" : "CareTeam.participant.role",
+      "path" : "CareTeam.participant.role",
+      "short" : "Deltagarens roll i teamet",
+      "definition" : "Den roll eller funktion som deltagaren har i teamet."
     },
     {
       "id" : "CareTeam.participant.member",
       "path" : "CareTeam.participant.member",
       "short" : "Teamdeltagare",
-      "definition" : "Aktör som ingår i teamet, exempelvis en person i roll eller en person.",
+      "definition" : "Den person som ingår i teamet, uttryckt antingen som personen i sin roll vid en enhet (PractitionerRole) eller som person (Practitioner).",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/PractitionerRole",
@@ -242,18 +348,42 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
       }]
     },
     {
+      "id" : "CareTeam.participant.onBehalfOf",
+      "path" : "CareTeam.participant.onBehalfOf",
+      "short" : "Organisation som deltagaren företräder",
+      "definition" : "Organisation som deltagaren företräder i teamet. Förväntas normalt inte användas."
+    },
+    {
+      "id" : "CareTeam.participant.coverage[x]",
+      "path" : "CareTeam.participant.coverage[x]",
+      "short" : "Deltagarens tillgänglighet",
+      "definition" : "Period eller schema då deltagaren ingår i teamet. Förväntas normalt inte användas."
+    },
+    {
+      "id" : "CareTeam.reason",
+      "path" : "CareTeam.reason",
+      "short" : "Anledning",
+      "definition" : "Används inte för team."
+    },
+    {
+      "id" : "CareTeam.managingOrganization",
+      "path" : "CareTeam.managingOrganization",
+      "short" : "Enhet som teamet tillhör",
+      "definition" : "Den vårdande enhet eller omsorgsenhet som teamet tillhör."
+    },
+    {
       "id" : "CareTeam.telecom",
       "path" : "CareTeam.telecom",
-      "short" : "Kontaktuppgifter till teamet",
-      "definition" : "Kontaktuppgifter som ska användas av invånaren för att nå teamet. Kontaktuppgifterna kan även användas när en fast kontakt nås via detta team.",
+      "short" : "Kontaktväg till teamet",
+      "definition" : "Kontaktväg som invånaren använder för att nå teamet, till exempel ett telefonnummer eller en webbadress. Kontaktvägen används även när en fast kontakt nås via teamet.",
       "mustSupport" : true
     },
     {
       "id" : "CareTeam.telecom.extension:availability",
       "path" : "CareTeam.telecom.extension",
       "sliceName" : "availability",
-      "short" : "Tillgänglighet för kontaktväg",
-      "definition" : "Anger under vilka tider och veckodagar kontaktvägen är tillgänglig.",
+      "short" : "Kontakttider",
+      "definition" : "Anger veckodagar och tider då kontaktvägen är tillgänglig, till exempel telefontider.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -292,6 +422,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
     {
       "id" : "CareTeam.telecom.system",
       "path" : "CareTeam.telecom.system",
+      "short" : "Typ av kontaktväg",
+      "definition" : "Anger vilken sorts kontaktväg det är, till exempel telefon, e-post eller webbadress.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",
@@ -302,6 +434,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
     {
       "id" : "CareTeam.telecom.value",
       "path" : "CareTeam.telecom.value",
+      "short" : "Kontaktuppgift",
+      "definition" : "Själva kontaktuppgiften, till exempel ett telefonnummer eller en webbadress, i den form den ska visas för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",
@@ -310,10 +444,28 @@ Andra representationer av profilen: [CSV](../StructureDefinition-RIVManagingTeam
       }]
     },
     {
+      "id" : "CareTeam.telecom.use",
+      "path" : "CareTeam.telecom.use",
+      "short" : "Avsedd användning",
+      "definition" : "Anger avsedd användning av kontaktvägen."
+    },
+    {
+      "id" : "CareTeam.telecom.rank",
+      "path" : "CareTeam.telecom.rank",
+      "short" : "Prioritetsordning",
+      "definition" : "Ordning i vilken kontaktvägarna bör användas. Värdet 1 anger högst prioritet."
+    },
+    {
+      "id" : "CareTeam.telecom.period",
+      "path" : "CareTeam.telecom.period",
+      "short" : "Giltighetsperiod för kontaktvägen",
+      "definition" : "Period under vilken kontaktvägen gäller."
+    },
+    {
       "id" : "CareTeam.note",
       "path" : "CareTeam.note",
       "short" : "Kommentar",
-      "definition" : "Kommentar eller kompletterande information om teamet.",
+      "definition" : "Kommentar i fritext om teamet, till exempel vägledning om när och hur invånaren kan ta kontakt.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "RIVManagingTeam-to-team-im",

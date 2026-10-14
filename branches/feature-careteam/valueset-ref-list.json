@@ -9,6 +9,40 @@
     "systems" : ["http://hl7.org/fhir/days-of-week"]
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/care-team-category",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "CareTeamCategory",
+    "title" : "Care Team category",
+    "description" : "Indicates the type of care team.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.146",
+    "2.16.840.1.113883.4.642.3.155"],
+    "sources" : ["2.16.840.1.113883.4.642.3.146",
+    "2.16.840.1.113883.4.642.3.155"],
+    "uses" : {
+    },
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/care-team-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "CareTeamStatus",
+    "title" : "Care Team Status",
+    "description" : "Indicates the status of the care team.",
+    "systems" : ["http://hl7.org/fhir/care-team-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.144",
+    "2.16.840.1.113883.4.642.3.153"],
+    "sources" : ["2.16.840.1.113883.4.642.3.144",
+    "2.16.840.1.113883.4.642.3.153"],
+    "uses" : {
+    },
+    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
+    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
+  },
+  {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
     "version" : "0.9",
     "status" : "active",

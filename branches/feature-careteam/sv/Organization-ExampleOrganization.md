@@ -2,16 +2,14 @@
 
 ## Exempel Organization: Exempel vårdenhet
 
-**identifier**: `urn:oid:1.2.752.29.4.19`/SE2321000016-VC123
+Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)
 
-**name**: Vårdcentralen Solrosen
-
-### Contacts
+-------
 
 | | |
 | :--- | :--- |
-| - | **Address** |
-| * | Storgatan 12 Stockholm 12345 SE (work) |
+| Kontaktuppgift | * Storgatan 12 Stockholm 12345 SE (work)
+ |
 
 
 

@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -32,7 +32,6 @@
     }]
   }],
   "packageId" : "inera.fhir.careteam",
-  "license" : "CC0-1.0",
   "fhirVersion" : ["5.0.0"],
   "dependsOn" : [{
     "id" : "hl7tx",
@@ -42,7 +41,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r5",
-    "version" : "7.3.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -57,7 +56,7 @@
   "definition" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r5#1.1.2"
+      "valueCode" : "hl7.fhir.uv.tools.r5#1.3.0"
     }],
     "resource" : [{
       "extension" : [{

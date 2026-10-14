@@ -48,8 +48,8 @@
     "2.16.840.1.113883.4.642.1.507"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R5/valueset-days-of-week.html" : "Days Of Week",
-    "ValueSet-weekday-vs.html" : "Veckodag"
+    "ValueSet-weekday-vs.html" : "Veckodag",
+    "http://hl7.org/fhir/R5/valueset-days-of-week.html" : "Days Of Week"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",

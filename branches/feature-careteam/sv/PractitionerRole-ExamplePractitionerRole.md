@@ -2,13 +2,16 @@
 
 ## Exempel PractitionerRole: Exempelroll för sjuksköterska
 
-**active**: true
+Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123): Nurse at Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)
 
-**practitioner**: [Practitioner Eva Svensson ](Practitioner-ExamplePractitioner.md)
+-------
 
-**organization**: [Organization Vårdcentralen Solrosen](Organization-ExampleOrganization.md)
-
-**code**: Nurse
+| | |
+| :--- | :--- |
+| Aktiv: | true |
+| Practitioner: | [Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)](Practitioner-ExamplePractitioner.md) |
+| Organization: | [Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)](Organization-ExampleOrganization.md) |
+| Role: | Nurse |
 
 
 

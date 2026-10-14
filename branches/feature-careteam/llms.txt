@@ -3,21 +3,21 @@
 ## Pages
 
 * [Hem](sv/index.md)
-* [Om](sv/about.md)
-* [Mappning till profiler](sv/mappings.md)
 * [Användningsfall](sv/use-cases.md)
-* [Förväntade svar](sv/expected-responses.md)
-* [Informationsunderlag](sv/information-basis.md)
+* [Om](sv/about.md)
 * [Testning och validering](sv/testing.md)
 * [Felhantering](sv/error-handling.md)
-* [REST-interaktioner och sökparametrar](sv/rest-interactions.md)
-* [Säkerhet och behörighet](sv/security.md)
-* [Sammanfattning av artefakter](sv/artifacts.md)
 * [Inledning](sv/introduction.md)
-* [Roller och ansvar](sv/roles-and-responsibilities.md)
+* [Mappning till profiler](sv/mappings.md)
+* [Sammanfattning av artefakter](sv/artifacts.md)
+* [Förväntade svar](sv/expected-responses.md)
 * [Nedladdningar](sv/downloads.md)
 * [CapabilityStatement](sv/capabilitystatement.md)
+* [Säkerhet och behörighet](sv/security.md)
 * [Versionshistorik](sv/version-history.md)
+* [Informationsunderlag](sv/information-basis.md)
+* [REST-interaktioner och sökparametrar](sv/rest-interactions.md)
+* [Roller och ansvar](sv/roles-and-responsibilities.md)
 
 ## Resources
 

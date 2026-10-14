@@ -2,9 +2,6 @@
 
 ## CodeSystem: Typ av fast kontakt 
 
- 
-Typ av fast kontakt, dvs en specifik, namngiven person inom vården eller socialtjänsten som har ett ansvar för att ge trygghet, kontinuitet och samordning för en patient eller enskild person. Begreppet är framför allt reglerat i lag och syftar till att patienten/den enskilde vet vem hen ska vända sig till, samt att vården och insatserna blir mer samordnade och individuella. 
-
 Detta kodsystem refereras i definitionen av följande värdemängder:
 
 * [Typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
@@ -31,7 +28,7 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

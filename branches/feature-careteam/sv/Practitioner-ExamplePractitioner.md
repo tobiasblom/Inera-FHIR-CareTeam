@@ -2,11 +2,14 @@
 
 ## Exempel Practitioner: Exempel vårdpersonal
 
-**identifier**: `urn:oid:1.2.752.29.4.19`/SE2321000016-ABC123, `urn:oid:1.2.752.129.2.1.4.1`/196912302345
+Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)
 
-**name**: Eva Svensson 
+-------
 
-**gender**: Female
+| | |
+| :--- | :--- |
+| Gender: | Female |
+| Annat id: | `urn:oid:1.2.752.129.2.1.4.1`/196912302345 |
 
 
 

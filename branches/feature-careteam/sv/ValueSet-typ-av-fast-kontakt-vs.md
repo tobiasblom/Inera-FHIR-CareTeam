@@ -2,9 +2,6 @@
 
 ## ValueSet: Typ av fast kontakt 
 
- 
-Tillåtna typer av fast kontakt 
-
  **References** 
 
 * [Fast kontakt](StructureDefinition-RIVCareManager-careteam.md)
@@ -33,7 +30,7 @@ Tillåtna typer av fast kontakt
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

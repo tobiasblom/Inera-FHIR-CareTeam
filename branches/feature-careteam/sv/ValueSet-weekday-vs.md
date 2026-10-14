@@ -2,9 +2,6 @@
 
 ## ValueSet: Veckodag 
 
- 
-Tillåtna veckodagar för kontakttid. 
-
  **References** 
 
 Denna värdemängd används inte här; den kan användas på andra ställen (t.ex. specifikationer och/eller implementationer som använder detta innehåll)
@@ -32,7 +29,7 @@ Denna värdemängd används inte här; den kan användas på andra ställen (t.e
   "name" : "WeekdayVS",
   "title" : "Veckodag",
   "status" : "draft",
-  "date" : "2026-09-21T08:04:47+00:00",
+  "date" : "2026-10-14T09:34:21+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
