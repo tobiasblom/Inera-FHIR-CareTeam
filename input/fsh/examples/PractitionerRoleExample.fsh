@@ -9,4 +9,4 @@ Usage: #example
 * practitioner = Reference(ExamplePractitioner)
 * organization = Reference(ExampleOrganization)
 
-* code[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#nurse "Nurse"
+* code[0] = urn:oid:1.2.752.129.2.2.1.4#206090 "Sjuksköterska"

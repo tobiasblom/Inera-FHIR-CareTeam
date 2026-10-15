@@ -4,7 +4,7 @@ Title: "Exempel vårdenhet"
 Description: "Vårdcentral där den fasta vårdkontakten arbetar."
 Usage: #example
 
-* identifier[0].system = "urn:oid:1.2.752.29.4.19"
+* identifier[0].system = "urn:oid:1.2.752.129.2.1.4.1"
 * identifier[0].value = "SE2321000016-VC123"
 
 * name = "Vårdcentralen Solrosen"

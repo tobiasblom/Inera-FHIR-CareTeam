@@ -16,6 +16,8 @@ Usage: #example
 * participant[0].member = Reference(ExamplePractitionerRole)
 * participant[0].member.display = "Eva Svensson, sjuksköterska"
 
+* managingOrganization = Reference(ExampleOrganization)
+
 * telecom[0].system = #phone
 * telecom[0].value = "010-123 45 67"
 

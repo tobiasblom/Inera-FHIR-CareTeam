@@ -164,6 +164,7 @@ Följande delar av informationsmodellen realiseras inte i nuvarande version av I
 |---|---|
 | Hälsoärende | Det finns i nuläget inte verksamhetsmässigt stöd för att strukturerat ange vilket hälsoärende den fasta kontakten hör till. |
 | Ändringsorsak | Det finns i nuläget inte verksamhetsmässigt stöd för att strukturerat dokumentera orsaken till en ändring av den fasta kontakten. |
+| Version | Det finns i nuläget inte verksamhetsmässigt stöd för att strukturerat dokumentera versionen av den fasta kontakten. |
 
 ---
 
