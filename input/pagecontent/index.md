@@ -1,4 +1,4 @@
-#### Fasta kontakter
+### Fasta kontakter
 
 Denna implementationsguide beskriver hur information om fasta kontakter representeras och utbyts med HL7 FHIR inom Ineras informationsförsörjning.
 

@@ -2,7 +2,7 @@ Mapping:  InformationsmodellFastKontakt
 Id:       informationsmodell
 Title:    "Informationsmodell - Fast kontakt"
 Source:   RIVCareManager
-Target:   "https://fhir.inera.se/ig/careteam/mappings.html"
+Target:   "urn:inera:informationsmodell:fasta-kontakter"
 Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVCareManager."
 
 * subject -> "Person.person-id" "Invånaren som den fasta kontakten gäller för. Själva person-id:t finns på den refererade Patient-resursen, i Patient.identifier."

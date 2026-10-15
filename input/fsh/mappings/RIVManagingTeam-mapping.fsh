@@ -2,7 +2,7 @@ Mapping:  InformationsmodellTeam
 Id:       informationsmodell
 Title:    "Informationsmodell - Team"
 Source:   RIVManagingTeam
-Target:   "https://fhir.inera.se/ig/careteam/mappings.html"
+Target:   "urn:inera:informationsmodell:fasta-kontakter"
 Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVManagingTeam."
 
 * identifier -> "Team.id" "Identifierare för teamet."
