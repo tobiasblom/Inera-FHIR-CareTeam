@@ -20,32 +20,32 @@
   "name" : "IneraFHIRCareTeam"
 },
 {
-  "id" : "RIVCareManager-careteam",
+  "id" : "contact-point-availability",
   "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability",
+  "version" : "0.9",
+  "name" : "RIVContactPointAvailabilityExtension"
+},
+{
+  "id" : "contact-via-team",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-via-team",
+  "version" : "0.9",
+  "name" : "RIVContactViaTeamExtension"
+},
+{
+  "id" : "riv-care-manager-careteam",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam",
   "version" : "0.9",
   "name" : "RIVCareManager"
 },
 {
-  "id" : "RIVContactPointAvailability",
+  "id" : "riv-managing-team-careteam",
   "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability",
-  "version" : "0.9",
-  "name" : "RIVContactPointAvailability"
-},
-{
-  "id" : "RIVManagingTeam-careteam",
-  "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam",
   "version" : "0.9",
   "name" : "RIVManagingTeam"
-},
-{
-  "id" : "riv-contact-via-team-extension",
-  "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension",
-  "version" : "0.9",
-  "name" : "RIVContactViaTeamExtension"
 },
 {
   "id" : "typ-av-careteam-vs",

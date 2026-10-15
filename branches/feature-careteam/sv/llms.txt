@@ -34,13 +34,13 @@
 
 ### Resource Profiles
 
-* [Fast kontakt](StructureDefinition-RIVCareManager-careteam.md)
-* [Team](StructureDefinition-RIVManagingTeam-careteam.md)
+* [Fast kontakt](StructureDefinition-riv-care-manager-careteam.md)
+* [Team](StructureDefinition-riv-managing-team-careteam.md)
 
 ### Extensions
 
-* [Tillgänglighet för kontaktväg](StructureDefinition-RIVContactPointAvailability.md)
-* [Kontakt via team](StructureDefinition-riv-contact-via-team-extension.md)
+* [Tillgänglighet för kontaktväg](StructureDefinition-contact-point-availability.md)
+* [Kontakt via team](StructureDefinition-contact-via-team.md)
 
 ### ImplementationGuides
 

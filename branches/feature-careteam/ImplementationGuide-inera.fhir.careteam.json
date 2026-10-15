@@ -11,7 +11,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-10-14T09:34:21+00:00",
+  "date" : "2026-10-15T08:56:04+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -66,7 +66,7 @@
       "name" : "Exempel fast kontakt",
       "description" : "Fast vårdkontakt för patient, där kontakt sker via ett team.",
       "isExample" : true,
-      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam"]
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"]
     },
     {
       "extension" : [{
@@ -127,7 +127,7 @@
       "name" : "Exempelteam",
       "description" : "Team som den fasta vårdkontakten ingår i och som används för kontakt.",
       "isExample" : true,
-      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"]
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam"]
     },
     {
       "extension" : [{
@@ -135,7 +135,7 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/RIVCareManager-careteam"
+        "reference" : "StructureDefinition/riv-care-manager-careteam"
       },
       "name" : "Fast kontakt",
       "description" : "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet.",
@@ -147,7 +147,7 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/riv-contact-via-team-extension"
+        "reference" : "StructureDefinition/contact-via-team"
       },
       "name" : "Kontakt via team",
       "description" : "Anger ett team som en fast kontakt kan nås via.",
@@ -159,7 +159,7 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/RIVManagingTeam-careteam"
+        "reference" : "StructureDefinition/riv-managing-team-careteam"
       },
       "name" : "Team",
       "description" : "Profil som beskriver ett vård- eller omsorgsteam i svensk vård och omsorg. Ett team kan vara kopplat till en invånare och kan ha egna kontaktuppgifter. Teamet kan också utgöra kontaktväg eller organisatoriskt sammanhang för en fast kontakt.",
@@ -171,7 +171,7 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/RIVContactPointAvailability"
+        "reference" : "StructureDefinition/contact-point-availability"
       },
       "name" : "Tillgänglighet för kontaktväg",
       "description" : "Anger när en kontaktväg är tillgänglig.",

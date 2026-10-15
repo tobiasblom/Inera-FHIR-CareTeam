@@ -5,7 +5,7 @@
   "jurisdiction": "SE",
   "extensions": [
     {
-      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability",
+      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability",
       "title": "Tillgänglighet för kontaktväg",
       "types": [
         "Availability",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension",
+      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-via-team",
       "title": "Kontakt via team",
       "types": [
         "Reference"
@@ -36,11 +36,11 @@
   "profiles": {
     "CareTeam": [
       {
-        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam",
+        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam",
         "title": "Fast kontakt"
       },
       {
-        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam",
+        "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam",
         "title": "Team"
       }
     ]
@@ -77,10 +77,10 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability": [
+    "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability": [
       "CareTeam.telecom"
     ],
-    "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension": [
+    "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-via-team": [
       "CareTeam.participant"
     ]
   }

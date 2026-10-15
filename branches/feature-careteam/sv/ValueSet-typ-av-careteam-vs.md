@@ -30,7 +30,7 @@ Denna värdemängd används inte här; den kan användas på andra ställen (t.e
   "title" : "Typ av CareTeam",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T09:34:21+00:00",
+  "date" : "2026-10-15T08:56:04+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-14T09:34:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T08:56:04+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -93,8 +93,8 @@
        fhir:description [ fhir:v "Fast vårdkontakt för patient, där kontakt sker via ett team." ] ;
        fhir:isExample [ fhir:v true ] ;
        fhir:profile ( [
-         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam"^^xsd:anyURI ;
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam>
+         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"^^xsd:anyURI ;
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam>
        ] )
      ] [
        fhir:extension ( [
@@ -172,8 +172,8 @@
        fhir:description [ fhir:v "Team som den fasta vårdkontakten ingår i och som används för kontakt." ] ;
        fhir:isExample [ fhir:v true ] ;
        fhir:profile ( [
-         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"^^xsd:anyURI ;
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam>
+         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam"^^xsd:anyURI ;
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam>
        ] )
      ] [
        fhir:extension ( [
@@ -184,8 +184,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam> ;
-         fhir:reference [ fhir:v "StructureDefinition/RIVCareManager-careteam" ]
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam> ;
+         fhir:reference [ fhir:v "StructureDefinition/riv-care-manager-careteam" ]
        ] ;
        fhir:name [ fhir:v "Fast kontakt" ] ;
        fhir:description [ fhir:v "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet." ] ;
@@ -199,8 +199,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/riv-contact-via-team-extension" ]
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/contact-via-team> ;
+         fhir:reference [ fhir:v "StructureDefinition/contact-via-team" ]
        ] ;
        fhir:name [ fhir:v "Kontakt via team" ] ;
        fhir:description [ fhir:v "Anger ett team som en fast kontakt kan nås via." ] ;
@@ -214,8 +214,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam> ;
-         fhir:reference [ fhir:v "StructureDefinition/RIVManagingTeam-careteam" ]
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam> ;
+         fhir:reference [ fhir:v "StructureDefinition/riv-managing-team-careteam" ]
        ] ;
        fhir:name [ fhir:v "Team" ] ;
        fhir:description [ fhir:v "Profil som beskriver ett vård- eller omsorgsteam i svensk vård och omsorg. Ett team kan vara kopplat till en invånare och kan ha egna kontaktuppgifter. Teamet kan också utgöra kontaktväg eller organisatoriskt sammanhang för en fast kontakt." ] ;
@@ -229,8 +229,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability> ;
-         fhir:reference [ fhir:v "StructureDefinition/RIVContactPointAvailability" ]
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability> ;
+         fhir:reference [ fhir:v "StructureDefinition/contact-point-availability" ]
        ] ;
        fhir:name [ fhir:v "Tillgänglighet för kontaktväg" ] ;
        fhir:description [ fhir:v "Anger när en kontaktväg är tillgänglig." ] ;

@@ -22,8 +22,8 @@
     "2.16.840.1.113883.4.642.3.155"],
     "uses" : {
     },
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-status",
@@ -39,8 +39,8 @@
     "2.16.840.1.113883.4.642.3.153"],
     "uses" : {
     },
-    "StructureDefinition-RIVManagingTeam-careteam.html" : "Team",
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
@@ -61,6 +61,6 @@
     "systems" : ["https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"],
     "uses" : {
     },
-    "StructureDefinition-RIVCareManager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
   }]
 }

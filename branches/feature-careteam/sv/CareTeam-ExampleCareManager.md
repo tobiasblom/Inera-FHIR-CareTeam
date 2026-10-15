@@ -2,7 +2,7 @@
 
 ## Exempel CareTeam: Exempel fast kontakt
 
-Profil: [Fast kontakt](StructureDefinition-RIVCareManager-careteam.md)
+Profil: [Fast kontakt](StructureDefinition-riv-care-manager-careteam.md)
 
 **status**: Active
 
@@ -35,7 +35,7 @@ Eva Svensson är Annas fasta vårdkontakt och nås via Norra teamet.
   "resourceType" : "CareTeam",
   "id" : "ExampleCareManager",
   "meta" : {
-    "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVCareManager-careteam"]
+    "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"]
   },
   "status" : "active",
   "category" : [{
@@ -53,7 +53,7 @@ Eva Svensson är Annas fasta vårdkontakt och nås via Norra teamet.
   },
   "participant" : [{
     "extension" : [{
-      "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-contact-via-team-extension",
+      "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-via-team",
       "valueReference" : {
         "reference" : "CareTeam/ExampleManagingTeam",
         "display" : "Norra teamet"

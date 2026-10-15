@@ -2,7 +2,7 @@
 
 ## Exempel CareTeam: Exempelteam
 
-Profil: [Team](StructureDefinition-RIVManagingTeam-careteam.md)
+Profil: [Team](StructureDefinition-riv-managing-team-careteam.md)
 
 **identifier**: `https://example.org/fhir/sid/team-id`/TEAM-SOLROSEN-NORRA
 
@@ -37,7 +37,7 @@ Teamets telefonnummer används för kontakt med medarbetare i teamet.
   "resourceType" : "CareTeam",
   "id" : "ExampleManagingTeam",
   "meta" : {
-    "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/RIVManagingTeam-careteam"]
+    "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/riv-managing-team-careteam"]
   },
   "identifier" : [{
     "system" : "https://example.org/fhir/sid/team-id",
@@ -59,7 +59,7 @@ Teamets telefonnummer används för kontakt med medarbetare i teamet.
   }],
   "telecom" : [{
     "extension" : [{
-      "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/RIVContactPointAvailability",
+      "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability",
       "valueAvailability" : {
         "availableTime" : [{
           "daysOfWeek" : ["mon", "tue", "wed", "thu", "fri"],
