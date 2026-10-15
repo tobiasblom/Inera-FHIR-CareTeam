@@ -1,7 +1,8 @@
-ValueSet: "Urval typ av fast kontakt"
-Id: typ-av-fast-kontakt-vs
-Title: "Typ av fast kontakt"
+ValueSet:    TypAvFastKontaktVS
+Id:          typ-av-fast-kontakt-vs
+Title:       "Urval typ av fast kontakt"
 Description: "Tillåtna typer av fast kontakt"
+
 * ^status = #active
 * ^experimental = false
 * ^publisher = "Inera AB"
