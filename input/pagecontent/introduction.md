@@ -1,5 +1,3 @@
-# Inledning
-
 Denna implementationsguide (IG) beskriver det FHIR-baserade informationsutbytet för **Fasta kontakter** inom Ineras informationsförsörjning.
 
 IG:n utgår från det informationsbehov som tagits fram inom arbetet med Sammanhållen planering på 1177. Informationsbehovet beskriver vilken information som behöver kunna delas om en persons fasta kontakter för att informationen ska kunna användas och presenteras av Ineras konsumerande tjänster.
@@ -10,7 +8,7 @@ Kraven uttrycks både genom maskintolkbara FHIR-artefakter, såsom profiler, Val
 
 ---
 
-## Läsanvisning
+### Läsanvisning
 
 Under **Funktionellt** beskrivs bakgrunden till informationsutbytet och hur informationsbehovet har realiserats:
 

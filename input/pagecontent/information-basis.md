@@ -1,5 +1,3 @@
-# Informationsunderlag
-
 Denna implementationsguide bygger på det informatikarbete som genomförts för informationsmängden **Fasta kontakter** inom uppdraget Sammanhållen planering på 1177.
 
 Det informatiska underlaget beskriver begrepp, informationsbehov och informationsstruktur för fasta kontakter. IG:n realiserar relevanta delar av detta underlag med HL7 FHIR.
@@ -11,7 +9,7 @@ De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. 
 | **Fasta kontakter – Begrepps- och informationsmodell** | 1.1, 2025-12-04 | Begreppsmodell, definitioner samt informationsmodell med klasser, attribut, datatyper, identifierare och kodverk. |
 | **Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering** | 1.1, 2025-12-04 | Bakgrund, beskrivning av olika typer av fasta kontakter, informationsbehov, kartläggning av regional förmåga och övergripande teknisk inriktning. |
 
-## Källor
+### Källor
 
 Båda dokumenten nedan finns publicerade på Ineras samarbetsyta för **Fasta kontakter**:
 

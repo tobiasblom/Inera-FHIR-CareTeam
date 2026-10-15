@@ -1,6 +1,4 @@
-# Hem
-
-### Fasta kontakter
+#### Fasta kontakter
 
 Denna implementationsguide beskriver hur information om fasta kontakter representeras och utbyts med HL7 FHIR inom Ineras informationsförsörjning.
 
@@ -10,7 +8,7 @@ Guiden beskriver de FHIR-profiler, terminologier och tekniska regler som en info
 
 ---
 
-### Omfattning
+#### Omfattning
 
 Implementationsguiden realiserar informationsbehovet för fasta kontakter som identifierats inom arbetet med Sammanhållen planering på 1177.
 
@@ -26,13 +24,13 @@ IG:n beskriver informationsutbytet och ställer inte krav på hur informationen 
 
 ---
 
-### Syfte
+#### Syfte
 
 Syftet med implementationsguiden är att möjliggöra ett enhetligt och strukturerat informationsutbyte om fasta kontakter mellan informationsproducenter och Ineras tjänster, exempelvis för presentation för invånare.
 
 ---
 
-### Målgrupp
+#### Målgrupp
 Implementationsguiden vänder sig främst till personer som utvecklar eller ansvarar för system som ska producera eller konsumera information om fasta kontakter, exempelvis:
 
 - system- och lösningsarkitekter
@@ -47,13 +45,13 @@ För teknisk information om hur API:et används, se [REST-interaktioner och sök
 
 ---
 
-### Terminologi
+#### Terminologi
 
 På [Inera Terminologitjänst](https://www.inera.se/tjanster/alla-tjanster-a-o/terminologitjanst-for-nationell-e-halsa/) finns alla refererade kodsystem och värdemängder som utvecklats av Inera.
 
 ---
 
-### Beroenden
+#### Beroenden
 
 Denna IG bygger på FHIR-profiler och andra artefakter från de beroenden som anges i implementationsguidens paketdefinition.
 
@@ -61,7 +59,7 @@ Denna IG bygger på FHIR-profiler och andra artefakter från de beroenden som an
 
 ---
 
-### Dokumentation
+#### Dokumentation
 
 Mer information om FHIR på Inera  finns [här](https://fhir.inera.se/). FHIR på Inera är en del av RIVTA – referensarkitekturen för svensk hälso- och sjukvård.
 

@@ -1,4 +1,4 @@
-ValueSet: TypAvFastKontaktVS
+ValueSet: "Urval typ av fast kontakt"
 Id: typ-av-fast-kontakt-vs
 Title: "Typ av fast kontakt"
 Description: "Tillåtna typer av fast kontakt"

@@ -1,4 +1,4 @@
-ValueSet: TypAvCareTeamVS
+ValueSet: "Urval typ av CareTeam"
 Id: typ-av-careteam-vs
 Title: "Typ av CareTeam"
 Description: "ValueSet som innehåller tillåtna typer av CareTeam."

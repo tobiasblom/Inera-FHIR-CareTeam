@@ -1,8 +1,8 @@
-Mapping: RIVManagingTeamToTeamIM
-Id: RIVManagingTeam-to-team-im
-Title: "Mappning mellan informationsmodell och Team"
-Source: RIVManagingTeam
-Target: "Informationsmodell - Team"
+Mapping:  InformationsmodellTeam
+Id:       informationsmodell
+Title:    "Informationsmodell - Team"
+Source:   RIVManagingTeam
+Target:   "https://fhir.inera.se/ig/careteam/mappings.html"
 Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVManagingTeam."
 
 * identifier -> "Team.id" "Identifierare för teamet."

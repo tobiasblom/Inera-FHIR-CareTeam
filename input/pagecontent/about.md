@@ -1,6 +1,4 @@
-# Om
-
-### Styrning och förvaltning
+#### Styrning och förvaltning
 
 FHIR-profiler förvaltas av Inera: [Källkod](https://github.com/inera-ab).
 

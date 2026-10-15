@@ -20,6 +20,7 @@ parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
   i18n-default-lang: sv
+  special-url: https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt
 
 pages:
   index.md:
