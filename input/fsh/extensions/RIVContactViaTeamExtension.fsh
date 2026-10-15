@@ -1,5 +1,5 @@
 Extension: RIVContactViaTeamExtension
-Id: riv-contact-via-team-extension
+Id: contact-via-team
 Title: "Kontakt via team"
 Description: "Anger ett team som en fast kontakt kan nås via."
 

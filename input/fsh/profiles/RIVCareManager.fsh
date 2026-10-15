@@ -8,7 +8,7 @@
 
 Profile:        RIVCareManager
 Parent:         CareTeam
-Id:             RIVCareManager-careteam
+Id:             riv-care-manager-careteam
 Title:          "Fast kontakt"
 Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet."
 
@@ -87,7 +87,7 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * telecom 0..* MS
 * telecom.system MS
 * telecom.value MS
-* telecom.extension contains RIVContactPointAvailability named availability 0..1 MS
+* telecom.extension contains RIVContactPointAvailabilityExtension named availability 0..1 MS
 * telecom ^short = "Kontaktväg till den fasta kontakten"
 * telecom ^definition = "Kontaktväg som invånaren använder för att nå den fasta kontakten, till exempel ett telefonnummer eller en webbadress. Om den fasta kontakten nås via ett team kan teamet i stället anges i participant.extension[contactViaTeam], och kontaktvägen hämtas då från teamets telecom."
 * insert SvenskaKontaktvagsbeskrivningar

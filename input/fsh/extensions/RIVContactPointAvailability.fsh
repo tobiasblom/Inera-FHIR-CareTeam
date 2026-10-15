@@ -1,5 +1,5 @@
-Extension: RIVContactPointAvailability
-Id: RIVContactPointAvailability
+Extension: RIVContactPointAvailabilityExtension
+Id: contact-point-availability
 Title: "Tillgänglighet för kontaktväg"
 Description: "Anger när en kontaktväg är tillgänglig."
 

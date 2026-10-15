@@ -8,7 +8,7 @@
 
 Profile:        RIVManagingTeam
 Parent:         CareTeam
-Id:             RIVManagingTeam-careteam
+Id:             riv-managing-team-careteam
 Title:          "Team"
 Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vård och omsorg. Ett team kan vara kopplat till en invånare och kan ha egna kontaktuppgifter. Teamet kan också utgöra kontaktväg eller organisatoriskt sammanhang för en fast kontakt."
 
@@ -80,7 +80,7 @@ Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vår
 * telecom 0..* MS
 * telecom.system MS
 * telecom.value MS
-* telecom.extension contains RIVContactPointAvailability named availability 0..1 MS
+* telecom.extension contains RIVContactPointAvailabilityExtension named availability 0..1 MS
 * telecom ^short = "Kontaktväg till teamet"
 * telecom ^definition = "Kontaktväg som invånaren använder för att nå teamet, till exempel ett telefonnummer eller en webbadress. Kontaktvägen används även när en fast kontakt nås via teamet."
 * insert SvenskaKontaktvagsbeskrivningar
