@@ -22,3 +22,6 @@ Description: "Typ av fast kontakt, dvs en specifik, namngiven person inom vårde
 
 * #4 "fast vårdkontakt med övergripande samordningsansvar"
   * ^definition = "en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter"
+
+* #9 "annan fast kontakt"
+* ^definition = "namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt"

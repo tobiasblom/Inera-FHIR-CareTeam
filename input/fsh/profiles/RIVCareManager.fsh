@@ -69,7 +69,8 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * participant.member ^definition = "Den person som har uppdraget som fast kontakt, uttryckt som personen i sin roll vid den vårdande enhet eller omsorgsenhet där personen tjänstgör. Via referensen anges personalens namn, identitet (för hälso- och sjukvårdspersonal HSA-id), befattning och enhet."
 
 * participant.role 1..1 MS
-* participant.role from TypAvFastKontaktVS (required)
+* participant.role from TypAvFastKontaktVS (extensible)
+* participant.role obeys fast-kontakt-typ-kod-eller-text
 * participant.role ^short = "Typ av fast kontakt"
 * participant.role ^definition = "Anger vilken typ av fast kontakt relationen avser, till exempel fast vårdkontakt, fast läkarkontakt i primärvården eller fast omsorgskontakt i hemtjänsten. Rollen avser funktionen i relation till invånaren, inte yrkestitel eller befattning."
 * participant.role ^binding.description = "Typ av fast kontakt."
