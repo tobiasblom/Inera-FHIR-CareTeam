@@ -26,6 +26,8 @@ Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.htm
 
 #### Terminologibindningar (differential)
 
+#### Begränsningar
+
 #### Terminologibindningar
 
 #### Begränsningar
@@ -43,6 +45,8 @@ Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.htm
 Denna struktur är härledd från [CareTeam](http://hl7.org/fhir/R5/careteam.html) 
 
 #### Terminologibindningar (differential)
+
+#### Begränsningar
 
  **ÖgonblicksbildsvyView** 
 
@@ -69,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-10-15T09:21:11+00:00",
+  "date" : "2026-10-15T12:03:42+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -352,9 +356,16 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "short" : "Typ av fast kontakt",
       "definition" : "Anger vilken typ av fast kontakt relationen avser, till exempel fast vårdkontakt, fast läkarkontakt i primärvården eller fast omsorgskontakt i hemtjänsten. Rollen avser funktionen i relation till invånaren, inte yrkestitel eller befattning.",
       "min" : 1,
+      "constraint" : [{
+        "key" : "fast-kontakt-typ-kod-eller-text",
+        "severity" : "error",
+        "human" : "Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.",
+        "expression" : "(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/<id>')",
+        "source" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"
+      }],
       "mustSupport" : true,
       "binding" : {
-        "strength" : "required",
+        "strength" : "extensible",
         "description" : "Typ av fast kontakt.",
         "valueSet" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs"
       },

@@ -1,11 +1,11 @@
 IneraFHIRCareTeam : Validation Results
 =========================================
 
-err = 36, warn = 136, info = 37, broken links = 0
+err = 37, warn = 136, info = 37, broken links = 0
 $--
 Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 30 / 111 / 0
- /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManager : 0 / 0 / 1
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManager : 1 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleManagingTeam : 0 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-careteam-cs : 0 / 3 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs : 2 / 2 / 3
@@ -165,6 +165,7 @@ ERROR: /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/output/sv/versi
 ERROR: /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/output/sv/version-history.html: The page has more than one top level heading: <h2> 'Tidigare utkast' (id=tidigare-utkast) is at the same level as the first heading on the page (<h2> 'Versionshistorik'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
 WARNING: /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/output/sv/version-history.html: The html source has duplicate element ids: segment-navbar,stripe. An id must be unique in a page - a link to one of these is ambiguous, and it is invalid HTML
 == fsh-generated/resources/CareTeam-ExampleCareManager.json ==
+ERROR: CareTeam/ExampleCareManager: CareTeam.participant[0].role: Begränsning misslyckades: fast-kontakt-typ-kod-eller-text: 'Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas. ((coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/<id>'))' (definierad i https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam)
 == fsh-generated/resources/CareTeam-ExampleManagingTeam.json ==
 == fsh-generated/resources/CodeSystem-typ-av-careteam-cs.json ==
 WARNING: CodeSystem/typ-av-careteam-cs: CodeSystem.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras

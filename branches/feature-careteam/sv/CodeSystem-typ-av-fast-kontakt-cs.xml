@@ -4,7 +4,7 @@
   <id value="typ-av-fast-kontakt-cs"/>
   <language value="sv"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: CodeSystem typ-av-fast-kontakt-cs</b></p><a name="typ-av-fast-kontakt-cs"> </a><a name="hctyp-av-fast-kontakt-cs"> </a><p>Detta  kodsystem <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code> definierar följande koder:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">1<a name="typ-av-fast-kontakt-cs-1"> </a></td><td>fast vårdkontakt</td><td>namngiven personal inom hälso- och sjukvård som ska bistå och stödja patienten genom att samordna vårdens insatser och övriga kontakter</td></tr><tr><td style="white-space:nowrap">2<a name="typ-av-fast-kontakt-cs-2"> </a></td><td>fast läkarkontakt i primärvård</td><td>namngiven läkare på den hälso- eller vårdcentral där patienten är listad, som ansvarar för och samordnar patientens medicinska vård</td></tr><tr><td style="white-space:nowrap">3<a name="typ-av-fast-kontakt-cs-3"> </a></td><td>fast omsorgskontakt i hemtjänsten</td><td>namngiven personal inom hemtjänstens verkställande verksamhet som ska bistå och stödja omsorgstagaren och hens anhöriga genom att samordna insatser och övriga kontakter</td></tr><tr><td style="white-space:nowrap">4<a name="typ-av-fast-kontakt-cs-4"> </a></td><td>fast vårdkontakt med övergripande samordningsansvar</td><td>en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: CodeSystem typ-av-fast-kontakt-cs</b></p><a name="typ-av-fast-kontakt-cs"> </a><a name="hctyp-av-fast-kontakt-cs"> </a><p>Detta  kodsystem <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code> definierar följande koder:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">1<a name="typ-av-fast-kontakt-cs-1"> </a></td><td>fast vårdkontakt</td><td>namngiven personal inom hälso- och sjukvård som ska bistå och stödja patienten genom att samordna vårdens insatser och övriga kontakter</td></tr><tr><td style="white-space:nowrap">2<a name="typ-av-fast-kontakt-cs-2"> </a></td><td>fast läkarkontakt i primärvård</td><td>namngiven läkare på den hälso- eller vårdcentral där patienten är listad, som ansvarar för och samordnar patientens medicinska vård</td></tr><tr><td style="white-space:nowrap">3<a name="typ-av-fast-kontakt-cs-3"> </a></td><td>fast omsorgskontakt i hemtjänsten</td><td>namngiven personal inom hemtjänstens verkställande verksamhet som ska bistå och stödja omsorgstagaren och hens anhöriga genom att samordna insatser och övriga kontakter</td></tr><tr><td style="white-space:nowrap">4<a name="typ-av-fast-kontakt-cs-4"> </a></td><td>fast vårdkontakt med övergripande samordningsansvar</td><td>en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter</td></tr><tr><td style="white-space:nowrap">9<a name="typ-av-fast-kontakt-cs-9"> </a></td><td>annan fast kontakt</td><td>namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt</td></tr></table></div>
   </text>
   <url value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
   <identifier>
@@ -16,7 +16,7 @@
   <title value="Typ av fast kontakt"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-10-15T09:21:11+00:00"/>
+  <date value="2026-10-15T12:03:42+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -34,7 +34,7 @@
     </coding>
   </jurisdiction>
   <content value="complete"/>
-  <count value="4"/>
+  <count value="5"/>
   <concept>
     <code value="1"/>
     <display value="fast vårdkontakt"/>
@@ -54,5 +54,10 @@
     <code value="4"/>
     <display value="fast vårdkontakt med övergripande samordningsansvar"/>
     <definition value="en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="annan fast kontakt"/>
+    <definition value="namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt"/>
   </concept>
 </CodeSystem>

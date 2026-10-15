@@ -6,9 +6,9 @@
   "status" : "draft",
   "package-id" : "inera.fhir.careteam",
   "ig-ver" : "0.9",
-  "date" : "Thu, 15 Oct, 2026 09:21:11 +0000",
-  "dateISO8601" : "2026-10-15T09:21:11+00:00",
-  "errs" : 36,
+  "date" : "Thu, 15 Oct, 2026 12:03:42 +0000",
+  "dateISO8601" : "2026-10-15T12:03:42+00:00",
+  "errs" : 37,
   "warnings" : 136,
   "hints" : 37,
   "broken-links" : 0,
@@ -16,5 +16,5 @@
   "suppressed-warnings" : 2,
   "version" : "5.0.0",
   "tool" : "6.0.0-snapshot1 (3)",
-  "maxMemory" : 998520848
+  "maxMemory" : 745816672
 }

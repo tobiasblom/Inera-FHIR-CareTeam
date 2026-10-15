@@ -28,7 +28,7 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-15T09:21:11+00:00",
+  "date" : "2026-10-15T12:03:42+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -46,7 +46,7 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
     }]
   }],
   "content" : "complete",
-  "count" : 4,
+  "count" : 5,
   "concept" : [{
     "code" : "1",
     "display" : "fast vårdkontakt",
@@ -66,6 +66,11 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
     "code" : "4",
     "display" : "fast vårdkontakt med övergripande samordningsansvar",
     "definition" : "en fast vårdkontakt med övergripande ansvar för samordning, i de fall en patient har flera fasta vårdkontakter"
+  },
+  {
+    "code" : "9",
+    "display" : "annan fast kontakt",
+    "definition" : "namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt"
   }]
 }
 

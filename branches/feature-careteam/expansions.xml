@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="65108064-8621-4dcf-8612-700c69514cf2"/>
+  <id value="6ed181ea-a674-4af6-9e55-3e2fb1307372"/>
   <meta>
-    <lastUpdated value="2026-10-15T09:21:11.891+00:00"/>
+    <lastUpdated value="2026-10-15T12:03:42.431+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -93,7 +93,7 @@
         <title value="Typ av CareTeam"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -102,8 +102,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5272ea3e-272c-4fb6-b0ee-d8d399243d17"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
+          <identifier value="urn:uuid:22d1bdf2-254c-409e-9c1f-8e46e1f76ec4"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -225,7 +225,7 @@
         <title value="Typ av CareTeam"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -234,8 +234,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:17b27e1e-5e44-4602-909b-4f72e9f969b3"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
+          <identifier value="urn:uuid:a4606b20-a58e-4047-b924-08bde2adf129"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -284,7 +284,7 @@
                 <button data-clipboard-text="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt|0.9" title="Klicka för att kopiera URL" class="btn-copy" aria-label="copy"> </button>
               </span>
             </p>
-            <p>Denna värdemängd innehåller 4 begrepp</p>
+            <p>Denna värdemängd innehåller 5 begrepp</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -390,6 +390,27 @@
                   </span>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <a name="x-https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt-9"> </a>
+                  <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-typ-av-fast-kontakt-cs.html#typ-av-fast-kontakt-cs-9">9</a>
+                </td>
+                <td/>
+                <td>namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt&quot;, &quot;version&quot;: &quot;0.9&quot;, &quot;code&quot;: &quot;9&quot;}" title="Klicka för att kopiera som Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt&quot;/&gt;&lt;version value=&quot;0.9&quot;/&gt;&lt;code value=&quot;9&quot;/&gt;&lt;/coding&gt;" title="Klicka för att kopiera som Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
             </table>
           </div>
         </text>
@@ -399,7 +420,7 @@
         <title value="Typ av fast kontakt"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -408,9 +429,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:53985a83-4374-4b01-abd1-87c383afabaf"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
-          <total value="4"/>
+          <identifier value="urn:uuid:7500a37a-d322-4106-a1f1-e76dd9a6efa3"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
+          <total value="5"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -447,6 +468,10 @@
           <contains>
             <system value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
             <code value="4"/>
+          </contains>
+          <contains>
+            <system value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
+            <code value="9"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -466,7 +491,7 @@
                 <button data-clipboard-text="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt|0.9" title="Klicka för att kopiera URL" class="btn-copy" aria-label="copy"> </button>
               </span>
             </p>
-            <p>Denna värdemängd innehåller 4 begrepp</p>
+            <p>Denna värdemängd innehåller 5 begrepp</p>
             <table class="codes" data-fhir="generated">
               <tr>
                 <td>
@@ -572,6 +597,27 @@
                   </span>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <a name="x-https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt-9"> </a>
+                  <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-typ-av-fast-kontakt-cs.html#typ-av-fast-kontakt-cs-9">9</a>
+                </td>
+                <td/>
+                <td>namngiven personal inom hälso- och sjukvård eller omsorg som ska bistå och stödja patienten eller omsorgstagaren genom att samordna insatser och kontakter, men som inte motsvarar någon av de särskilt angivna typerna av fast kontakt</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt&quot;, &quot;version&quot;: &quot;0.9&quot;, &quot;code&quot;: &quot;9&quot;}" title="Klicka för att kopiera som Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt&quot;/&gt;&lt;version value=&quot;0.9&quot;/&gt;&lt;code value=&quot;9&quot;/&gt;&lt;/coding&gt;" title="Klicka för att kopiera som Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
             </table>
           </div>
         </text>
@@ -581,7 +627,7 @@
         <title value="Typ av fast kontakt"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -590,9 +636,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f3466ebd-b363-4f93-85e1-cf18b11a9ecf"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
-          <total value="4"/>
+          <identifier value="urn:uuid:5735049a-a0c8-49a3-8a2f-45363b772e46"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
+          <total value="5"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -629,6 +675,10 @@
           <contains>
             <system value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
             <code value="4"/>
+          </contains>
+          <contains>
+            <system value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
+            <code value="9"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -825,7 +875,7 @@
         <name value="WeekdayVS"/>
         <title value="Veckodag"/>
         <status value="draft"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -834,8 +884,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e51acfce-89f5-43e0-91a5-cd8afbacbfc7"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
+          <identifier value="urn:uuid:fce733b8-4440-4896-ac89-122f2c3ce4dc"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -1081,7 +1131,7 @@
         <name value="WeekdayVS"/>
         <title value="Veckodag"/>
         <status value="draft"/>
-        <date value="2026-10-15T09:21:11+00:00"/>
+        <date value="2026-10-15T12:03:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1090,8 +1140,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ba6a42ed-d660-4ffb-9874-6bed6c1b44f9"/>
-          <timestamp value="2026-10-15T09:21:52+00:00"/>
+          <identifier value="urn:uuid:f958e1d5-34c1-4595-98e5-aca1e895e51a"/>
+          <timestamp value="2026-10-15T12:04:23+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
