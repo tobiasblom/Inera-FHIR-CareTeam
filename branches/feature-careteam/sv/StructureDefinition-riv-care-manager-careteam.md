@@ -73,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-10-15T13:32:05+00:00",
+  "date" : "2026-10-15T13:47:34+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -93,7 +93,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "fhirVersion" : "5.0.0",
   "mapping" : [{
     "identity" : "informationsmodell",
-    "uri" : "https://fhir.inera.se/ig/careteam/mappings.html",
+    "uri" : "urn:inera:informationsmodell:fasta-kontakter",
     "name" : "Informationsmodell - Fast kontakt",
     "comment" : "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVCareManager."
   },

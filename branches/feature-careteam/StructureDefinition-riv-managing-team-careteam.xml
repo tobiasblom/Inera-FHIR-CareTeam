@@ -55,7 +55,7 @@
   <name value="RIVManagingTeam"/>
   <title value="Team"/>
   <status value="draft"/>
-  <date value="2026-10-15T13:32:05+00:00"/>
+  <date value="2026-10-15T13:47:34+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -75,7 +75,7 @@
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="informationsmodell"/>
-    <uri value="https://fhir.inera.se/ig/careteam/mappings.html"/>
+    <uri value="urn:inera:informationsmodell:fasta-kontakter"/>
     <name value="Informationsmodell - Team"/>
     <comment value="Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVManagingTeam."/>
   </mapping>

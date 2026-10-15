@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "RIVCareManager"] ; # 
   fhir:title [ fhir:v "Fast kontakt"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-15T13:32:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T13:47:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -38,7 +38,7 @@
   fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "informationsmodell" ] ;
-     fhir:uri [ fhir:v "https://fhir.inera.se/ig/careteam/mappings.html"^^xsd:anyURI ] ;
+     fhir:uri [ fhir:v "urn:inera:informationsmodell:fasta-kontakter"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "Informationsmodell - Fast kontakt" ] ;
      fhir:comment [ fhir:v "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVCareManager." ]
   ] [
