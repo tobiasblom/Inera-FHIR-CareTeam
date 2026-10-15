@@ -5,7 +5,7 @@
     "status" : "active",
     "name" : "TypAvCareTeamCS",
     "title" : "Typ av CareTeam",
-    "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam."
+    "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam."
   },
   {
     "url" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt",

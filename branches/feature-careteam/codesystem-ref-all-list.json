@@ -57,7 +57,7 @@
     "status" : "active",
     "name" : "TypAvCareTeamCS",
     "title" : "Typ av CareTeam",
-    "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam.",
+    "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam.",
     "uses" : {
     },
     "ValueSet-typ-av-careteam-vs.html" : "Typ av CareTeam"

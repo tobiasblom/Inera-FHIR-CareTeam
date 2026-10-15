@@ -30,7 +30,7 @@
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-15T08:56:04+00:00",
+  "date" : "2026-10-15T09:21:11+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

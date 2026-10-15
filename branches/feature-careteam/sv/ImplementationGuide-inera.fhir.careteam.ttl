@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-15T08:56:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T09:21:11+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -263,7 +263,7 @@
          fhir:reference [ fhir:v "CodeSystem/typ-av-careteam-cs" ]
        ] ;
        fhir:name [ fhir:v "Typ av CareTeam" ] ;
-       fhir:description [ fhir:v "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam." ] ;
+       fhir:description [ fhir:v "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

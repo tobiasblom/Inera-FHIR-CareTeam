@@ -70,7 +70,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-10-15T08:56:04+00:00",
+  "date" : "2026-10-15T09:21:11+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -215,13 +215,9 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       },
       "mustSupport" : true,
       "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "CareTeamCategory"
-        }],
-        "strength" : "example",
-        "description" : "Kategori av CareTeam.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/care-team-category"
+        "strength" : "required",
+        "description" : "Typ av CareTeam enligt Ineras kodverk.",
+        "valueSet" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs"
       }
     },
     {
@@ -236,7 +232,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "id" : "CareTeam.category.coding.system",
       "path" : "CareTeam.category.coding.system",
       "short" : "Kodsystem",
-      "definition" : "Identifierar det kodsystem som koden kommer från."
+      "definition" : "Identifierar det kodsystem som koden kommer från.",
+      "min" : 1
     },
     {
       "id" : "CareTeam.category.coding.version",
@@ -248,7 +245,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "id" : "CareTeam.category.coding.code",
       "path" : "CareTeam.category.coding.code",
       "short" : "Kod",
-      "definition" : "Koden för kategorin."
+      "definition" : "Koden för kategorin.",
+      "min" : 1
     },
     {
       "id" : "CareTeam.category.coding.display",

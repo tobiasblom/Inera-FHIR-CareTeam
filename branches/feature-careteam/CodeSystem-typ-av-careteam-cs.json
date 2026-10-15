@@ -3,7 +3,7 @@
   "id" : "typ-av-careteam-cs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem typ-av-careteam-cs</b></p><a name=\"typ-av-careteam-cs\"> </a><a name=\"hctyp-av-careteam-cs\"> </a><p>Detta case-insensitive kodsystem <code>https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs</code> definierar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">fast-kontakt<a name=\"typ-av-careteam-cs-fast-kontakt\"> </a></td><td>Fast kontakt</td><td>CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare.</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"typ-av-careteam-cs-team\"> </a></td><td>Team</td><td>CareTeam som beskriver ett vård- eller omsorgsteam.</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem typ-av-careteam-cs</b></p><a name=\"typ-av-careteam-cs\"> </a><a name=\"hctyp-av-careteam-cs\"> </a><p>Detta  kodsystem <code>https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs</code> definierar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">fast-kontakt<a name=\"typ-av-careteam-cs-fast-kontakt\"> </a></td><td>Fast kontakt</td><td>CareTeam vars syfte är att beskriva fast kontakt för en vård- eller omsorgstagare.</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"typ-av-careteam-cs-team\"> </a></td><td>Team</td><td>CareTeam som beskriver ett vård- eller omsorgsteam.</td></tr></table></div>"
   },
   "url" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",
   "version" : "0.9",
@@ -11,7 +11,7 @@
   "title" : "Typ av CareTeam",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-15T08:56:04+00:00",
+  "date" : "2026-10-15T09:21:11+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -20,7 +20,7 @@
       "value" : "https://www.inera.se"
     }]
   }],
-  "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam.",
+  "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -28,7 +28,6 @@
       "display" : "Sweden"
     }]
   }],
-  "caseSensitive" : false,
   "content" : "complete",
   "count" : 2,
   "concept" : [{

@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-10-15T08:56:04+00:00",
+  "date" : "2026-10-15T09:21:11+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -249,7 +249,7 @@
         "reference" : "CodeSystem/typ-av-careteam-cs"
       },
       "name" : "Typ av CareTeam",
-      "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam.",
+      "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam.",
       "isExample" : false
     },
     {

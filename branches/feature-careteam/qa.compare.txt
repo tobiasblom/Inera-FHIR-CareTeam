@@ -1,13 +1,13 @@
 IneraFHIRCareTeam : Validation Results
 =========================================
 
-err = 36, warn = 135, info = 36, broken links = 0
+err = 36, warn = 136, info = 37, broken links = 0
 $--
 Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 30 / 111 / 0
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManager : 0 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleManagingTeam : 0 / 0 / 1
- /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-careteam-cs : 0 / 2 / 2
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-careteam-cs : 0 / 3 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs : 2 / 2 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ImplementationGuide-inera.fhir.careteam : 0 / 2 / 20
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Organization-ExampleOrganization : 0 / 1 / 1
@@ -169,6 +169,8 @@ WARNING: /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/output/sv/ver
 == fsh-generated/resources/CodeSystem-typ-av-careteam-cs.json ==
 WARNING: CodeSystem/typ-av-careteam-cs: CodeSystem.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: CodeSystem/typ-av-careteam-cs: CodeSystem.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CodeSystem/typ-av-careteam-cs: CodeSystem: CodeSystems BÖR ha ett angivet värde för caseSensitive-elementet så att användare tydligt förstår kodsystemets status och betydelse
+WARNING: CodeSystem/typ-av-careteam-cs: CodeSystem: Publicerade kodsystem BÖR följa ShareableCodeSystem-profilen, som anger att elementet CodeSystem.caseSensitive är obligatoriskt, men det är inte närvarande
 WARNING: Resource: The resource CodeSystem/typ-av-careteam-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
 == fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs.json ==
 ERROR: CodeSystem.where(url = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt'): Conformance resource /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs.json - the canonical URL (https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-fast-kontakt-cs) does not match the URL (https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt). Use the special-url parameter if you really mean for it not to match

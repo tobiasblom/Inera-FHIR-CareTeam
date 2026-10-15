@@ -40,7 +40,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
     <system value=""https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs""/>
     <code value=""team""/>
   </coding>
-</valueCodeableConcept>","","","",,"example","Kategori av CareTeam.","http://hl7.org/fhir/ValueSet/care-team-category","",,,,"CareTeam.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCodeableConcept>","","","",,"required","Typ av CareTeam enligt Ineras kodverk.","https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs","",,,,"CareTeam.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "CareTeam.category.id","CareTeam.category.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
@@ -61,13 +61,13 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"CareTeam.category.coding.system","CareTeam.category.coding.system","","","",0,1,"","","Y","uri {[]} {[]}
+"CareTeam.category.coding.system","CareTeam.category.coding.system","","","",1,1,"","","Y","uri {[]} {[]}
 ","Kodsystem","Identifierar det kodsystem som koden kommer från.","The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should be an absolute reference to some definition that establishes the system clearly and unambiguously.","Need to be unambiguous about the source of the definition of the symbol.","","","","","","","",,,,,"",,,,"Coding.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./codeSystem","C*E.3"
 "CareTeam.category.coding.version","CareTeam.category.coding.version","","","",0,1,"","","Y","string {[]} {[]}
 ","Version av kodsystemet","Version av kodsystemet, om det är relevant.","Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.","","","","","","","","",,,,,"",,,,"Coding.version",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./codeSystemVersion","C*E.7"
-"CareTeam.category.coding.code","CareTeam.category.coding.code","","","",0,1,"","","Y","code {[]} {[]}
+"CareTeam.category.coding.code","CareTeam.category.coding.code","","","",1,1,"","","Y","code {[]} {[]}
 ","Kod","Koden för kategorin.","","Need to refer to a particular code in the system.","","","","","","","",,,,,"",,,,"Coding.code",0,1,"cod-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./code","C*E.1"
