@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "ca8d7282-63ef-492e-b5a0-d4088a6c5ea6",
+  "id" : "50c8c9af-4055-4cc1-9b9f-053dce2465c6",
   "meta" : {
-    "lastUpdated" : "2026-10-15T13:54:27.425+00:00"
+    "lastUpdated" : "2026-10-15T14:04:45.737+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "Urval typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T13:54:27+00:00",
+      "date" : "2026-10-15T14:04:45+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:17e21050-f304-4ffc-a071-a4d261560cc1",
-        "timestamp" : "2026-10-15T13:54:57+00:00",
+        "identifier" : "urn:uuid:fe618b81-ac9b-430b-9c10-838ba5ea6f6a",
+        "timestamp" : "2026-10-15T14:05:20+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -77,7 +77,7 @@
       "title" : "Urval typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T13:54:27+00:00",
+      "date" : "2026-10-15T14:04:45+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -86,8 +86,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:aaa8ba0c-67a4-4c3b-9106-16ae010ed455",
-        "timestamp" : "2026-10-15T13:54:57+00:00",
+        "identifier" : "urn:uuid:bd3dc1b1-400c-453a-8ad7-e0072c77cc10",
+        "timestamp" : "2026-10-15T14:05:20+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -135,7 +135,7 @@
       "title" : "Urval typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T13:54:27+00:00",
+      "date" : "2026-10-15T14:04:45+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -144,8 +144,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:cdcdee4b-c15e-4d21-b10b-315fca31df73",
-        "timestamp" : "2026-10-15T13:54:57+00:00",
+        "identifier" : "urn:uuid:898836cf-2768-4875-989f-3f55fa3aa22b",
+        "timestamp" : "2026-10-15T14:05:20+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -205,7 +205,7 @@
       "title" : "Urval typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T13:54:27+00:00",
+      "date" : "2026-10-15T14:04:45+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -214,8 +214,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:27828b4e-519b-457f-996b-4279f0d89d57",
-        "timestamp" : "2026-10-15T13:54:57+00:00",
+        "identifier" : "urn:uuid:63f04851-3d2f-411a-b44e-f5efa7f666da",
+        "timestamp" : "2026-10-15T14:05:21+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{

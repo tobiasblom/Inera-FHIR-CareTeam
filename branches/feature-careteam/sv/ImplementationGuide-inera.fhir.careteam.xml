@@ -12,7 +12,7 @@
   <name value="IneraFHIRCareTeam"/>
   <title value="Inera FHIR CareTeam"/>
   <status value="draft"/>
-  <date value="2026-10-15T13:54:27+00:00"/>
+  <date value="2026-10-15T14:04:45+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -312,6 +312,12 @@
         <sourceUrl value="version-history.html"/>
         <name value="version-history.html"/>
         <title value="Versionshistorik"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="menu.html"/>
+        <name value="menu.html"/>
+        <title value="Innehåll"/>
         <generation value="markdown"/>
       </page>
     </page>

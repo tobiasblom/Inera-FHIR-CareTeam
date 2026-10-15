@@ -12,6 +12,7 @@
 * [Sammanfattning av artefakter](artifacts.md)
 * [Förväntade svar](expected-responses.md)
 * [Nedladdningar](downloads.md)
+* [Innehåll](menu.md)
 * [CapabilityStatement](capabilitystatement.md)
 * [Säkerhet och behörighet](security.md)
 * [Versionshistorik](version-history.md)

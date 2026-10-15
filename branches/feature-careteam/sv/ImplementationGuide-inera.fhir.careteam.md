@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-10-15T13:54:27+00:00",
+  "date" : "2026-10-15T14:04:45+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -394,6 +394,12 @@
         "sourceUrl" : "version-history.html",
         "name" : "version-history.html",
         "title" : "Versionshistorik",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "menu.html",
+        "name" : "menu.html",
+        "title" : "Innehåll",
         "generation" : "markdown"
       }]
     },
