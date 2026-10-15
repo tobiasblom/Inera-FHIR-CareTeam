@@ -73,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-10-15T12:49:20+00:00",
+  "date" : "2026-10-15T13:32:05+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -92,9 +92,9 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   }],
   "fhirVersion" : "5.0.0",
   "mapping" : [{
-    "identity" : "RIVCareManager-to-fast-kontakt-im",
-    "uri" : "Informationsmodell - Fast kontakt",
-    "name" : "Mappning mellan informationsmodell och Fast kontakt",
+    "identity" : "informationsmodell",
+    "uri" : "https://fhir.inera.se/ig/careteam/mappings.html",
+    "name" : "Informationsmodell - Fast kontakt",
     "comment" : "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVCareManager."
   },
   {
@@ -279,7 +279,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Person.person-id",
         "comment" : "Invånaren som den fasta kontakten gäller för. Själva person-id:t finns på den refererade Patient-resursen, i Patient.identifier."
       }]
@@ -298,7 +298,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "definition" : "Datum då den fasta kontakten börjar gälla för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Fast kontakt.startdatum",
         "comment" : "Datum då den fasta kontakten börjar gälla."
       }]
@@ -310,7 +310,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "definition" : "Datum då den fasta kontakten upphör att gälla. Saknas slutdatum gäller relationen tills vidare.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Fast kontakt.slutdatum",
         "comment" : "Datum då den fasta kontakten upphör att gälla."
       }]
@@ -370,7 +370,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
         "valueSet" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs"
       },
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Fast kontakt.typ",
         "comment" : "Typ av fast kontakt enligt kodverk. Mappas till ValueSet TypAvFastKontaktVS."
       }]
@@ -387,17 +387,17 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Personal.id",
         "comment" : "Den namngivna personalen representeras via PractitionerRole. Personalens identifierare finns på den Practitioner-resurs som refereras från PractitionerRole.practitioner."
       },
       {
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Personal.namn",
         "comment" : "Personalens namn finns på den Practitioner-resurs som refereras från PractitionerRole.practitioner."
       },
       {
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Personal.befattning",
         "comment" : "Personalens befattning kan uttryckas på PractitionerRole.code, exempelvis med HSA Innehåll Befattning."
       }]
@@ -451,7 +451,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.daysOfWeek",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.daysOfWeek",
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.veckodag",
         "comment" : "Veckodag då kontaktvägen är tillgänglig."
       }]
@@ -460,7 +460,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.availableStartTime",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.availableStartTime",
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.starttid",
         "comment" : "Tidpunkt då kontakttiden börjar."
       }]
@@ -469,7 +469,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.availableEndTime",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.availableEndTime",
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.sluttid",
         "comment" : "Tidpunkt då kontakttiden slutar."
       }]
@@ -481,7 +481,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "definition" : "Anger vilken sorts kontaktväg det är, till exempel telefon, e-post eller webbadress.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Kontaktväg.kontaktvägstyp",
         "comment" : "Typ av kontaktväg, exempelvis telefon, e-post eller webbadress."
       }]
@@ -493,7 +493,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "definition" : "Själva kontaktuppgiften, till exempel ett telefonnummer eller en webbadress, i den form den ska visas för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Kontaktväg.värde",
         "comment" : "Värdet för kontaktvägen, exempelvis telefonnummer, e-postadress eller URL."
       }]
@@ -523,7 +523,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "definition" : "Kommentar i fritext om den fasta kontakten, till exempel vägledning om när och hur invånaren kan ta kontakt.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVCareManager-to-fast-kontakt-im",
+        "identity" : "informationsmodell",
         "map" : "Fast kontakt.kommentar",
         "comment" : "Kommentar eller vägledning i fritext kring den fasta kontakten. Förutsätter att note används i profilen."
       }]

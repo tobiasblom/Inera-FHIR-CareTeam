@@ -12,7 +12,7 @@
   <name value="IneraFHIRCareTeam"/>
   <title value="Inera FHIR CareTeam"/>
   <status value="draft"/>
-  <date value="2026-10-15T12:49:20+00:00"/>
+  <date value="2026-10-15T13:32:05+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -177,17 +177,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/typ-av-careteam-vs"/>
-      </reference>
-      <name value="Typ av CareTeam"/>
-      <description value="ValueSet som innehåller tillåtna typer av CareTeam."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -195,17 +184,6 @@
       </reference>
       <name value="Typ av CareTeam"/>
       <description value="Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/typ-av-fast-kontakt-vs"/>
-      </reference>
-      <name value="Typ av fast kontakt"/>
-      <description value="Tillåtna typer av fast kontakt"/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -224,10 +202,21 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/weekday-vs"/>
+        <reference value="ValueSet/typ-av-careteam-vs"/>
       </reference>
-      <name value="Veckodag"/>
-      <description value="Tillåtna veckodagar för kontakttid."/>
+      <name value="Urval typ av CareTeam"/>
+      <description value="ValueSet som innehåller tillåtna typer av CareTeam."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/typ-av-fast-kontakt-vs"/>
+      </reference>
+      <name value="Urval typ av fast kontakt"/>
+      <description value="Tillåtna typer av fast kontakt"/>
       <isExample value="false"/>
     </resource>
     <page>
@@ -360,6 +349,13 @@
         <code value="i18n-default-lang"/>
       </code>
       <value value="sv"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="special-url"/>
+      </code>
+      <value value="https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"/>
     </parameter>
     <parameter>
       <code>

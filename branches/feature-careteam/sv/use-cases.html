@@ -201,36 +201,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#användningsfall" id="markdown-toc-användningsfall">Användningsfall</a>    <ul>
-      <li><a href="#hämta-en-persons-fasta-kontakter" id="markdown-toc-hämta-en-persons-fasta-kontakter">Hämta en persons fasta kontakter</a>        <ul>
-          <li><a href="#utlösande-händelse" id="markdown-toc-utlösande-händelse">Utlösande händelse</a></li>
-          <li><a href="#aktörer" id="markdown-toc-aktörer">Aktörer</a></li>
-          <li><a href="#förlopp" id="markdown-toc-förlopp">Förlopp</a></li>
-          <li><a href="#resultat" id="markdown-toc-resultat">Resultat</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h1 id="användningsfall">Användningsfall</h1>
-
 <p>Denna implementationsguide stödjer informationsutbyte där en konsumerande tjänst behöver hämta information om en persons fasta kontakter från en informationsproducent. De verksamhetsprocesser där en fast kontakt utses, ändras eller avslutas sker i producentens verksamhetssystem och omfattas inte av denna IG. Resultatet av dessa processer påverkar däremot vilken information som ska kunna lämnas vid en efterföljande förfrågan.</p>
 
-<h2 id="hämta-en-persons-fasta-kontakter">Hämta en persons fasta kontakter</h2>
+<h3 id="hämta-en-persons-fasta-kontakter">Hämta en persons fasta kontakter</h3>
 
 <p>En konsumerande tjänst behöver få tillgång till aktuella uppgifter om en persons fasta kontakter för att kunna presentera eller använda informationen.</p>
 
-<h3 id="utlösande-händelse">Utlösande händelse</h3>
+<h4 id="utlösande-händelse">Utlösande händelse</h4>
 
 <p>Användningsfallet initieras när en konsument behöver information om vilka fasta kontakter som finns registrerade för en viss person.</p>
 
 <p>Det kan exempelvis ske när informationen ska presenteras för en invånare eller användas av en behörig användare i en annan konsumerande tjänst.</p>
 
-<h3 id="aktörer">Aktörer</h3>
+<h4 id="aktörer">Aktörer</h4>
 
 <p><strong>Informationskonsument</strong><br />
 System eller tjänst som efterfrågar information om en persons fasta kontakter.</p>
@@ -238,7 +224,7 @@ System eller tjänst som efterfrågar information om en persons fasta kontakter.
 <p><strong>Informationsproducent</strong><br />
 System eller tjänst som tillhandahåller information om fasta kontakter enligt denna IG.</p>
 
-<h3 id="förlopp">Förlopp</h3>
+<h4 id="förlopp">Förlopp</h4>
 
 <ol>
   <li>Konsumenten identifierar den person vars fasta kontakter ska hämtas.</li>
@@ -248,7 +234,7 @@ System eller tjänst som tillhandahåller information om fasta kontakter enligt 
   <li>Konsumenten tolkar informationen och använder den i sitt aktuella sammanhang.</li>
 </ol>
 
-<h3 id="resultat">Resultat</h3>
+<h4 id="resultat">Resultat</h4>
 
 <p>Konsumenten får information om personens fasta kontakter, inklusive den information som krävs för att förstå vilken typ av kontakt det är, vem kontakten är och hur kontakten kan nås, i den utsträckning informationen finns tillgänglig och får lämnas till konsumenten.</p>
 
@@ -284,7 +270,7 @@ System eller tjänst som tillhandahåller information om fasta kontakter enligt 
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-10-15 12:49:00 +0000">
+  <span title="2026-10-15 13:32:00 +0000">
     2026-10-15
   </span>
 

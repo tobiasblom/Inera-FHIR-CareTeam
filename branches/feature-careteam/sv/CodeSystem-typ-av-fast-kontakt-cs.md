@@ -4,7 +4,7 @@
 
 Detta kodsystem refereras i definitionen av följande värdemängder:
 
-* [Typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
+* [Urval typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
 
 -------
 
@@ -28,7 +28,7 @@ Detta kodsystem refereras i definitionen av följande värdemängder:
   "title" : "Typ av fast kontakt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-15T12:49:20+00:00",
+  "date" : "2026-10-15T13:32:05+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

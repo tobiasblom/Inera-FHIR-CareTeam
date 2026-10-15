@@ -70,7 +70,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-10-15T12:49:20+00:00",
+  "date" : "2026-10-15T13:32:05+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -89,9 +89,9 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
   }],
   "fhirVersion" : "5.0.0",
   "mapping" : [{
-    "identity" : "RIVManagingTeam-to-team-im",
-    "uri" : "Informationsmodell - Team",
-    "name" : "Mappning mellan informationsmodell och Team",
+    "identity" : "informationsmodell",
+    "uri" : "https://fhir.inera.se/ig/careteam/mappings.html",
+    "name" : "Informationsmodell - Team",
     "comment" : "Mappning mellan informationsmodellen för fasta kontakter och FHIR-profilen RIVManagingTeam."
   },
   {
@@ -181,7 +181,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "definition" : "Unik identifierare för teamet.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Team.id",
         "comment" : "Identifierare för teamet."
       }]
@@ -273,7 +273,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "definition" : "Teamets namn i den form det ska visas för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Team.namn",
         "comment" : "Namn på teamet."
       }]
@@ -289,7 +289,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Person.person-id",
         "comment" : "Invånaren som teamet gäller för. Själva person-id:t finns på den refererade Patient-resursen, i Patient.identifier."
       }]
@@ -340,7 +340,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Personal",
         "comment" : "Teamdeltagare representeras med PractitionerRole eller Practitioner. Personens identifierare och namn uttrycks på Practitioner. Befattning kan uttryckas på PractitionerRole.code när PractitionerRole används."
       }]
@@ -394,7 +394,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.daysOfWeek",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.daysOfWeek",
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.veckodag",
         "comment" : "Veckodag då kontaktvägen är tillgänglig."
       }]
@@ -403,7 +403,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.availableStartTime",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.availableStartTime",
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.starttid",
         "comment" : "Tidpunkt då kontakttiden börjar."
       }]
@@ -412,7 +412,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "id" : "CareTeam.telecom.extension:availability.value[x].availableTime.availableEndTime",
       "path" : "CareTeam.telecom.extension.value[x].availableTime.availableEndTime",
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Kontakttid.sluttid",
         "comment" : "Tidpunkt då kontakttiden slutar."
       }]
@@ -424,7 +424,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "definition" : "Anger vilken sorts kontaktväg det är, till exempel telefon, e-post eller webbadress.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Kontaktväg.kontaktvägstyp",
         "comment" : "Typ av kontaktväg, exempelvis telefon, e-post eller webbadress."
       }]
@@ -436,7 +436,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "definition" : "Själva kontaktuppgiften, till exempel ett telefonnummer eller en webbadress, i den form den ska visas för invånaren.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Kontaktväg.värde",
         "comment" : "Värdet för kontaktvägen, exempelvis telefonnummer, e-postadress eller URL."
       }]
@@ -466,7 +466,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
       "definition" : "Kommentar i fritext om teamet, till exempel vägledning om när och hur invånaren kan ta kontakt.",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "RIVManagingTeam-to-team-im",
+        "identity" : "informationsmodell",
         "map" : "Team.kommentar",
         "comment" : "Kommentar eller kompletterande information om teamet."
       }]

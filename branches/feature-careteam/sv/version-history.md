@@ -2,19 +2,17 @@
 
 ## Versionshistorik
 
-# Versionshistorik
-
 Denna sida beskriver versionshistoriken för Implementation Guiden **Fasta kontakter**.
 
 IG:n är under utveckling. Versionshistoriken kompletteras i samband med att nya versioner av specifikationen tas fram och publiceras.
 
 -------
 
-## 0.9 – 2026-09-21
+### 0.9 – 2026-09-21
 
 **Status:** Utkast
 
-### Innehåll
+#### Innehåll
 
 * FHIR-profiler för informationsutbyte om fasta kontakter framtagna.
 * Profil för **Fast kontakt** (`RIVCareManager`) baserad på FHIR-resursen `CareTeam`.
@@ -25,7 +23,7 @@ IG:n är under utveckling. Versionshistoriken kompletteras i samband med att nya
 * Dokumentation av mappningen mellan informationsmodellen och FHIR-realiseringen påbörjad.
 * Profilerna tekniskt validerade med SUSHI.
 
-### Kända återstående delar
+#### Kända återstående delar
 
 Implementeringsdelen av IG:n är ännu inte färdigställd. Bland annat återstår beskrivning av:
 
@@ -38,7 +36,7 @@ Implementeringsdelen av IG:n är ännu inte färdigställd. Bland annat återst�
 
 -------
 
-## Tidigare utkast
+### Tidigare utkast
 
 Tidigare arbetsversioner har använts under framtagandet av profiler, terminologi och mappningar. Dessa har inte publicerats som formella versioner av Implementation Guiden.
 

@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-15T12:49:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T13:32:05+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -259,21 +259,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs> ;
-         fhir:reference [ fhir:v "ValueSet/typ-av-careteam-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Typ av CareTeam" ] ;
-       fhir:description [ fhir:v "ValueSet som innehåller tillåtna typer av CareTeam." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -283,21 +268,6 @@
        ] ;
        fhir:name [ fhir:v "Typ av CareTeam" ] ;
        fhir:description [ fhir:v "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs> ;
-         fhir:reference [ fhir:v "ValueSet/typ-av-fast-kontakt-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Typ av fast kontakt" ] ;
-       fhir:description [ fhir:v "Tillåtna typer av fast kontakt" ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -323,11 +293,26 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://fhir.inera.se/ig/careteam/ValueSet/weekday-vs> ;
-         fhir:reference [ fhir:v "ValueSet/weekday-vs" ]
+         fhir:link <https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs> ;
+         fhir:reference [ fhir:v "ValueSet/typ-av-careteam-vs" ]
        ] ;
-       fhir:name [ fhir:v "Veckodag" ] ;
-       fhir:description [ fhir:v "Tillåtna veckodagar för kontakttid." ] ;
+       fhir:name [ fhir:v "Urval typ av CareTeam" ] ;
+       fhir:description [ fhir:v "ValueSet som innehåller tillåtna typer av CareTeam." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs> ;
+         fhir:reference [ fhir:v "ValueSet/typ-av-fast-kontakt-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Urval typ av fast kontakt" ] ;
+       fhir:description [ fhir:v "Tillåtna typer av fast kontakt" ] ;
        fhir:isExample [ fhir:v false ]
      ] ) ;
      fhir:page [
@@ -490,6 +475,12 @@
          fhir:code [ fhir:v "i18n-default-lang" ]
        ] ;
        fhir:value [ fhir:v "sv" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "special-url" ]
+       ] ;
+       fhir:value [ fhir:v "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt" ]
      ] [
        fhir:code [
          fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;

@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "bf3c841b-104d-4876-9bf6-48ba3da4baac",
+  "id" : "9e5042e1-a9ba-4e68-b978-863b93ba3c0b",
   "meta" : {
-    "lastUpdated" : "2026-10-15T12:49:20.112+00:00"
+    "lastUpdated" : "2026-10-15T13:32:05.891+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -16,10 +16,10 @@
       "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
       "version" : "0.9",
       "name" : "TypAvCareTeamVS",
-      "title" : "Typ av CareTeam",
+      "title" : "Urval typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T12:49:20+00:00",
+      "date" : "2026-10-15T13:32:05+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:947da79f-5a3a-4f17-badd-63c2d2fa1914",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
+        "identifier" : "urn:uuid:e6bd648b-0c1c-4768-8797-a3674cf6417d",
+        "timestamp" : "2026-10-15T13:32:38+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -74,10 +74,10 @@
       "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
       "version" : "0.9",
       "name" : "TypAvCareTeamVS",
-      "title" : "Typ av CareTeam",
+      "title" : "Urval typ av CareTeam",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T12:49:20+00:00",
+      "date" : "2026-10-15T13:32:05+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -86,8 +86,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:07b4715f-7235-4ac4-bda4-5ca450e23831",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
+        "identifier" : "urn:uuid:d6e76fe9-2fbb-4687-be65-756aa31cc7d6",
+        "timestamp" : "2026-10-15T13:32:38+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -132,10 +132,10 @@
       "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
       "version" : "0.9",
       "name" : "TypAvFastKontaktVS",
-      "title" : "Typ av fast kontakt",
+      "title" : "Urval typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T12:49:20+00:00",
+      "date" : "2026-10-15T13:32:05+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -144,8 +144,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d27a8e0f-aa86-4c96-9c0d-d27a3caf080f",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
+        "identifier" : "urn:uuid:96cf39cf-da4a-4d69-9784-4827b694f953",
+        "timestamp" : "2026-10-15T13:32:38+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -202,10 +202,10 @@
       "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
       "version" : "0.9",
       "name" : "TypAvFastKontaktVS",
-      "title" : "Typ av fast kontakt",
+      "title" : "Urval typ av fast kontakt",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-10-15T12:49:20+00:00",
+      "date" : "2026-10-15T13:32:05+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -214,8 +214,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:3a5d5b35-2316-4cab-924f-9cba24ebcf14",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
+        "identifier" : "urn:uuid:df05b641-d36e-40dd-b634-9912b272b79c",
+        "timestamp" : "2026-10-15T13:32:38+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -257,160 +257,6 @@
         {
           "system" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt",
           "code" : "9"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://example.org/fhir/ValueSet/veckodag",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion utförd internt baserad på <a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html\">codesystem Days Of Week v5.0.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://hl7.org/fhir/days-of-week|5.0.0\" title=\"Klicka för att kopiera URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>Denna värdemängd innehåller 7 begrepp</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning (sv)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-mon\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-mon\">mon</a></td><td/><td>Monday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;mon&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;mon&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-tue\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-tue\">tue</a></td><td/><td>Tuesday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;tue&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;tue&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-wed\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-wed\">wed</a></td><td/><td>Wednesday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;wed&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;wed&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-thu\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-thu\">thu</a></td><td/><td>Thursday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;thu&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;thu&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-fri\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-fri\">fri</a></td><td/><td>Friday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;fri&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;fri&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-sat\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-sat\">sat</a></td><td/><td>Saturday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;sat&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;sat&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-sun\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-sun\">sun</a></td><td/><td>Sunday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;sun&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;sun&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
-      },
-      "url" : "http://example.org/fhir/ValueSet/veckodag",
-      "version" : "0.9",
-      "name" : "WeekdayVS",
-      "title" : "Veckodag",
-      "status" : "draft",
-      "date" : "2026-10-15T12:49:20+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "SE",
-          "display" : "Sweden"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:0467af51-5c28-48e5-9d34-19b3cbbec29b",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
-        "total" : 7,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "sv"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "used-codesystem",
-          "valueUri" : "http://hl7.org/fhir/days-of-week|5.0.0"
-        }],
-        "contains" : [{
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "mon"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "tue"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "wed"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "thu"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "fri"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "sat"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "sun"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://example.org/fhir/ValueSet/veckodag",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion utförd internt baserad på <a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html\">codesystem Days Of Week v5.0.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://hl7.org/fhir/days-of-week|5.0.0\" title=\"Klicka för att kopiera URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>Denna värdemängd innehåller 7 begrepp</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning (sv)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-mon\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-mon\">mon</a></td><td/><td>Monday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;mon&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;mon&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-tue\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-tue\">tue</a></td><td/><td>Tuesday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;tue&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;tue&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-wed\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-wed\">wed</a></td><td/><td>Wednesday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;wed&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;wed&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-thu\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-thu\">thu</a></td><td/><td>Thursday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;thu&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;thu&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-fri\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-fri\">fri</a></td><td/><td>Friday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;fri&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;fri&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-sat\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-sat\">sat</a></td><td/><td>Saturday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;sat&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;sat&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://hl7.org/fhir/days-of-week-sun\"> </a><code>http://hl7.org/fhir/days-of-week</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-days-of-week.html#days-of-week-sun\">sun</a></td><td/><td>Sunday.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://hl7.org/fhir/days-of-week&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;sun&quot;}\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/days-of-week&quot;/&gt;&lt;version value=&quot;5.0.0&quot;/&gt;&lt;code value=&quot;sun&quot;/&gt;&lt;/coding&gt;\" title=\"Klicka för att kopiera som Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
-      },
-      "url" : "http://example.org/fhir/ValueSet/veckodag",
-      "version" : "0.9",
-      "name" : "WeekdayVS",
-      "title" : "Veckodag",
-      "status" : "draft",
-      "date" : "2026-10-15T12:49:20+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "SE",
-          "display" : "Sweden"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:ed02551f-99e1-48b4-8c67-20d03b833463",
-        "timestamp" : "2026-10-15T12:49:45+00:00",
-        "total" : 7,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "sv"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "used-codesystem",
-          "valueUri" : "http://hl7.org/fhir/days-of-week|5.0.0"
-        }],
-        "contains" : [{
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "mon"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "tue"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "wed"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "thu"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "fri"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "sat"
-        },
-        {
-          "system" : "http://hl7.org/fhir/days-of-week",
-          "code" : "sun"
         }]
       }
     }

@@ -2,8 +2,6 @@
 
 ## Roller och ansvar
 
-# Roller och ansvar
-
 Denna implementationsguide beskriver informationsutbyte mellan en **informationsproducent** och en **informationskonsument**.
 
 Rollerna avser systemens ansvar i informationsutbytet.
@@ -13,9 +11,9 @@ Rollerna avser systemens ansvar i informationsutbytet.
 | **Informationsproducent** | Tillhandahåller information om fasta kontakter för en person och ansvarar för att information som lämnas följer profiler och övriga krav i denna IG. |
 | **Informationskonsument** | Efterfrågar information om fasta kontakter och ansvarar för att kunna ta emot, tolka och använda information som följer denna IG. |
 
-## Förväntningar vid implementation
+### Förväntningar vid implementation
 
-### Informationsproducent
+#### Informationsproducent
 
 En informationsproducent ska:
 
@@ -27,7 +25,7 @@ En informationsproducent ska:
 
 IG:n ställer inte krav på hur informationen lagras eller struktureras internt hos producenten.
 
-### Informationskonsument
+#### Informationskonsument
 
 En informationskonsument ska:
 
@@ -37,7 +35,7 @@ En informationskonsument ska:
 * kunna hantera ett giltigt svar även när inga fasta kontakter motsvarar förfrågan
 * använda informationen i enlighet med de behörighets- och åtkomstregler som gäller för den aktuella tjänsten
 
-## Samspel mellan rollerna
+### Samspel mellan rollerna
 
 Informationsutbytet initieras när en informationskonsument behöver information om en persons fasta kontakter.
 

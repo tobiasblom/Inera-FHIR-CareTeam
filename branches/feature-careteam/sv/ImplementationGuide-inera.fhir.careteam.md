@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-10-15T12:49:20+00:00",
+  "date" : "2026-10-15T13:32:05+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -240,22 +240,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-typ-av-careteam-vs.html"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/typ-av-careteam-vs"
-      },
-      "name" : "Typ av CareTeam",
-      "description" : "ValueSet som innehåller tillåtna typer av CareTeam.",
-      "isExample" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       },
       {
@@ -267,22 +251,6 @@
       },
       "name" : "Typ av CareTeam",
       "description" : "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam.",
-      "isExample" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-typ-av-fast-kontakt-vs.html"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/typ-av-fast-kontakt-vs"
-      },
-      "name" : "Typ av fast kontakt",
-      "description" : "Tillåtna typer av fast kontakt",
       "isExample" : false
     },
     {
@@ -308,13 +276,29 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-weekday-vs.html"
+        "valueUri" : "ValueSet-typ-av-careteam-vs.html"
       }],
       "reference" : {
-        "reference" : "ValueSet/weekday-vs"
+        "reference" : "ValueSet/typ-av-careteam-vs"
       },
-      "name" : "Veckodag",
-      "description" : "Tillåtna veckodagar för kontakttid.",
+      "name" : "Urval typ av CareTeam",
+      "description" : "ValueSet som innehåller tillåtna typer av CareTeam.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-typ-av-fast-kontakt-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/typ-av-fast-kontakt-vs"
+      },
+      "name" : "Urval typ av fast kontakt",
+      "description" : "Tillåtna typer av fast kontakt",
       "isExample" : false
     }],
     "page" : {
@@ -447,6 +431,13 @@
         "code" : "i18n-default-lang"
       },
       "value" : "sv"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "special-url"
+      },
+      "value" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt"
     },
     {
       "code" : {

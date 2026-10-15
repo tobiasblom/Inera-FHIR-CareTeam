@@ -2,15 +2,13 @@
 
 ## Mappning till profiler
 
-# Mappning till profiler
-
 Denna sida beskriver hur informationsunderlaget för **Fasta kontakter** har realiserats med HL7 FHIR.
 
 Mappningarna syftar till att skapa spårbarhet mellan den informatiska modellen och de FHIR-profiler som används i informationsutbytet. De visar vilket FHIR-element som bär respektive informationsmängd och dokumenterar designval där FHIR-realiseringen inte direkt motsvarar strukturen i informationsmodellen.
 
 -------
 
-## Omfattade delar
+### Omfattade delar
 
 Denna IG realiserar de delar av informationsmodellen som behövs för att tillhandahålla information om en persons fasta kontakter, inklusive:
 
@@ -30,9 +28,9 @@ Information om personal och organisatorisk tillhörighet realiseras genom refere
 
 -------
 
-## Avvikelser och designbeslut
+### Avvikelser och designbeslut
 
-### Fast kontakt representeras med CareTeam
+#### Fast kontakt representeras med CareTeam
 
 Informationsmodellen beskriver **Fast kontakt** som en relation mellan en invånare och en namngiven vård- eller omsorgspersonal med samordnande funktion.
 
@@ -40,7 +38,7 @@ I denna IG realiseras relationen med FHIR-resursen `CareTeam`. Profilen `RIVCare
 
 `CareTeam.category` är därför fixerad till kategorin `fast-kontakt`. Typen av fast kontakt, exempelvis fast vårdkontakt eller fast omsorgskontakt, uttrycks separat med `CareTeam.participant.role`.
 
-### Den fasta kontakten representeras genom PractitionerRole
+#### Den fasta kontakten representeras genom PractitionerRole
 
 Den namngivna person som är fast kontakt representeras genom `CareTeam.participant.member`, som refererar till `PractitionerRole`.
 
@@ -48,7 +46,7 @@ Detta gör det möjligt att skilja mellan personen och den roll eller organisato
 
 Personens namn och identifierare representeras genom den `Practitioner` som refereras från `PractitionerRole`, medan exempelvis befattning kan uttryckas på `PractitionerRole.code`.
 
-### Startdatum för fast kontakt
+#### Startdatum för fast kontakt
 
 Informationsmodellen anger `Fast kontakt.startdatum` som obligatoriskt. I källsystemen finns dock inte alltid information om när den fasta kontakten började gälla.
 
@@ -56,13 +54,13 @@ Informationsmodellen anger `Fast kontakt.startdatum` som obligatoriskt. I källs
 
 En producent ska tillhandahålla startdatum när uppgiften finns tillgänglig, men avsaknad av startdatum ska inte hindra att information om den fasta kontakten kan tillhandahållas.
 
-### Kontakt via team
+#### Kontakt via team
 
 En fast kontakt kan sakna en direkt kontaktväg och i stället nås genom ett team.
 
 Detta realiseras med extensionen `contactViaTeam` på `CareTeam.participant`. Extensionen refererar till ett `RIVManagingTeam`. Kontaktuppgifter för teamet uttrycks då på den refererade teamresursens `telecom`.
 
-### Team representeras som en separat CareTeam
+#### Team representeras som en separat CareTeam
 
 Informationsmodellens `Team` representeras med en separat `CareTeam`-resurs genom profilen `RIVManagingTeam`.
 
@@ -72,7 +70,7 @@ Teamet kan vara kopplat till en specifik invånare genom `CareTeam.subject`, men
 
 Deltagare i teamet kan anges med `CareTeam.participant.member`. En deltagare kan representeras med antingen `PractitionerRole` eller `Practitioner`.
 
-### Kontaktväg
+#### Kontaktväg
 
 Informationsmodellens `Kontaktväg` realiseras med `CareTeam.telecom` i både `RIVCareManager` och `RIVManagingTeam`.
 
@@ -86,7 +84,7 @@ Kontaktvägens tillgänglighet, exempelvis veckodagar och tider, uttrycks med ex
 
 -------
 
-## Syfte med mappningarna
+### Syfte med mappningarna
 
 Mappningarna nedan visar hur informationsmodellens element motsvaras av element i FHIR-profilerna.
 
@@ -102,9 +100,9 @@ Kardinaliteterna för informationsmodellen och FHIR-profilen redovisas separat n
 
 -------
 
-## Mappningstabeller
+### Mappningstabeller
 
-### Fast kontakt → RIVCareManager
+#### Fast kontakt → RIVCareManager
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
@@ -121,7 +119,7 @@ Kardinaliteterna för informationsmodellen och FHIR-profilen redovisas separat n
 | Kontakttid.starttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableStartTime` | — | Tid då tillgängligheten börjar. |
 | Kontakttid.sluttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableEndTime` | — | Tid då tillgängligheten slutar. |
 
-### Team → RIVManagingTeam
+#### Team → RIVManagingTeam
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
@@ -138,7 +136,7 @@ Kardinaliteterna för informationsmodellen och FHIR-profilen redovisas separat n
 
 Kardinaliteter markerade med `—` preciseras av respektive refererad profil eller extension.
 
-### Personal → PractitionerRole och Practitioner
+#### Personal → PractitionerRole och Practitioner
 
 Information om personal representeras inte direkt som attribut på `RIVCareManager` eller `RIVManagingTeam`.
 
@@ -148,7 +146,7 @@ När `PractitionerRole` används representeras personens identifierare och namn 
 
 -------
 
-## FHIR-element utan direkt motsvarighet i informationsmodellen
+### FHIR-element utan direkt motsvarighet i informationsmodellen
 
 Vissa element behövs i FHIR-realiseringen men har ingen direkt motsvarighet som attribut i informationsmodellen.
 
@@ -160,7 +158,7 @@ Vissa element behövs i FHIR-realiseringen men har ingen direkt motsvarighet som
 
 -------
 
-## Omappade element
+### Omappade element
 
 Följande delar av informationsmodellen realiseras inte i nuvarande version av IG:n.
 

@@ -9,10 +9,10 @@
   <url value="https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs"/>
   <version value="0.9"/>
   <name value="TypAvFastKontaktVS"/>
-  <title value="Typ av fast kontakt"/>
+  <title value="Urval typ av fast kontakt"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-10-15T12:49:20+00:00"/>
+  <date value="2026-10-15T13:32:05+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>

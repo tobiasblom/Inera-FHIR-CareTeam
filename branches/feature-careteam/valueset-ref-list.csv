@@ -1,5 +1,4 @@
 URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
-http://example.org/fhir/ValueSet/veckodag,0.9,draft,,WeekdayVS,Veckodag,"Tillåtna veckodagar för kontakttid.",,"hl7.fhir.r5.core"
 http://hl7.org/fhir/ValueSet/care-team-status,5.0.0,draft,"2.16.840.1.113883.4.642.3.144,2.16.840.1.113883.4.642.3.153",CareTeamStatus,Care Team Status,"Indicates the status of the care team.","StructureDefinition/riv-care-manager-careteam,StructureDefinition/riv-managing-team-careteam","hl7.fhir.r5.core"
-https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs,0.9,active,,TypAvCareTeamVS,Typ av CareTeam,"ValueSet som innehåller tillåtna typer av CareTeam.","StructureDefinition/riv-care-manager-careteam,StructureDefinition/riv-managing-team-careteam","Internal"
-https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs,0.9,active,,TypAvFastKontaktVS,Typ av fast kontakt,"Tillåtna typer av fast kontakt","StructureDefinition/riv-care-manager-careteam","Internal"
+https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs,0.9,active,,TypAvCareTeamVS,Urval typ av CareTeam,"ValueSet som innehåller tillåtna typer av CareTeam.","StructureDefinition/riv-care-manager-careteam,StructureDefinition/riv-managing-team-careteam","Internal"
+https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs,0.9,active,,TypAvFastKontaktVS,Urval typ av fast kontakt,"Tillåtna typer av fast kontakt","StructureDefinition/riv-care-manager-careteam","Internal"

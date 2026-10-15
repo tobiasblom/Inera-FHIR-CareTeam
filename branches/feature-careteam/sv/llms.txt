@@ -28,9 +28,8 @@
 
 ### ValueSets
 
-* [Typ av CareTeam](ValueSet-typ-av-careteam-vs.md)
-* [Typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
-* [Veckodag](ValueSet-weekday-vs.md)
+* [Urval typ av CareTeam](ValueSet-typ-av-careteam-vs.md)
+* [Urval typ av fast kontakt](ValueSet-typ-av-fast-kontakt-vs.md)
 
 ### Resource Profiles
 

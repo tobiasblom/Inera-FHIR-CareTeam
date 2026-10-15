@@ -1,11 +1,4 @@
 [{
-  "id" : "weekday-vs",
-  "type" : "ValueSet",
-  "url" : "http://example.org/fhir/ValueSet/veckodag",
-  "version" : "0.9",
-  "name" : "WeekdayVS"
-},
-{
   "id" : "typ-av-careteam-cs",
   "type" : "CodeSystem",
   "url" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",

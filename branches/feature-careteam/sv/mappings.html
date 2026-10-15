@@ -203,40 +203,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#mappning-till-profiler" id="markdown-toc-mappning-till-profiler">Mappning till profiler</a>    <ul>
-      <li><a href="#omfattade-delar" id="markdown-toc-omfattade-delar">Omfattade delar</a></li>
-      <li><a href="#avvikelser-och-designbeslut" id="markdown-toc-avvikelser-och-designbeslut">Avvikelser och designbeslut</a>        <ul>
-          <li><a href="#fast-kontakt-representeras-med-careteam" id="markdown-toc-fast-kontakt-representeras-med-careteam">Fast kontakt representeras med CareTeam</a></li>
-          <li><a href="#den-fasta-kontakten-representeras-genom-practitionerrole" id="markdown-toc-den-fasta-kontakten-representeras-genom-practitionerrole">Den fasta kontakten representeras genom PractitionerRole</a></li>
-          <li><a href="#startdatum-för-fast-kontakt" id="markdown-toc-startdatum-för-fast-kontakt">Startdatum för fast kontakt</a></li>
-          <li><a href="#kontakt-via-team" id="markdown-toc-kontakt-via-team">Kontakt via team</a></li>
-          <li><a href="#team-representeras-som-en-separat-careteam" id="markdown-toc-team-representeras-som-en-separat-careteam">Team representeras som en separat CareTeam</a></li>
-          <li><a href="#kontaktväg" id="markdown-toc-kontaktväg">Kontaktväg</a></li>
-        </ul>
-      </li>
-      <li><a href="#syfte-med-mappningarna" id="markdown-toc-syfte-med-mappningarna">Syfte med mappningarna</a></li>
-      <li><a href="#mappningstabeller" id="markdown-toc-mappningstabeller">Mappningstabeller</a>        <ul>
-          <li><a href="#fast-kontakt--rivcaremanager" id="markdown-toc-fast-kontakt--rivcaremanager">Fast kontakt → RIVCareManager</a></li>
-          <li><a href="#team--rivmanagingteam" id="markdown-toc-team--rivmanagingteam">Team → RIVManagingTeam</a></li>
-          <li><a href="#personal--practitionerrole-och-practitioner" id="markdown-toc-personal--practitionerrole-och-practitioner">Personal → PractitionerRole och Practitioner</a></li>
-        </ul>
-      </li>
-      <li><a href="#fhir-element-utan-direkt-motsvarighet-i-informationsmodellen" id="markdown-toc-fhir-element-utan-direkt-motsvarighet-i-informationsmodellen">FHIR-element utan direkt motsvarighet i informationsmodellen</a></li>
-      <li><a href="#omappade-element" id="markdown-toc-omappade-element">Omappade element</a></li>
-    </ul>
-  </li>
+  <li><a href="#omfattade-delar" id="markdown-toc-omfattade-delar">Omfattade delar</a></li>
+  <li><a href="#avvikelser-och-designbeslut" id="markdown-toc-avvikelser-och-designbeslut">Avvikelser och designbeslut</a></li>
+  <li><a href="#syfte-med-mappningarna" id="markdown-toc-syfte-med-mappningarna">Syfte med mappningarna</a></li>
+  <li><a href="#mappningstabeller" id="markdown-toc-mappningstabeller">Mappningstabeller</a></li>
+  <li><a href="#fhir-element-utan-direkt-motsvarighet-i-informationsmodellen" id="markdown-toc-fhir-element-utan-direkt-motsvarighet-i-informationsmodellen">FHIR-element utan direkt motsvarighet i informationsmodellen</a></li>
+  <li><a href="#omappade-element" id="markdown-toc-omappade-element">Omappade element</a></li>
 </ul>
 
 </div>
-<h1 id="mappning-till-profiler">Mappning till profiler</h1>
-
 <p>Denna sida beskriver hur informationsunderlaget för <strong>Fasta kontakter</strong> har realiserats med HL7 FHIR.</p>
 
 <p>Mappningarna syftar till att skapa spårbarhet mellan den informatiska modellen och de FHIR-profiler som används i informationsutbytet. De visar vilket FHIR-element som bär respektive informationsmängd och dokumenterar designval där FHIR-realiseringen inte direkt motsvarar strukturen i informationsmodellen.</p>
 
 <hr />
 
-<h2 id="omfattade-delar">Omfattade delar</h2>
+<h3 id="omfattade-delar">Omfattade delar</h3>
 
 <p>Denna IG realiserar de delar av informationsmodellen som behövs för att tillhandahålla information om en persons fasta kontakter, inklusive:</p>
 
@@ -258,9 +240,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="avvikelser-och-designbeslut">Avvikelser och designbeslut</h2>
+<h3 id="avvikelser-och-designbeslut">Avvikelser och designbeslut</h3>
 
-<h3 id="fast-kontakt-representeras-med-careteam">Fast kontakt representeras med CareTeam</h3>
+<h4 id="fast-kontakt-representeras-med-careteam">Fast kontakt representeras med CareTeam</h4>
 
 <p>Informationsmodellen beskriver <strong>Fast kontakt</strong> som en relation mellan en invånare och en namngiven vård- eller omsorgspersonal med samordnande funktion.</p>
 
@@ -268,7 +250,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><code class="language-plaintext highlighter-rouge">CareTeam.category</code> är därför fixerad till kategorin <code class="language-plaintext highlighter-rouge">fast-kontakt</code>. Typen av fast kontakt, exempelvis fast vårdkontakt eller fast omsorgskontakt, uttrycks separat med <code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code>.</p>
 
-<h3 id="den-fasta-kontakten-representeras-genom-practitionerrole">Den fasta kontakten representeras genom PractitionerRole</h3>
+<h4 id="den-fasta-kontakten-representeras-genom-practitionerrole">Den fasta kontakten representeras genom PractitionerRole</h4>
 
 <p>Den namngivna person som är fast kontakt representeras genom <code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code>, som refererar till <code class="language-plaintext highlighter-rouge">PractitionerRole</code>.</p>
 
@@ -276,7 +258,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Personens namn och identifierare representeras genom den <code class="language-plaintext highlighter-rouge">Practitioner</code> som refereras från <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, medan exempelvis befattning kan uttryckas på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code>.</p>
 
-<h3 id="startdatum-för-fast-kontakt">Startdatum för fast kontakt</h3>
+<h4 id="startdatum-för-fast-kontakt">Startdatum för fast kontakt</h4>
 
 <p>Informationsmodellen anger <code class="language-plaintext highlighter-rouge">Fast kontakt.startdatum</code> som obligatoriskt. I källsystemen finns dock inte alltid information om när den fasta kontakten började gälla.</p>
 
@@ -284,13 +266,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>En producent ska tillhandahålla startdatum när uppgiften finns tillgänglig, men avsaknad av startdatum ska inte hindra att information om den fasta kontakten kan tillhandahållas.</p>
 
-<h3 id="kontakt-via-team">Kontakt via team</h3>
+<h4 id="kontakt-via-team">Kontakt via team</h4>
 
 <p>En fast kontakt kan sakna en direkt kontaktväg och i stället nås genom ett team.</p>
 
 <p>Detta realiseras med extensionen <code class="language-plaintext highlighter-rouge">contactViaTeam</code> på <code class="language-plaintext highlighter-rouge">CareTeam.participant</code>. Extensionen refererar till ett <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>. Kontaktuppgifter för teamet uttrycks då på den refererade teamresursens <code class="language-plaintext highlighter-rouge">telecom</code>.</p>
 
-<h3 id="team-representeras-som-en-separat-careteam">Team representeras som en separat CareTeam</h3>
+<h4 id="team-representeras-som-en-separat-careteam">Team representeras som en separat CareTeam</h4>
 
 <p>Informationsmodellens <code class="language-plaintext highlighter-rouge">Team</code> representeras med en separat <code class="language-plaintext highlighter-rouge">CareTeam</code>-resurs genom profilen <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
 
@@ -300,7 +282,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Deltagare i teamet kan anges med <code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code>. En deltagare kan representeras med antingen <code class="language-plaintext highlighter-rouge">PractitionerRole</code> eller <code class="language-plaintext highlighter-rouge">Practitioner</code>.</p>
 
-<h3 id="kontaktväg">Kontaktväg</h3>
+<h4 id="kontaktväg">Kontaktväg</h4>
 
 <p>Informationsmodellens <code class="language-plaintext highlighter-rouge">Kontaktväg</code> realiseras med <code class="language-plaintext highlighter-rouge">CareTeam.telecom</code> i både <code class="language-plaintext highlighter-rouge">RIVCareManager</code> och <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
 
@@ -314,7 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="syfte-med-mappningarna">Syfte med mappningarna</h2>
+<h3 id="syfte-med-mappningarna">Syfte med mappningarna</h3>
 
 <p>Mappningarna nedan visar hur informationsmodellens element motsvaras av element i FHIR-profilerna.</p>
 
@@ -332,9 +314,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="mappningstabeller">Mappningstabeller</h2>
+<h3 id="mappningstabeller">Mappningstabeller</h3>
 
-<h3 id="fast-kontakt--rivcaremanager">Fast kontakt → RIVCareManager</h3>
+<h4 id="fast-kontakt--rivcaremanager">Fast kontakt → RIVCareManager</h4>
 
 <table>
   <thead>
@@ -434,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h3 id="team--rivmanagingteam">Team → RIVManagingTeam</h3>
+<h4 id="team--rivmanagingteam">Team → RIVManagingTeam</h4>
 
 <table>
   <thead>
@@ -522,7 +504,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Kardinaliteter markerade med <code class="language-plaintext highlighter-rouge">—</code> preciseras av respektive refererad profil eller extension.</p>
 
-<h3 id="personal--practitionerrole-och-practitioner">Personal → PractitionerRole och Practitioner</h3>
+<h4 id="personal--practitionerrole-och-practitioner">Personal → PractitionerRole och Practitioner</h4>
 
 <p>Information om personal representeras inte direkt som attribut på <code class="language-plaintext highlighter-rouge">RIVCareManager</code> eller <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
 
@@ -532,7 +514,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="fhir-element-utan-direkt-motsvarighet-i-informationsmodellen">FHIR-element utan direkt motsvarighet i informationsmodellen</h2>
+<h3 id="fhir-element-utan-direkt-motsvarighet-i-informationsmodellen">FHIR-element utan direkt motsvarighet i informationsmodellen</h3>
 
 <p>Vissa element behövs i FHIR-realiseringen men har ingen direkt motsvarighet som attribut i informationsmodellen.</p>
 
@@ -561,7 +543,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="omappade-element">Omappade element</h2>
+<h3 id="omappade-element">Omappade element</h3>
 
 <p>Följande delar av informationsmodellen realiseras inte i nuvarande version av IG:n.</p>
 
@@ -618,7 +600,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-10-15 12:49:00 +0000">
+  <span title="2026-10-15 13:32:00 +0000">
     2026-10-15
   </span>
 

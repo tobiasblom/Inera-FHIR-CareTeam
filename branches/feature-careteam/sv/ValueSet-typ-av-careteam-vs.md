@@ -1,6 +1,6 @@
-# Typ av CareTeam - Inera FHIR CareTeam v0.9
+# Urval typ av CareTeam - Inera FHIR CareTeam v0.9
 
-## ValueSet: Typ av CareTeam 
+## ValueSet: Urval typ av CareTeam 
 
  **References** 
 
@@ -28,10 +28,10 @@
   "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
   "version" : "0.9",
   "name" : "TypAvCareTeamVS",
-  "title" : "Typ av CareTeam",
+  "title" : "Urval typ av CareTeam",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-15T12:49:20+00:00",
+  "date" : "2026-10-15T13:32:05+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
