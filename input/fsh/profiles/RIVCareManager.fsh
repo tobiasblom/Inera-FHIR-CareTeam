@@ -33,10 +33,11 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * subject ^definition = "Den invånare som har tilldelats den fasta kontakten. Avser patient inom hälso- och sjukvård eller brukare inom omsorg."
 
 * category 1..1 MS
-* category ^short = "Kategori: fast kontakt"
-* category ^definition = "Anger att resursen beskriver en fast kontakt och skiljer den från andra användningar av CareTeam, till exempel team. Värdet är fast och är alltid koden fast-kontakt."
-* category ^binding.description = "Kategori av CareTeam."
+* category from TypAvCareTeamVS (required)
+* category ^binding.description = "Typ av CareTeam enligt Ineras kodverk."
 * category.coding 1..1
+* category.coding.system 1..1
+* category.coding.code 1..1
 * category = TypAvCareTeamCS#fast-kontakt
 * insert SvenskaKategoribeskrivningar
 

@@ -7,6 +7,7 @@ Description: "Typ av fast kontakt, dvs en specifik, namngiven person inom vårde
 * ^status = #active
 * ^experimental = false
 * ^publisher = "Inera AB"
+* ^version = "1.0"
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.752.129.5.1.69"
 

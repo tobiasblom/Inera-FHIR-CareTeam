@@ -2,12 +2,12 @@
 CodeSystem:     TypAvCareTeamCS
 Id:             typ-av-careteam-cs
 Title:          "Typ av CareTeam"
-Description:    "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vårdteam."
+Description:    "Kodverk som anger vilken typ av CareTeam som avses, till exempel fast kontakt eller vård- eller omsorgsteam."
 
 * ^status = #active
 * ^experimental = false
 * ^publisher = "Inera AB"
-* ^caseSensitive = false
+* ^version = "1.0"
 
 
 * #fast-kontakt "Fast kontakt"

@@ -37,10 +37,13 @@ Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vår
 * subject ^definition = "Den invånare som teamet är organiserat kring. Utelämnas om teamet inte är kopplat till en specifik invånare."
 
 * category 1..1 MS
+* category from TypAvCareTeamVS (required)
 * category ^short = "Kategori: team"
 * category ^definition = "Anger att resursen beskriver ett team och skiljer den från andra användningar av CareTeam, till exempel fast kontakt. Värdet är fast och är alltid koden team."
-* category ^binding.description = "Kategori av CareTeam."
+* category ^binding.description = "Typ av CareTeam enligt Ineras kodverk."
 * category.coding 1..1
+* category.coding.system 1..1
+* category.coding.code 1..1
 * category = TypAvCareTeamCS#team
 * insert SvenskaKategoribeskrivningar
 
