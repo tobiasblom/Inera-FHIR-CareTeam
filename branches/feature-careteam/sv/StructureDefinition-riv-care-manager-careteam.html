@@ -326,7 +326,7 @@ Fast kontakt
 
 <p><b>Användningar:</b></p>
 <ul>
- <li>Exempel för denna Profil: <a href="CareTeam-ExampleCareManager.html">CareTeam/ExampleCareManager</a></li>
+ <li>Exempel för denna Profil: <a href="CareTeam-ExampleCareManager.html">CareTeam/ExampleCareManager</a> and <a href="CareTeam-ExampleCareManagerAnnanFastKontakt.html">CareTeam/ExampleCareManagerAnnanFastKontakt</a></li>
 </ul>
 <p>Du kan också kontrollera <a href="https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/riv-care-manager-careteam">användningar i FHIR IG-statistiken</a></p>
 
@@ -666,7 +666,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamK'), 'constraint', document.getElementById('cbriv-care-manager-careteamK-constraint').checked, document.getElementById('ppriv-care-manager-careteamK'));
 document.getElementById('cbriv-care-manager-careteamK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -848,7 +848,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamK'), 'obligation', 
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -1101,7 +1101,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamK'), 'obligation', 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.50">0</span><span style="opacity: 0.50">..</span><span style="opacity: 0.50">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.50; opacity: 0.50" href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamD'), 'constraint', document.getElementById('cbriv-care-manager-careteamD-constraint').checked, document.getElementById('ppriv-care-manager-careteamD'));
 document.getElementById('cbriv-care-manager-careteamD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -1210,7 +1210,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamD'), 'obligation', 
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -1584,7 +1584,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamS'), 'constraint', document.getElementById('cbriv-care-manager-careteamS-constraint').checked, document.getElementById('ppriv-care-manager-careteamS'));
 document.getElementById('cbriv-care-manager-careteamS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -1767,7 +1767,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamS'), 'obligation', 
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -2212,7 +2212,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamKA'), 'constraint', document.getElementById('cbriv-care-manager-careteamKA-constraint').checked, document.getElementById('ppriv-care-manager-careteamKA'));
 document.getElementById('cbriv-care-manager-careteamKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -2393,7 +2393,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamKA'), 'obligation',
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -2646,7 +2646,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamKA'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.50">0</span><span style="opacity: 0.50">..</span><span style="opacity: 0.50">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.50; opacity: 0.50" href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamDA'), 'constraint', document.getElementById('cbriv-care-manager-careteamDA-constraint').checked, document.getElementById('ppriv-care-manager-careteamDA'));
 document.getElementById('cbriv-care-manager-careteamDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -2752,7 +2752,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamDA'), 'obligation',
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -3126,7 +3126,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kommentar<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // dad459fb-e231-428b-997c-f056466611e9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr><script type="text/javascript">  // 745893e7-d0e8-4b5f-b647-7ee7180af8c7
 document.getElementById('cbriv-care-manager-careteamSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
 filterDesc(document.getElementById('riv-care-manager-careteamSA'), 'constraint', document.getElementById('cbriv-care-manager-careteamSA-constraint').checked, document.getElementById('ppriv-care-manager-careteamSA'));
 document.getElementById('cbriv-care-manager-careteamSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
@@ -3307,7 +3307,7 @@ filterDesc(document.getElementById('riv-care-manager-careteamSA'), 'obligation',
     <td>CareTeam.participant.role</td>
     <td>Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.</td>
     <td>
-      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')</code>
+      <code>(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')</code>
     </td>
   </tr>
 </table>
@@ -3495,7 +3495,7 @@ Sammanfattning
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-10-15 12:03:00 +0000">
+  <span title="2026-10-15 12:49:00 +0000">
     2026-10-15
   </span>
 

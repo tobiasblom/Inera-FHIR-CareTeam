@@ -2,16 +2,16 @@
 
 ## Exempel PractitionerRole: Exempelroll för sjuksköterska
 
-Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123): Nurse at Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)
+Eva Svensson (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-ABC123): Sjuksköterska at Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)
 
 -------
 
 | | |
 | :--- | :--- |
 | Aktiv: | true |
-| Practitioner: | [Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)](Practitioner-ExamplePractitioner.md) |
-| Organization: | [Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)](Organization-ExampleOrganization.md) |
-| Role: | Nurse |
+| Practitioner: | [Eva Svensson (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-ABC123)](Practitioner-ExamplePractitioner.md) |
+| Organization: | [Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)](Organization-ExampleOrganization.md) |
+| Role: | Sjuksköterska |
 
 
 
@@ -30,9 +30,9 @@ Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123): Nurse at Vårdcentra
   },
   "code" : [{
     "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/practitioner-role",
-      "code" : "nurse",
-      "display" : "Nurse"
+      "system" : "urn:oid:1.2.752.129.2.2.1.4",
+      "code" : "206090",
+      "display" : "Sjuksköterska"
     }]
   }]
 }

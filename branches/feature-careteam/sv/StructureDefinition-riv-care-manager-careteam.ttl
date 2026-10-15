@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "RIVCareManager"] ; # 
   fhir:title [ fhir:v "Fast kontakt"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-15T12:03:42+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T12:49:20+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -1528,7 +1528,7 @@
          fhir:key [ fhir:v "fast-kontakt-typ-kod-eller-text" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas." ] ;
-         fhir:expression [ fhir:v "(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/<id>')" ] ;
+         fhir:expression [ fhir:v "(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')" ] ;
          fhir:source [
            fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"^^xsd:anyURI ;
            fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam>
@@ -3051,7 +3051,7 @@
          fhir:key [ fhir:v "fast-kontakt-typ-kod-eller-text" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas." ] ;
-         fhir:expression [ fhir:v "(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/<id>')" ] ;
+         fhir:expression [ fhir:v "(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')" ] ;
          fhir:source [
            fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"^^xsd:anyURI ;
            fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam>

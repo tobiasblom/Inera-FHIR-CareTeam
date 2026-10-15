@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-10-15T12:03:42+00:00",
+  "date" : "2026-10-15T12:49:20+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -171,6 +171,23 @@
       "name" : "Fast kontakt",
       "description" : "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet.",
       "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CareTeam"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CareTeam-ExampleCareManagerAnnanFastKontakt.html"
+      }],
+      "reference" : {
+        "reference" : "CareTeam/ExampleCareManagerAnnanFastKontakt"
+      },
+      "name" : "Fast kontakt med typ i klartext",
+      "description" : "Exempel på en fast kontakt vars typ inte finns i kodverket och därför anges i klartext.",
+      "isExample" : true,
+      "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"]
     },
     {
       "extension" : [{

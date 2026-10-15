@@ -49,6 +49,7 @@
 ### Examples
 
 * [ExampleCareManager (CareTeam)](CareTeam-ExampleCareManager.md)
+* [ExampleCareManagerAnnanFastKontakt (CareTeam)](CareTeam-ExampleCareManagerAnnanFastKontakt.md)
 * [Norra teamet (CareTeam)](CareTeam-ExampleManagingTeam.md)
 * [Vårdcentralen Solrosen (Organization)](Organization-ExampleOrganization.md)
 * [ExamplePatient (Patient)](Patient-ExamplePatient.md)

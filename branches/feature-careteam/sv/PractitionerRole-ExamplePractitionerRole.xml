@@ -4,7 +4,7 @@
   <id value="ExamplePractitionerRole"/>
   <language value="sv"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: PractitionerRole ExamplePractitionerRole</b></p><a name="ExamplePractitionerRole"> </a><a name="hcExamplePractitionerRole"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123): Nurse at Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Posten är aktiv">Aktiv:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="The practitioner who is able to provide the services in this role">Practitioner:</td><td colspan="3"><a href="Practitioner-ExamplePractitioner.html">Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization where the practitioner performs the roles">Organization:</td><td colspan="3"><a href="Organization-ExampleOrganization.html">Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)</a></td></tr><tr><td style="background-color: #f3f5da" title="Roles which this practitioner is authorized to perform for the organization">Role:</td><td colspan="3"><span title="Koder:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}">Nurse</span></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: PractitionerRole ExamplePractitionerRole</b></p><a name="ExamplePractitionerRole"> </a><a name="hcExamplePractitionerRole"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Eva Svensson (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-ABC123): Sjuksköterska at Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Posten är aktiv">Aktiv:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="The practitioner who is able to provide the services in this role">Practitioner:</td><td colspan="3"><a href="Practitioner-ExamplePractitioner.html">Eva Svensson (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-ABC123)</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization where the practitioner performs the roles">Organization:</td><td colspan="3"><a href="Organization-ExampleOrganization.html">Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)</a></td></tr><tr><td style="background-color: #f3f5da" title="Roles which this practitioner is authorized to perform for the organization">Role:</td><td colspan="3"><span title="Koder:{urn:oid:1.2.752.129.2.2.1.4 206090}">Sjuksköterska</span></td></tr></table></div>
   </text>
   <active value="true"/>
   <practitioner>
@@ -15,9 +15,9 @@
   </organization>
   <code>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
-      <code value="nurse"/>
-      <display value="Nurse"/>
+      <system value="urn:oid:1.2.752.129.2.2.1.4"/>
+      <code value="206090"/>
+      <display value="Sjuksköterska"/>
     </coding>
   </code>
 </PractitionerRole>

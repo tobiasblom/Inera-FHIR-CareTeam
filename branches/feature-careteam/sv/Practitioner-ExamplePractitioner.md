@@ -2,14 +2,13 @@
 
 ## Exempel Practitioner: Exempel vårdpersonal
 
-Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)
+Eva Svensson (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-ABC123)
 
 -------
 
 | | |
 | :--- | :--- |
 | Gender: | Female |
-| Annat id: | `urn:oid:1.2.752.129.2.1.4.1`/196912302345 |
 
 
 
@@ -20,12 +19,8 @@ Eva Svensson (urn:oid:1.2.752.29.4.19#SE2321000016-ABC123)
   "resourceType" : "Practitioner",
   "id" : "ExamplePractitioner",
   "identifier" : [{
-    "system" : "urn:oid:1.2.752.29.4.19",
-    "value" : "SE2321000016-ABC123"
-  },
-  {
     "system" : "urn:oid:1.2.752.129.2.1.4.1",
-    "value" : "196912302345"
+    "value" : "SE2321000016-ABC123"
   }],
   "name" : [{
     "family" : "Svensson",

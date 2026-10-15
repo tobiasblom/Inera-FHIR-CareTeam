@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-15T12:03:42+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-15T12:49:20+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -190,6 +190,25 @@
        fhir:name [ fhir:v "Fast kontakt" ] ;
        fhir:description [ fhir:v "Profil som beskriver relationen Fast kontakt som kan finnas mellan en invånare och namngiven vård- och omsorgspersonal i svensk vård och omsorg. En fast kontakt är en namngiven vård- eller omsorgspersonal som tilldelats en samordnande roll för en vård- och/eller omsorgstagare i syfte att skapa trygghet och kontinuitet." ] ;
        fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CareTeam"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.inera.se/ig/careteam/CareTeam/ExampleCareManagerAnnanFastKontakt> ;
+         fhir:reference [ fhir:v "CareTeam/ExampleCareManagerAnnanFastKontakt" ]
+       ] ;
+       fhir:name [ fhir:v "Fast kontakt med typ i klartext" ] ;
+       fhir:description [ fhir:v "Exempel på en fast kontakt vars typ inte finns i kodverket och därför anges i klartext." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"^^xsd:anyURI ;
+         fhir:link <https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam>
+       ] )
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

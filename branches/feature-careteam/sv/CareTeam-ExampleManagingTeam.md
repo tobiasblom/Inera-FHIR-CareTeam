@@ -19,6 +19,8 @@ Profil: [Team](StructureDefinition-riv-managing-team-careteam.md)
 | - | **Member** |
 | * | [Eva Svensson, sjuksköterska](PractitionerRole-ExamplePractitionerRole.md) |
 
+**managingOrganization**: [Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)](Organization-ExampleOrganization.md)
+
 **telecom**: ph: 010-123 45 67
 
 **note**: 
@@ -56,6 +58,9 @@ Teamets telefonnummer används för kontakt med medarbetare i teamet.
       "reference" : "PractitionerRole/ExamplePractitionerRole",
       "display" : "Eva Svensson, sjuksköterska"
     }
+  }],
+  "managingOrganization" : [{
+    "reference" : "Organization/ExampleOrganization"
   }],
   "telecom" : [{
     "extension" : [{

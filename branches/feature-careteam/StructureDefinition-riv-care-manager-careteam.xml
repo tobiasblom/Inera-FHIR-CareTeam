@@ -57,7 +57,7 @@
   <name value="RIVCareManager"/>
   <title value="Fast kontakt"/>
   <status value="draft"/>
-  <date value="2026-10-15T12:03:42+00:00"/>
+  <date value="2026-10-15T12:49:20+00:00"/>
   <publisher value="Inera AB"/>
   <contact>
     <name value="Inera AB"/>
@@ -1420,7 +1420,7 @@
         <key value="fast-kontakt-typ-kod-eller-text"/>
         <severity value="error"/>
         <human value="Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas."/>
-        <expression value="(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')"/>
+        <expression value="(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')"/>
         <source value="https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"/>
       </constraint>
       <mustSupport value="true"/>
@@ -2776,7 +2776,7 @@
         <key value="fast-kontakt-typ-kod-eller-text"/>
         <severity value="error"/>
         <human value="Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas."/>
-        <expression value="(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/&lt;id&gt;')"/>
+        <expression value="(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')"/>
         <source value="https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"/>
       </constraint>
       <mustSupport value="true"/>

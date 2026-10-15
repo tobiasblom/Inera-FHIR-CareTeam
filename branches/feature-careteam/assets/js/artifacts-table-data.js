@@ -29,7 +29,8 @@ window.artifactsTableData = {
       { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Exempel vårdpersonal", "i":"ExamplePractitioner", "t":"Practitioner", "u":"Practitioner-ExamplePractitioner.html", "r":"Practitioner/ExamplePractitioner", "d":"<p>Legitimerad sjuksköterska som är fast vårdkontakt.</p>" },
       { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Exempelpatient", "i":"ExamplePatient", "t":"Patient", "u":"Patient-ExamplePatient.html", "r":"Patient/ExamplePatient", "d":"<p>Patient som har en fast vårdkontakt.</p>" },
       { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Exempelroll för sjuksköterska", "i":"ExamplePractitionerRole", "t":"PractitionerRole", "u":"PractitionerRole-ExamplePractitionerRole.html", "r":"PractitionerRole/ExamplePractitionerRole", "d":"<p>Roll som beskriver vårdpersonalens funktion vid vårdenheten.</p>" },
-      { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Exempelteam", "i":"ExampleManagingTeam", "t":"CareTeam", "u":"CareTeam-ExampleManagingTeam.html", "r":"CareTeam/ExampleManagingTeam", "d":"<p>Team som den fasta vårdkontakten ingår i och som används för kontakt.</p>" }
+      { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Exempelteam", "i":"ExampleManagingTeam", "t":"CareTeam", "u":"CareTeam-ExampleManagingTeam.html", "r":"CareTeam/ExampleManagingTeam", "d":"<p>Team som den fasta vårdkontakten ingår i och som används för kontakt.</p>" },
+      { "p":5, "gid":"-ex-example", "g":"Exempel: Exempelinstanser", "n":"Fast kontakt med typ i klartext", "i":"ExampleCareManagerAnnanFastKontakt", "t":"CareTeam", "u":"CareTeam-ExampleCareManagerAnnanFastKontakt.html", "r":"CareTeam/ExampleCareManagerAnnanFastKontakt", "d":"<p>Exempel på en fast kontakt vars typ inte finns i kodverket och därför anges i klartext.</p>" }
     ]
   }
 };

@@ -2,7 +2,7 @@
 
 ## Exempel Patient: Exempelpatient
 
-Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#197805232391)
+Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)
 
 -------
 
@@ -16,7 +16,7 @@ Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#1
   "id" : "ExamplePatient",
   "identifier" : [{
     "system" : "urn:oid:1.2.752.129.2.1.3.1",
-    "value" : "197805232391"
+    "value" : "196408233234"
   }],
   "name" : [{
     "family" : "Andersson",

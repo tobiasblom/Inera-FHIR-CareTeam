@@ -2,7 +2,7 @@
 
 ## Exempel Organization: Exempel vårdenhet
 
-Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)
+Vårdcentralen Solrosen (urn:oid:1.2.752.129.2.1.4.1#SE2321000016-VC123)
 
 -------
 
@@ -20,7 +20,7 @@ Vårdcentralen Solrosen (urn:oid:1.2.752.29.4.19#SE2321000016-VC123)
   "resourceType" : "Organization",
   "id" : "ExampleOrganization",
   "identifier" : [{
-    "system" : "urn:oid:1.2.752.29.4.19",
+    "system" : "urn:oid:1.2.752.129.2.1.4.1",
     "value" : "SE2321000016-VC123"
   }],
   "name" : "Vårdcentralen Solrosen",

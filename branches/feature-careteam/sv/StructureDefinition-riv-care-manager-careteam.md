@@ -4,7 +4,7 @@
 
 **Användningar:**
 
-* Exempel för denna Profil: [CareTeam/ExampleCareManager](CareTeam-ExampleCareManager.md)
+* Exempel för denna Profil: [CareTeam/ExampleCareManager](CareTeam-ExampleCareManager.md) and [CareTeam/ExampleCareManagerAnnanFastKontakt](CareTeam-ExampleCareManagerAnnanFastKontakt.md)
 
 Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/riv-care-manager-careteam)
 
@@ -73,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-10-15T12:03:42+00:00",
+  "date" : "2026-10-15T12:49:20+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -360,7 +360,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
         "key" : "fast-kontakt-typ-kod-eller-text",
         "severity" : "error",
         "human" : "Typ av fast kontakt ska anges med kod från kodverket Typ av fast kontakt, med text eller med båda. Koder från andra kodverk får inte användas.",
-        "expression" : "(coding.exists() or text.exists()) and coding.all(system = 'https://fhir.inera.se/ig/careteam/CodeSystem/<id>')",
+        "expression" : "(coding.exists() or text.exists()) and coding.all(system = 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_typ_av_fast_kontakt')",
         "source" : "https://fhir.inera.se/ig/careteam/StructureDefinition/riv-care-manager-careteam"
       }],
       "mustSupport" : true,

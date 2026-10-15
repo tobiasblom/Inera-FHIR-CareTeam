@@ -105,9 +105,9 @@
     "2.16.840.1.113883.4.642.3.506"],
     "uses" : {
     },
+    "StructureDefinition-contact-point-availability.html" : "Tillgänglighet för kontaktväg",
     "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-contact-point-availability.html" : "Tillgänglighet för kontaktväg"
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
