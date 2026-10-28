@@ -90,6 +90,7 @@
     <sch:title>f:CareTeam/f:telecom/f:extension/f:value[x]/f:availableTime 1</sch:title>
     <sch:rule context="f:CareTeam/f:telecom/f:extension/f:value[x]/f:availableTime">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period']) &lt;= 1">extension with URL = 'https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:daysOfWeek) &gt;= 1">daysOfWeek: minimum cardinality of 'daysOfWeek' is 1</sch:assert>
       <sch:assert test="count(f:allDay) &lt;= 1">allDay: maximum cardinality of 'allDay' is 1</sch:assert>
       <sch:assert test="count(f:availableStartTime) &lt;= 1">availableStartTime: maximum cardinality of 'availableStartTime' is 1</sch:assert>

@@ -13,6 +13,13 @@
   "name" : "IneraFHIRCareTeam"
 },
 {
+  "id" : "available-time-period",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period",
+  "version" : "0.9",
+  "name" : "RIVAvailableTimePeriodExtension"
+},
+{
   "id" : "contact-point-availability",
   "type" : "StructureDefinition",
   "url" : "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability",

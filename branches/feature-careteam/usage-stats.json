@@ -5,6 +5,13 @@
   "jurisdiction": "SE",
   "extensions": [
     {
+      "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period",
+      "title": "Period för tillgänglig tid",
+      "types": [
+        "Period"
+      ]
+    },
+    {
       "url": "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability",
       "title": "Tillgänglighet för kontaktväg",
       "types": [
@@ -13,6 +20,7 @@
         "Extension",
         "Element",
         "string",
+        "Extension",
         "Extension",
         "code",
         "boolean",
@@ -76,6 +84,10 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period": [
+      "CareTeam.telecom.extension.value[x].availableTime",
+      "Extension.value[x].availableTime"
     ],
     "https://fhir.inera.se/ig/careteam/StructureDefinition/contact-point-availability": [
       "CareTeam.telecom"

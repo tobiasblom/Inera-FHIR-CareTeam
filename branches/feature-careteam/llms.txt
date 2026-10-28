@@ -39,6 +39,7 @@
 
 ### Extensions
 
+* [Period för tillgänglig tid](sv/StructureDefinition-available-time-period.md)
 * [Tillgänglighet för kontaktväg](sv/StructureDefinition-contact-point-availability.md)
 * [Kontakt via team](sv/StructureDefinition-contact-via-team.md)
 

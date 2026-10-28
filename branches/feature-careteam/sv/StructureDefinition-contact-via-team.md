@@ -59,7 +59,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-via-tea
   "name" : "RIVContactViaTeamExtension",
   "title" : "Kontakt via team",
   "status" : "draft",
-  "date" : "2026-10-15T14:04:45+00:00",
+  "date" : "2026-10-28T12:18:22+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

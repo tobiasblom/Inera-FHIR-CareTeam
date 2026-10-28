@@ -9,7 +9,7 @@
 **Användningar:**
 
 * Använd denna Extension: [Fast kontakt](StructureDefinition-riv-care-manager-careteam.md) and [Team](StructureDefinition-riv-managing-team-careteam.md)
-* Exempel för denna Extension: [Norra teamet](CareTeam-ExampleManagingTeam.md)
+* Exempel för denna Extension: [CareTeam/ExampleCareManagerAnnanFastKontakt](CareTeam-ExampleCareManagerAnnanFastKontakt.md) and [Norra teamet](CareTeam-ExampleManagingTeam.md)
 
 Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/contact-point-availability)
 
@@ -63,7 +63,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
   "name" : "RIVContactPointAvailabilityExtension",
   "title" : "Tillgänglighet för kontaktväg",
   "status" : "draft",
-  "date" : "2026-10-15T14:04:45+00:00",
+  "date" : "2026-10-28T12:18:22+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -116,7 +116,6 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
       "short" : "Kontaktvägens tillgänglighet",
-      "definition" : "Anger under vilka veckodagar och tider kontaktvägen är tillgänglig.",
       "min" : 1,
       "type" : [{
         "code" : "Availability"
@@ -128,7 +127,22 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "path" : "Extension.value[x].availableTime",
       "short" : "Tillgänglig tid",
       "definition" : "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig.",
+      "comment" : "Saknas veckodagar, tider och period är kontaktvägen tillgänglig alla dagar, hela dygnet, tills vidare.",
       "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.value[x].availableTime.extension:period",
+      "path" : "Extension.value[x].availableTime.extension",
+      "sliceName" : "period",
+      "short" : "Period",
+      "definition" : "Datumperiod under vilken veckodagarna och tiderna gäller. Saknas perioden gäller tiderna tills vidare.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period"]
+      }],
       "mustSupport" : true
     },
     {
@@ -136,6 +150,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "path" : "Extension.value[x].availableTime.daysOfWeek",
       "short" : "Veckodag",
       "definition" : "Veckodag då kontaktvägen är tillgänglig.",
+      "comment" : "Saknas veckodag gäller tiderna alla dagar i veckan.",
       "min" : 1,
       "mustSupport" : true
     },
@@ -144,6 +159,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "path" : "Extension.value[x].availableTime.availableStartTime",
       "short" : "Starttid",
       "definition" : "Tidpunkt då tillgängligheten börjar.",
+      "comment" : "Saknas starttid gäller tillgängligheten från dagens början.",
       "mustSupport" : true
     },
     {
@@ -151,6 +167,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "path" : "Extension.value[x].availableTime.availableEndTime",
       "short" : "Sluttid",
       "definition" : "Tidpunkt då tillgängligheten upphör.",
+      "comment" : "Saknas sluttid gäller tillgängligheten till dagens slut.",
       "mustSupport" : true
     }]
   }

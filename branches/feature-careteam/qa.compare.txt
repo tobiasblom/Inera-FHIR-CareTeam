@@ -1,7 +1,7 @@
 IneraFHIRCareTeam : Validation Results
 =========================================
 
-err = 0, warn = 20, info = 35, broken links = 0
+err = 0, warn = 21, info = 37, broken links = 0
 $--
 Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 0 / 0 / 0
@@ -15,6 +15,7 @@ Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https:/
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Patient-ExamplePatient : 0 / 1 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Practitioner-ExamplePractitioner : 0 / 1 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/PractitionerRole-ExamplePractitionerRole : 0 / 1 / 1
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-available-time-period : 0 / 1 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-contact-point-availability : 0 / 1 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-contact-via-team : 0 / 1 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-riv-care-manager-careteam : 0 / 2 / 3
@@ -22,21 +23,34 @@ Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https:/
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ValueSet-typ-av-careteam-vs : 0 / 2 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ValueSet-typ-av-fast-kontakt-vs : 0 / 2 / 3
 </table>
+
 == n/a ==
+
+
 == fsh-generated/resources/CareTeam-ExampleCareManager.json ==
+
+
 == fsh-generated/resources/CareTeam-ExampleCareManagerAnnanFastKontakt.json ==
+
+
 == fsh-generated/resources/CareTeam-ExampleManagingTeam.json ==
+
+
 == fsh-generated/resources/CodeSystem-typ-av-careteam-cs.json ==
 WARNING: CodeSystem/typ-av-careteam-cs: CodeSystem.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: CodeSystem/typ-av-careteam-cs: CodeSystem.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: CodeSystem/typ-av-careteam-cs: CodeSystem: CodeSystems BÖR ha ett angivet värde för caseSensitive-elementet så att användare tydligt förstår kodsystemets status och betydelse
 WARNING: CodeSystem/typ-av-careteam-cs: CodeSystem: Publicerade kodsystem BÖR följa ShareableCodeSystem-profilen, som anger att elementet CodeSystem.caseSensitive är obligatoriskt, men det är inte närvarande
 WARNING: Resource: The resource CodeSystem/typ-av-careteam-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs.json ==
 WARNING: CodeSystem/typ-av-fast-kontakt-cs: CodeSystem.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: CodeSystem/typ-av-fast-kontakt-cs: CodeSystem.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: CodeSystem/typ-av-fast-kontakt-cs: CodeSystem: CodeSystems BÖR ha ett angivet värde för caseSensitive-elementet så att användare tydligt förstår kodsystemets status och betydelse
 WARNING: CodeSystem/typ-av-fast-kontakt-cs: CodeSystem: Publicerade kodsystem BÖR följa ShareableCodeSystem-profilen, som anger att elementet CodeSystem.caseSensitive är obligatoriskt, men det är inte närvarande
+
+
 == fsh-generated/resources/ImplementationGuide-inera.fhir.careteam.json ==
 WARNING: ImplementationGuide.version: The version 0.9 is not a valid semantic version and will not be acceptible to the ci-build, nor will it be a valid vesion in the NPM package system
 INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.language: Det angivna värdet ('sv') kunde inte valideras i avsaknad av en terminologiserver
@@ -59,38 +73,66 @@ INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.defini
 INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.definition.parameter[21].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.definition.parameter[27].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 INFORMATION: Resource: The resource ImplementationGuide/inera.fhir.careteam could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/Organization-ExampleOrganization.json ==
 WARNING: Organization/ExampleOrganization: Organization.identifier[0].system: Ingen definition kunde hittas för URL-värdet 'urn:oid:1.2.752.129.2.1.4.1'
+
+
 == fsh-generated/resources/Patient-ExamplePatient.json ==
 WARNING: Patient/ExamplePatient: Patient.identifier[0].system: Ingen definition kunde hittas för URL-värdet 'urn:oid:1.2.752.129.2.1.3.1'
+
+
 == fsh-generated/resources/Practitioner-ExamplePractitioner.json ==
 WARNING: Practitioner/ExamplePractitioner: Practitioner.identifier[0].system: Ingen definition kunde hittas för URL-värdet 'urn:oid:1.2.752.129.2.1.4.1'
+
+
 == fsh-generated/resources/PractitionerRole-ExamplePractitionerRole.json ==
 WARNING: PractitionerRole/ExamplePractitionerRole: PractitionerRole.code[0].coding[0].system: En definition för CodeSystem 'urn:oid:1.2.752.129.2.2.1.4' kunde inte hittas, så koden kan inte valideras
+
+
+== fsh-generated/resources/StructureDefinition-available-time-period.json ==
+WARNING: StructureDefinition/available-time-period: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
+INFORMATION: StructureDefinition/available-time-period: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: Resource: The resource StructureDefinition/available-time-period could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/StructureDefinition-contact-point-availability.json ==
 WARNING: StructureDefinition/contact-point-availability: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/contact-point-availability: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: Resource: The resource StructureDefinition/contact-point-availability could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/StructureDefinition-contact-via-team.json ==
 WARNING: StructureDefinition/contact-via-team: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/contact-via-team: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: Resource: The resource StructureDefinition/contact-via-team could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/StructureDefinition-riv-care-manager-careteam.json ==
 WARNING: StructureDefinition/riv-care-manager-careteam: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/riv-care-manager-careteam: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 WARNING: StructureDefinition/riv-care-manager-careteam: StructureDefinition.differential.element[28]: Constraint failed: eld-27: 'Mappings SHOULD be unique by key (mapping.select(identity).isDistinct())' at CareTeam.participant.member (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition)
 INFORMATION: Resource: The resource StructureDefinition/riv-care-manager-careteam could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/StructureDefinition-riv-managing-team-careteam.json ==
 WARNING: StructureDefinition/riv-managing-team-careteam: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/riv-managing-team-careteam: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: Resource: The resource StructureDefinition/riv-managing-team-careteam could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/ValueSet-typ-av-careteam-vs.json ==
 WARNING: ValueSet/typ-av-careteam-vs: ValueSet.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: ValueSet/typ-av-careteam-vs: ValueSet.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: ValueSet/typ-av-careteam-vs: ValueSet.compose.include[0]: Begreppen i värdemängdens include har inte validerats eftersom det inte finns någon terminologiserver
 WARNING: Resource: The resource ValueSet/typ-av-careteam-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/ValueSet-typ-av-fast-kontakt-vs.json ==
 WARNING: ValueSet/typ-av-fast-kontakt-vs: ValueSet.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: ValueSet/typ-av-fast-kontakt-vs: ValueSet.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: ValueSet/typ-av-fast-kontakt-vs: ValueSet.compose.include[0]: Begreppen i värdemängdens include har inte validerats eftersom det inte finns någon terminologiserver
 WARNING: Resource: The resource ValueSet/typ-av-fast-kontakt-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
