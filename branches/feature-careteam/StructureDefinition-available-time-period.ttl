@@ -25,7 +25,7 @@
   fhir:name [ fhir:v "RIVAvailableTimePeriodExtension"] ; # 
   fhir:title [ fhir:v "Period för tillgänglig tid"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-11-02T09:45:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-11-02T09:57:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;

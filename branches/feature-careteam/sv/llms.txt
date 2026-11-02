@@ -6,6 +6,7 @@
 * [Nedladdningar](downloads.md)
 * [Testning och validering](testing.md)
 * [Förväntade svar](expected-responses.md)
+* [Mappning från GetCareManagers](mapping-getcaremanagers.md)
 * [CapabilityStatement](capabilitystatement.md)
 * [Felhantering](error-handling.md)
 * [Sammanfattning av artefakter](artifacts.md)

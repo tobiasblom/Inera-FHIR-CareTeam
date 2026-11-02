@@ -59,7 +59,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-available-time-
   "name" : "RIVAvailableTimePeriodExtension",
   "title" : "Period för tillgänglig tid",
   "status" : "draft",
-  "date" : "2026-11-02T09:45:29+00:00",
+  "date" : "2026-11-02T09:57:02+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

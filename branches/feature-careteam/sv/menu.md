@@ -8,6 +8,7 @@
 * [Användningsfall](use-cases.md)
 * [Roller och ansvar](roles-and-responsibilities.md)
 * [Mappning till profiler](mappings.md)
+* [Mappning från GetCareManagers](mapping-getcaremanagers.md)
 
 ### Om
 

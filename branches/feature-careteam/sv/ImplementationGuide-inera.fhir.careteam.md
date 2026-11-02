@@ -14,7 +14,7 @@
   "name" : "IneraFHIRCareTeam",
   "title" : "Inera FHIR CareTeam",
   "status" : "draft",
-  "date" : "2026-11-02T09:45:29+00:00",
+  "date" : "2026-11-02T09:57:02+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -356,6 +356,12 @@
         "sourceUrl" : "mappings.html",
         "name" : "mappings.html",
         "title" : "Mappning till profiler",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "mapping-getcaremanagers.html",
+        "name" : "mapping-getcaremanagers.html",
+        "title" : "Mappning från GetCareManagers",
         "generation" : "markdown"
       },
       {

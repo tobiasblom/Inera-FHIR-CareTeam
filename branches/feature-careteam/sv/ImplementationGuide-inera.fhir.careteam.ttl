@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "IneraFHIRCareTeam"] ; # 
   fhir:title [ fhir:v "Inera FHIR CareTeam"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-11-02T09:45:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-11-02T09:57:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Inera AB"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Inera AB" ] ;
@@ -385,6 +385,14 @@
          ] ;
          fhir:name [ fhir:v "mappings.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Mappning till profiler" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "mapping-getcaremanagers.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "mapping-getcaremanagers.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Mappning från GetCareManagers" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:source [

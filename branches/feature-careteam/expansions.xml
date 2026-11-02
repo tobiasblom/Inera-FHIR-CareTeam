@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="05bc4404-9d45-4435-992c-2ab6b1c09f77"/>
+  <id value="1f97d97a-18d5-4671-8b44-38aeaa3641b3"/>
   <meta>
-    <lastUpdated value="2026-11-02T09:45:29.605+00:00"/>
+    <lastUpdated value="2026-11-02T09:57:02.600+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -93,7 +93,7 @@
         <title value="Urval typ av CareTeam"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-02T09:45:29+00:00"/>
+        <date value="2026-11-02T09:57:02+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -102,8 +102,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a8ed4a14-4969-41eb-a231-9e463d6b990f"/>
-          <timestamp value="2026-11-02T09:46:08+00:00"/>
+          <identifier value="urn:uuid:cd87abb3-2546-4ebf-8821-e28195449685"/>
+          <timestamp value="2026-11-02T09:57:20+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -225,7 +225,7 @@
         <title value="Urval typ av CareTeam"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-02T09:45:29+00:00"/>
+        <date value="2026-11-02T09:57:02+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -234,8 +234,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e57acb65-e178-4e2f-a34f-e1e60d52e383"/>
-          <timestamp value="2026-11-02T09:46:08+00:00"/>
+          <identifier value="urn:uuid:5010551f-d7e7-4a29-b185-a7c618a8187b"/>
+          <timestamp value="2026-11-02T09:57:20+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -420,7 +420,7 @@
         <title value="Urval typ av fast kontakt"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-02T09:45:29+00:00"/>
+        <date value="2026-11-02T09:57:02+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -429,8 +429,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:eebf07a3-ec83-4f41-ac4d-04f05da4f19c"/>
-          <timestamp value="2026-11-02T09:46:08+00:00"/>
+          <identifier value="urn:uuid:5723ae5b-7727-4b0a-b86a-83e3ce6f45ca"/>
+          <timestamp value="2026-11-02T09:57:20+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -627,7 +627,7 @@
         <title value="Urval typ av fast kontakt"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-02T09:45:29+00:00"/>
+        <date value="2026-11-02T09:57:02+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -636,8 +636,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8df8513d-4ada-43de-ae64-d601130fc51a"/>
-          <timestamp value="2026-11-02T09:46:08+00:00"/>
+          <identifier value="urn:uuid:08821d59-37d7-46e3-bad4-2f9c6718aacc"/>
+          <timestamp value="2026-11-02T09:57:20+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>

@@ -108,31 +108,31 @@ Kardinaliteterna för informationsmodellen och FHIR-profilen redovisas separat n
 | :--- | :--- | :--- | :--- | :--- |
 | Person.person-id | 1 | `CareTeam.subject` | 1..1 | Refererar till`Patient`. Personens identifierare finns på den refererade Patient-resursen i`Patient.identifier`. |
 | Fast kontakt.typ | 1 | `CareTeam.participant.role` | 1..1 | Anger vilken typ av fast kontakt relationen avser. Bundet till`TypAvFastKontaktVS`. |
-| Fast kontakt.kommentar | 0..1 | `CareTeam.note` | 0..* | Kompletterande information eller vägledning om den fasta kontakten. FHIR-modellens öppnare kardinalitet har behållits. |
+| Fast kontakt.kommentar | 0..1 | `CareTeam.note` | 0..* | Kommentar som får visas för invånaren. Interna kommentarer förmedlas inte. FHIR-modellens öppnare kardinalitet har behållits. |
 | Fast kontakt.startdatum | 1 | `CareTeam.period.start` | 0..1 | Startdatum finns inte alltid dokumenterat i källsystemen och är därför frivilligt i FHIR-profilen. |
 | Fast kontakt.slutdatum | 0..1 | `CareTeam.period.end` | 0..1 | Datum då den fasta kontakten upphör att gälla. |
 | Personal | — | `CareTeam.participant.member` | 1..1 | Referens till`PractitionerRole`som representerar den namngivna vård- eller omsorgspersonalen i den aktuella rollen. |
 | Team | — | `CareTeam.participant.extension[contactViaTeam]` | 0..1 | Referens till`RIVManagingTeam`när den fasta kontakten nås genom ett team. |
 | Kontaktväg.kontaktvägstyp | 1 | `CareTeam.telecom.system` | 0..1 | Anger kommunikationskanal enligt FHIR`ContactPoint.system`. Informationsmodellens mer detaljerade typer av telefonnummer realiseras inte. |
 | Kontaktväg.värde | 0..1 | `CareTeam.telecom.value` | 0..1 | Telefonnummer, e-postadress, URL eller motsvarande. |
-| Kontakttid.veckodag | 0..1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.daysOfWeek` | — | Veckodag då kontaktvägen är tillgänglig. |
-| Kontakttid.starttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableStartTime` | — | Tid då tillgängligheten börjar. |
-| Kontakttid.sluttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableEndTime` | — | Tid då tillgängligheten slutar. |
+| Kontakttid.veckodag | 0..1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.daysOfWeek` | 0..* | Flera veckodagar kan anges för samma tider. Saknas veckodag gäller tiderna alla dagar. |
+| Kontakttid.starttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableStartTime` | 0..1 | Frivillig i FHIR. Saknas starttid gäller tillgängligheten från dagens början. |
+| Kontakttid.sluttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableEndTime` | 0..1 | Frivillig i FHIR. Saknas sluttid gäller tillgängligheten till dagens slut. |
 
 #### Team → RIVManagingTeam
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| Team.id | 1 | `CareTeam.identifier` | 0..* | Identifierare för teamet. |
+| Team.id | 1 | `CareTeam.identifier` | 0..* | Identifierare för teamet. Frivillig i FHIR-profilen enligt designbeslut, eftersom alla källsystem inte har en identifierare för team. |
 | Team.namn | 0..1 | `CareTeam.name` | 0..1 | Teamets namn. |
-| Team.kommentar | 0..1 | `CareTeam.note` | 0..* | Kompletterande information eller vägledning om teamet. FHIR-modellens öppnare kardinalitet har behållits. |
+| Team.kommentar | 0..1 | `CareTeam.note` | 0..* | Kommentar som får visas för invånaren. Interna kommentarer förmedlas inte. FHIR-modellens öppnare kardinalitet har behållits. |
 | Person.person-id | 1 | `CareTeam.subject` | 0..1 | Refererar till`Patient`när teamet är kopplat till en specifik invånare. Personens identifierare finns i`Patient.identifier`. |
 | Personal | — | `CareTeam.participant.member` | 0..1 per deltagare | En deltagare representeras med`PractitionerRole`eller`Practitioner`.`CareTeam.participant`kan upprepas för flera deltagare. |
 | Kontaktväg.kontaktvägstyp | 1 | `CareTeam.telecom.system` | 0..1 | Anger kommunikationskanal. Informationsmodellens mer detaljerade typer av telefonnummer realiseras inte. |
 | Kontaktväg.värde | 0..1 | `CareTeam.telecom.value` | 0..1 | Telefonnummer, e-postadress, URL eller motsvarande. |
-| Kontakttid.veckodag | 0..1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.daysOfWeek` | — | Veckodag då kontaktvägen är tillgänglig. |
-| Kontakttid.starttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableStartTime` | — | Tid då tillgängligheten börjar. |
-| Kontakttid.sluttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableEndTime` | — | Tid då tillgängligheten slutar. |
+| Kontakttid.veckodag | 0..1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.daysOfWeek` | 0..* | Flera veckodagar kan anges för samma tider. Saknas veckodag gäller tiderna alla dagar. |
+| Kontakttid.starttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableStartTime` | 0..1 | Frivillig i FHIR. Saknas starttid gäller tillgängligheten från dagens början. |
+| Kontakttid.sluttid | 1 | `CareTeam.telecom.extension[availability].valueAvailability.availableTime.availableEndTime` | 0..1 | Frivillig i FHIR. Saknas sluttid gäller tillgängligheten till dagens slut. |
 
 Kardinaliteter markerade med `—` preciseras av respektive refererad profil eller extension.
 
@@ -155,6 +155,7 @@ Vissa element behövs i FHIR-realiseringen men har ingen direkt motsvarighet som
 | `CareTeam.category` | Skiljer en`RIVCareManager`från ett`RIVManagingTeam`genom de fixerade kategorierna`fast-kontakt`respektive`team`. |
 | `RIVManagingTeam.period` | Kan beskriva under vilken period teamet är relevant i det aktuella sammanhanget. |
 | `RIVManagingTeam.participant` | Möjliggör representation av de aktörer som ingår i teamet. |
+| `availableTime.extension[period]` | Anger under vilken datumperiod veckodagar och tider gäller, till exempel sommartider. Perioden finns inte i informationsmodellen men behövs eftersom källsystemen har tider som gäller under begränsade perioder. Tider med period har företräde framför tider utan period. |
 
 -------
 
