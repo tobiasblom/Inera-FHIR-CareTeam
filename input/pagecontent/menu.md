@@ -6,6 +6,11 @@
 - [Mappning till profiler](mappings.html)
 - [Mappning från GetCareManagers](mapping-getcaremanagers.html)
 
+### Implementering
+
+- [REST-interaktioner och sökparametrar](rest-interactions.html)
+- [Säkerhet och behörighet](security.html)
+
 ### Om
 
 - [Styrning och förvaltning](about.html)
