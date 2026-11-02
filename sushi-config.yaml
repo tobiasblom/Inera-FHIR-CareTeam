@@ -35,6 +35,8 @@ pages:
     title: Roller och ansvar
   mappings.md:
     title: Mappning till profiler
+  mapping-getcaremanagers.md:
+    title: Mappning från GetCareManagers  
   rest-interactions.md:
     title: REST-interaktioner och sökparametrar
   expected-responses.md:

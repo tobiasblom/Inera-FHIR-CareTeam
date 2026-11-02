@@ -4,6 +4,7 @@
 - [Användningsfall](use-cases.html)
 - [Roller och ansvar](roles-and-responsibilities.html)
 - [Mappning till profiler](mappings.html)
+- [Mappning från GetCareManagers](mapping-getcaremanagers.html)
 
 ### Om
 
