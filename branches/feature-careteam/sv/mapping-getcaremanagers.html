@@ -184,9 +184,697 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#läsanvisning" id="markdown-toc-läsanvisning">Läsanvisning</a></li>
+  <li><a href="#övergripande-skillnader" id="markdown-toc-övergripande-skillnader">Övergripande skillnader</a></li>
+  <li><a href="#begäran" id="markdown-toc-begäran">Begäran</a></li>
+  <li><a href="#svar--fast-kontakt" id="markdown-toc-svar--fast-kontakt">Svar – fast kontakt</a></li>
+  <li><a href="#svar--medarbetare" id="markdown-toc-svar--medarbetare">Svar – medarbetare</a></li>
+  <li><a href="#svar--organisation" id="markdown-toc-svar--organisation">Svar – organisation</a></li>
+  <li><a href="#svar--team" id="markdown-toc-svar--team">Svar – team</a></li>
+  <li><a href="#kontaktväg" id="markdown-toc-kontaktväg">Kontaktväg</a></li>
+  <li><a href="#tillgänglighet" id="markdown-toc-tillgänglighet">Tillgänglighet</a></li>
+  <li><a href="#header-och-spärrinformation" id="markdown-toc-header-och-spärrinformation">Header och spärrinformation</a></li>
+  <li><a href="#affärsregler" id="markdown-toc-affärsregler">Affärsregler</a></li>
+  <li><a href="#avgränsningar" id="markdown-toc-avgränsningar">Avgränsningar</a></li>
+  <li><a href="#öppna-frågor" id="markdown-toc-öppna-frågor">Öppna frågor</a></li>
+</ul>
+
 </div>
+<p>Denna sida beskriver hur tjänstekontraktet <strong>GetCareManagers 1.0</strong> motsvaras av FHIR-profilerna i denna IG. Sidan är avsedd för producenter och konsumenter som i dag använder tjänstekontraktet och behöver förstå var samma information finns i FHIR.</p>
+
+<p>Mappningen mot informationsmodellen beskrivs på sidan <a href="mappings.html">Mappning till profiler</a>.</p>
+
+<hr />
+
+<h3 id="läsanvisning">Läsanvisning</h3>
+
+<p>Varje tabell visar ett element i tjänstekontraktet, dess motsvarighet i FHIR och om motsvarigheten är fullständig.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Betydelse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OK</td>
+      <td>Motsvarighet finns.</td>
+    </tr>
+    <tr>
+      <td>Avvikelse</td>
+      <td>Motsvarighet finns men avviker, till exempel i struktur eller kardinalitet.</td>
+    </tr>
+    <tr>
+      <td>Saknas</td>
+      <td>Motsvarighet saknas i nuvarande version.</td>
+    </tr>
+    <tr>
+      <td>Öppen fråga</td>
+      <td>Mappningen är inte fastställd. Se avsnittet Öppna frågor nedan.</td>
+    </tr>
+    <tr>
+      <td>Avgränsning</td>
+      <td>Hanteras inte i denna version. Se avsnittet Avgränsningar nedan.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sökvägar i tjänstekontraktet anges relativt svarets eller begärans rot. <code class="language-plaintext highlighter-rouge">*</code> står för samtliga tre organisationselement (<code class="language-plaintext highlighter-rouge">managingCareGiver</code>, <code class="language-plaintext highlighter-rouge">managingCareUnit</code> och <code class="language-plaintext highlighter-rouge">careProvidingCareUnit</code>).</p>
+
+<hr />
+
+<h3 id="övergripande-skillnader">Övergripande skillnader</h3>
+
+<p><strong>En resurs per fast kontakt.</strong> Varje <code class="language-plaintext highlighter-rouge">careManager</code> i svaret motsvaras av en instans av profilen <a href="StructureDefinition-riv-care-manager-careteam.html">Fast kontakt</a>. Ett sökresultat (<code class="language-plaintext highlighter-rouge">Bundle</code>) innehåller därför en resurs per fast kontakt.</p>
+
+<p><strong>Fast kontakt och team skiljs åt med kategori.</strong> Båda profilerna bygger på <code class="language-plaintext highlighter-rouge">CareTeam</code>. <code class="language-plaintext highlighter-rouge">CareTeam.category</code> anger om resursen är en fast kontakt eller ett team. Kategorin saknar motsvarighet i tjänstekontraktet.</p>
+
+<p><strong>Personal och organisation är egna resurser.</strong> Information om medarbetare och organisation ligger i tjänstekontraktet direkt under <code class="language-plaintext highlighter-rouge">careManager</code>. I FHIR refererar Fast kontakt till en <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, som i sin tur refererar till <code class="language-plaintext highlighter-rouge">Practitioner</code> (personen) och <code class="language-plaintext highlighter-rouge">Organization</code> (enheten).</p>
+
+<hr />
+
+<h3 id="begäran">Begäran</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patientId</code></td>
+      <td>1..1</td>
+      <td>Sökning på <code class="language-plaintext highlighter-rouge">CareTeam</code> med <code class="language-plaintext highlighter-rouge">subject</code></td>
+      <td>Avvikelse</td>
+      <td>Kräver kedjad sökning (<code class="language-plaintext highlighter-rouge">subject:Patient.identifier</code>) eller uppslag av Patient följt av sökning med <code class="language-plaintext highlighter-rouge">subject=Patient/{id}</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patientId.root</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient.identifier.system</code></td>
+      <td>OK</td>
+      <td>Personnummer, samordningsnummer eller nationellt reservnummer, uttryckt som <code class="language-plaintext highlighter-rouge">urn:oid:</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">patientId.extension</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient.identifier.value</code></td>
+      <td>OK</td>
+      <td>12 tecken utan avskiljare.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careGiverId</code></td>
+      <td>0..1</td>
+      <td>Ingen standardparameter</td>
+      <td>Avgränsning</td>
+      <td>Sökparametrar beskrivs inte i denna version.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careUnitId</code></td>
+      <td>0..1</td>
+      <td>Ingen standardparameter</td>
+      <td>Avgränsning</td>
+      <td>Som <code class="language-plaintext highlighter-rouge">careGiverId</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManagerType</code></td>
+      <td>0..1</td>
+      <td>Ingen standardparameter</td>
+      <td>Avgränsning</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam</code> saknar sökparameter för <code class="language-plaintext highlighter-rouge">participant.role</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careProcessId</code></td>
+      <td>0..1</td>
+      <td>Ingen motsvarighet</td>
+      <td>Saknas</td>
+      <td>Hälsoärende realiseras inte i denna version.</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>–</td>
+      <td>Sökning på <code class="language-plaintext highlighter-rouge">category</code></td>
+      <td>OK</td>
+      <td>Behövs i FHIR för att skilja fasta kontakter från team. Saknas i tjänstekontraktet.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="svar--fast-kontakt">Svar – fast kontakt</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager</code></td>
+      <td>0..*</td>
+      <td>En instans av Fast kontakt</td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>En resurs per fast kontakt.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.code</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code></td>
+      <td>1..1</td>
+      <td>OK</td>
+      <td>Kodverket Typ av fast kontakt. FHIR tillåter även typ i klartext när koden saknas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.period</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.period.start</code></td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.period.start</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Startdatum finns inte alltid i källsystemen.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.period.end</code></td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.period.end</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.externalNotes</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.note</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>Kommentar som får visas för invånaren.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.internalNotes</code></td>
+      <td>0..1</td>
+      <td>Förmedlas inte</td>
+      <td>–</td>
+      <td>Avvikelse</td>
+      <td>Interna kommentarer ska inte kunna anges och förmedlas inte i FHIR.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.contact</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>Endast kontaktvägar (telecom). Adress, se avsnittet Kontaktväg.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.careTeam</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.extension[contactViaTeam]</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Referens till ett <a href="StructureDefinition-riv-managing-team-careteam.html">Team</a> som den fasta kontakten nås via.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="svar--medarbetare">Svar – medarbetare</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.practitioner</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code> → <code class="language-plaintext highlighter-rouge">PractitionerRole.practitioner</code></td>
+      <td>1..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">practitioner.id</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.identifier</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>HSA-id (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.1.4.1</code>) i första hand, annars personnummer. Producenten ansvarar för hantering av skyddade personuppgifter.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">practitioner.name</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.name.text</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>Sträng i tjänstekontraktet, <code class="language-plaintext highlighter-rouge">HumanName</code> i FHIR.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">practitioner.qualification</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.code</code></td>
+      <td>0..*</td>
+      <td>Öppen fråga</td>
+      <td>Befattning enligt KV Befattning (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.2.1.4</code>). Alternativet är <code class="language-plaintext highlighter-rouge">Practitioner.qualification.code</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="svar--organisation">Svar – organisation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.managingCareGiver</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> via <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> och <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
+      <td>–</td>
+      <td>Öppen fråga</td>
+      <td>Vård- eller omsorgsgivare.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.managingCareUnit</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code> via <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> och <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
+      <td>–</td>
+      <td>Öppen fråga</td>
+      <td>Vård- eller omsorgsenhet.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManager.careProvidingCareUnit</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code></td>
+      <td>–</td>
+      <td>Öppen fråga</td>
+      <td>Vårdutförande enhet.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*.hsaId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.identifier</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td><code class="language-plaintext highlighter-rouge">system</code> = <code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.1.4.1</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*.name</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.name</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*.contact</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td><code class="language-plaintext highlighter-rouge">ExtendedContactDetail</code> rymmer både kontaktvägar och adress.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="svar--team">Svar – team</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careTeam.id</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.identifier</code></td>
+      <td>0..*</td>
+      <td>Avvikelse</td>
+      <td>Frivillig i profilen enligt designbeslut.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careTeam.name</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.name</code></td>
+      <td>0..1</td>
+      <td>Avvikelse</td>
+      <td>Frivillig i profilen enligt designbeslut.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careTeam.externalNotes</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.note</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>Kommentar som får visas för invånaren.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careTeam.internalNotes</code></td>
+      <td>0..1</td>
+      <td>Förmedlas inte</td>
+      <td>–</td>
+      <td>Avvikelse</td>
+      <td>Interna kommentarer ska inte kunna anges och förmedlas inte i FHIR.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careTeam.contact</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td>Endast kontaktvägar (telecom).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="kontaktväg">Kontaktväg</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">contact.telecom</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telecom.system</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">ContactPoint.system</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Samma värden: phone, fax, email, pager, url, sms, other.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telecom.value</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">ContactPoint.value</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telecom.period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">ContactPoint.extension[availability]</code></td>
+      <td>0..1</td>
+      <td>Avvikelse</td>
+      <td>Kontakttider uttrycks med extensionen <a href="StructureDefinition-contact-point-availability.html">Tillgänglighet för kontaktväg</a>. Se avsnittet Tillgänglighet.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">contact.address</code></td>
+      <td>0..1</td>
+      <td>Saknas på <code class="language-plaintext highlighter-rouge">CareTeam</code></td>
+      <td>–</td>
+      <td>Saknas</td>
+      <td>Adress till fast kontakt eller team kan inte förmedlas. Adressen finns på organisationen i <code class="language-plaintext highlighter-rouge">Organization.contact.address</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">address.type</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.type</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>postal, physical, both.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">address.line</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.line</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">address.city</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.city</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">address.postalCode</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.postalCode</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">address.period</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.period</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td><code class="language-plaintext highlighter-rouge">Period</code> kan bara uttrycka ett datumintervall, inte veckodagar och tider.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="tillgänglighet">Tillgänglighet</h3>
+
+<p><code class="language-plaintext highlighter-rouge">HoursOfServiceType</code> i tjänstekontraktet motsvaras av <code class="language-plaintext highlighter-rouge">Availability</code> i extensionen <a href="StructureDefinition-contact-point-availability.html">Tillgänglighet för kontaktväg</a>. Varje förekomst av <code class="language-plaintext highlighter-rouge">hoursOfService</code> blir en <code class="language-plaintext highlighter-rouge">availableTime</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Kard. FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hoursOfService.weekDay</code></td>
+      <td>0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">availableTime.daysOfWeek</code></td>
+      <td>0..*</td>
+      <td>OK</td>
+      <td><code class="language-plaintext highlighter-rouge">Monday</code> → <code class="language-plaintext highlighter-rouge">mon</code>, <code class="language-plaintext highlighter-rouge">Tuesday</code> → <code class="language-plaintext highlighter-rouge">tue</code> osv. Saknas veckodag gäller tiderna alla dagar.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hoursOfService.time.start</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">availableTime.availableStartTime</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td><code class="language-plaintext highlighter-rouge">080000</code> → <code class="language-plaintext highlighter-rouge">08:00:00</code>. Saknas starttid gäller tillgängligheten från dagens början.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hoursOfService.time.end</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">availableTime.availableEndTime</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Saknas sluttid gäller tillgängligheten till dagens slut.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hoursOfService.datePeriod</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">availableTime.extension[period].valuePeriod</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Extensionen <a href="StructureDefinition-available-time-period.html">Period för tillgänglig tid</a>. Datumprecision.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hoursOfService.month</code></td>
+      <td>0..*</td>
+      <td>–</td>
+      <td>–</td>
+      <td>OK</td>
+      <td>Utgår ur tjänstekontraktet. Ingen mappning behövs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Tolkningsregler</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">availableTime.allDay</code> används inte. Hela dagen uttrycks genom att starttid och sluttid utelämnas.</li>
+  <li>Om kontaktvägen alltid är tillgänglig utelämnas extensionen.</li>
+  <li>Tider med angiven period har företräde framför tider utan period under den perioden.</li>
+  <li>Tider med angivna perioder får inte överlappa varandra.</li>
+</ul>
+
+<p>Se exemplet <a href="CareTeam-ExampleCareManagerAnnanFastKontakt.html">Fast kontakt med typ i klartext</a> för ordinarie tider kombinerade med sommartider.</p>
+
+<hr />
+
+<h3 id="header-och-spärrinformation">Header och spärrinformation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>TK-element</th>
+      <th>Kard. TK</th>
+      <th>FHIR</th>
+      <th>Status</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">careManagerHeader.sourceSystemId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.meta.source</code></td>
+      <td>Avgränsning</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessControlHeader.accountableHealthcareProviderId</code></td>
+      <td>1..1</td>
+      <td>–</td>
+      <td>Avgränsning</td>
+      <td>Personuppgiftsansvarig vårdgivare.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessControlHeader.accountableCareUnitId</code></td>
+      <td>1..1</td>
+      <td>–</td>
+      <td>Avgränsning</td>
+      <td>Personuppgiftsansvarig vårdenhet.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessControlHeader.patientId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.subject</code></td>
+      <td>OK</td>
+      <td>Redundant med <code class="language-plaintext highlighter-rouge">subject</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessControlHeader.careProcessId</code></td>
+      <td>0..1</td>
+      <td>–</td>
+      <td>Saknas</td>
+      <td>Hälsoärende realiseras inte i denna version.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessControlHeader.blockComparisonTime</code></td>
+      <td>1..1</td>
+      <td>–</td>
+      <td>Avgränsning</td>
+      <td>Dokumentationstidpunkt för spärrkontroll.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="affärsregler">Affärsregler</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regel</th>
+      <th>Hantering i FHIR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rule001</code>: högst en fast läkarkontakt per patient</td>
+      <td>Gäller över flera resurser och kan inte uttryckas som invariant i profilen. Producenten ansvarar för att regeln följs.</td>
+    </tr>
+    <tr>
+      <td>Interna kommentarer</td>
+      <td>Förmedlas inte. Producenten ska endast ange kommentarer som får visas för invånaren i <code class="language-plaintext highlighter-rouge">note</code>.</td>
+    </tr>
+    <tr>
+      <td>Överlapp i tillgänglighet</td>
+      <td>Se tolkningsreglerna i avsnittet Tillgänglighet.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="avgränsningar">Avgränsningar</h3>
+
+<p>Följande hanteras inte i denna version av IG:n:</p>
+
+<ul>
+  <li><strong>Sökparametrar.</strong> Sökning på vårdgivare, vårdenhet och typ av fast kontakt kräver egna <code class="language-plaintext highlighter-rouge">SearchParameter</code>-resurser. De tas fram tillsammans med lösningsarkitekturen och beskrivs på sidan <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a>.</li>
+  <li><strong>Header- och spärrinformation.</strong> Hur personuppgiftsansvar och spärrkontroll uttrycks i FHIR är en gemensam fråga för samverkansinfrastrukturen och hanteras inte i denna IG.</li>
+</ul>
+
+<hr />
+
+<h3 id="öppna-frågor">Öppna frågor</h3>
+
+<ul>
+  <li><strong>Organisationsnivåer.</strong> Tjänstekontraktet anger tre organisationsnivåer per fast kontakt. Förslaget är att <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> pekar på den mest specifika organisationen och att hierarkin uttrycks med <code class="language-plaintext highlighter-rouge">Organization.partOf</code>.</li>
+  <li><strong>Befattning.</strong> Om befattning ska uttryckas på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code> eller <code class="language-plaintext highlighter-rouge">Practitioner.qualification.code</code> beslutas i ett större sammanhang än denna IG.</li>
+  <li><strong>Adress till fast kontakt och team.</strong> Tjänstekontraktets hantering av adress ses över. Mappningen kan komma att ändras.</li>
+</ul>
 
 
 
@@ -216,7 +904,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-11-02 09:57:00 +0000">
+  <span title="2026-11-02 10:24:00 +0000">
     2026-11-02
   </span>
 
