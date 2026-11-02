@@ -10,6 +10,11 @@
 * [Mappning till profiler](mappings.md)
 * [Mappning från GetCareManagers](mapping-getcaremanagers.md)
 
+### Implementering
+
+* [REST-interaktioner och sökparametrar](rest-interactions.md)
+* [Säkerhet och behörighet](security.md)
+
 ### Om
 
 * [Styrning och förvaltning](about.md)
