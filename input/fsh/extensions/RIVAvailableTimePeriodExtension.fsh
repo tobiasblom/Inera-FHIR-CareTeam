@@ -11,4 +11,5 @@ Context: Availability.availableTime
 * value[x] only Period
 
 * valuePeriod ^short = "Giltighetsperiod för tiderna"
-* valuePeriod ^definition = "Datumperiod under vilken veckodagarna och tiderna gäller. Saknas perioden gäller tiderna tills vidare."
+* valuePeriod ^definition = "Datumperiod under vilken veckodagarna och tiderna gäller."
+* valuePeriod ^comment = "Anges med datumprecision (ÅÅÅÅ-MM-DD). Start och slut ingår i perioden. Endast start innebär att tiderna gäller från och med det datumet tills vidare."
