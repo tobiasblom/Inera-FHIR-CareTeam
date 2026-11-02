@@ -9,7 +9,7 @@ Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR
 
 * name -> "Team.namn" "Namn på teamet."
 
-* note -> "Team.kommentar" "Kommentar eller kompletterande information om teamet."
+* note -> "Team.kommentar" "Kommentar eller kompletterande information om teamet som får visas för invånaren. Interna kommentarer förmedlas inte."
 
 * subject -> "Person.person-id" "Invånaren som teamet gäller för. Själva person-id:t finns på den refererade Patient-resursen, i Patient.identifier."
 

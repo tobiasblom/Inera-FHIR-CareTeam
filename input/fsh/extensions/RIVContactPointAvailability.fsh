@@ -11,17 +11,19 @@ Context: CareTeam.telecom
 * value[x] only Availability
 
 * valueAvailability ^short = "Kontaktvägens tillgänglighet"
-* valueAvailability.availableTime ^definition = "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig. Flera tillgängliga tider kan anges, t.ex. ordinarie tider och tider för en viss period. Tider med angiven period har företräde framför tider utan period under den perioden. Tider med angivna perioder ska inte överlappa varandra."
-* valueAvailability.availableTime ^comment = "Saknas veckodagar, tider och period är kontaktvägen tillgänglig alla dagar, hela dygnet, tills vidare."
+* valueAvailability ^comment = "Om kontaktvägen alltid är tillgänglig utelämnas extensionen."
 
 * valueAvailability.availableTime 1..* MS
 * valueAvailability.availableTime ^short = "Tillgänglig tid"
-* valueAvailability.availableTime ^definition = "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig."
+* valueAvailability.availableTime ^definition = "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig. Flera tillgängliga tider kan anges, t.ex. ordinarie tider och tider för en viss period. Tider med angiven period har företräde framför tider utan period under den perioden. Tider med angivna perioder ska inte överlappa varandra."
 
-* valueAvailability.availableTime.daysOfWeek 1..* MS
+* valueAvailability.availableTime.daysOfWeek 0..* MS
 * valueAvailability.availableTime.daysOfWeek ^short = "Veckodag"
 * valueAvailability.availableTime.daysOfWeek ^definition = "Veckodag då kontaktvägen är tillgänglig."
 * valueAvailability.availableTime.daysOfWeek ^comment = "Saknas veckodag gäller tiderna alla dagar i veckan."
+
+* valueAvailability.availableTime.allDay 0..0
+* valueAvailability.availableTime.allDay ^comment = "Används inte. Att kontaktvägen är tillgänglig hela dagen uttrycks genom att starttid och sluttid utelämnas."
 
 * valueAvailability.availableTime.availableStartTime 0..1 MS
 * valueAvailability.availableTime.availableStartTime ^short = "Starttid"

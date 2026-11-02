@@ -9,7 +9,7 @@ Description: "Mappning mellan informationsmodellen för fasta kontakter och FHIR
 
 * participant.role -> "Fast kontakt.typ" "Typ av fast kontakt enligt kodverk. Mappas till ValueSet TypAvFastKontaktVS."
 
-* note -> "Fast kontakt.kommentar" "Kommentar eller vägledning i fritext kring den fasta kontakten. Förutsätter att note används i profilen."
+* note -> "Fast kontakt.kommentar" "Kommentar eller vägledning i fritext som får visas för invånaren. Interna kommentarer förmedlas inte."
 
 * period.start -> "Fast kontakt.startdatum" "Datum då den fasta kontakten börjar gälla."
 

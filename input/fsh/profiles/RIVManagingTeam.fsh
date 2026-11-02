@@ -89,5 +89,6 @@ Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vår
 * insert SvenskaKontaktvagsbeskrivningar
 
 * note MS
-* note ^short = "Kommentar"
-* note ^definition = "Kommentar i fritext om teamet, till exempel vägledning om när och hur invånaren kan ta kontakt."
+* note ^short = "Kommentar till invånaren"
+* note ^definition = "Kommentar i fritext om teamet som får visas för invånaren, till exempel vägledning om när och hur invånaren kan ta kontakt."
+* note ^comment = "Endast kommentarer som får visas för invånaren förmedlas. Interna kommentarer som bara är avsedda för vård- och omsorgspersonal ska inte anges i note."

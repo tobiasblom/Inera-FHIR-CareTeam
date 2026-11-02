@@ -10,3 +10,10 @@ Usage: #example
 * name.given = "Anna"
 * gender = #female
 * birthDate = "1978-05-23"
+
+* identifier.system = "urn:oid:1.2.752.129.2.1.3.1"
+* identifier.value = "196408233234"
+* name.family = "Andersson"
+* name.given = "Begnt"
+* gender = #male
+* birthDate = "1964-08-23"
