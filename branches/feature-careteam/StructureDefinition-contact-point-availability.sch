@@ -24,7 +24,7 @@
   <sch:pattern>
     <sch:title>f:Extension/f:value[x]/f:availableTime 1</sch:title>
     <sch:rule context="f:Extension/f:value[x]/f:availableTime">
-      <sch:assert test="count(f:daysOfWeek) &gt;= 1">daysOfWeek: minimum cardinality of 'daysOfWeek' is 1</sch:assert>
+      <sch:assert test="count(f:allDay) &lt;= 0">allDay: maximum cardinality of 'allDay' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

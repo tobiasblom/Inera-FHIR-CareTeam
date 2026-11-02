@@ -59,7 +59,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-available-time-
   "name" : "RIVAvailableTimePeriodExtension",
   "title" : "Period för tillgänglig tid",
   "status" : "draft",
-  "date" : "2026-10-28T12:18:22+00:00",
+  "date" : "2026-11-02T09:45:29+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -112,7 +112,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-available-time-
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
       "short" : "Giltighetsperiod för tiderna",
-      "definition" : "Datumperiod under vilken veckodagarna och tiderna gäller. Saknas perioden gäller tiderna tills vidare.",
+      "definition" : "Datumperiod under vilken veckodagarna och tiderna gäller.",
+      "comment" : "Anges med datumprecision (ÅÅÅÅ-MM-DD). Start och slut ingår i perioden. Endast start innebär att tiderna gäller från och med det datumet tills vidare.",
       "min" : 1,
       "type" : [{
         "code" : "Period"

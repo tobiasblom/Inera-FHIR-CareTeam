@@ -70,7 +70,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-10-28T12:18:22+00:00",
+  "date" : "2026-11-02T09:45:29+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -462,13 +462,14 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
     {
       "id" : "CareTeam.note",
       "path" : "CareTeam.note",
-      "short" : "Kommentar",
-      "definition" : "Kommentar i fritext om teamet, till exempel vägledning om när och hur invånaren kan ta kontakt.",
+      "short" : "Kommentar till invånaren",
+      "definition" : "Kommentar i fritext om teamet som får visas för invånaren, till exempel vägledning om när och hur invånaren kan ta kontakt.",
+      "comment" : "Endast kommentarer som får visas för invånaren förmedlas. Interna kommentarer som bara är avsedda för vård- och omsorgspersonal ska inte anges i note.",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "informationsmodell",
         "map" : "Team.kommentar",
-        "comment" : "Kommentar eller kompletterande information om teamet."
+        "comment" : "Kommentar eller kompletterande information om teamet som får visas för invånaren. Interna kommentarer förmedlas inte."
       }]
     }]
   }

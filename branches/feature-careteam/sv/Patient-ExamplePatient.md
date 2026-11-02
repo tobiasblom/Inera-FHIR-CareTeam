@@ -2,7 +2,7 @@
 
 ## Exempel Patient: Exempelpatient
 
-Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)
+Begnt Andersson Male, Födelsedatum: 1964-08-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)
 
 -------
 
@@ -20,10 +20,10 @@ Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#1
   }],
   "name" : [{
     "family" : "Andersson",
-    "given" : ["Anna"]
+    "given" : ["Begnt"]
   }],
-  "gender" : "female",
-  "birthDate" : "1978-05-23"
+  "gender" : "male",
+  "birthDate" : "1964-08-23"
 }
 
 ```

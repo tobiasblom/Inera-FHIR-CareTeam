@@ -4,7 +4,7 @@
   "language" : "sv",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Patient ExamplePatient</b></p><a name=\"ExamplePatient\"> </a><a name=\"hcExamplePatient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anna Andersson  Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)</p><hr/></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Patient ExamplePatient</b></p><a name=\"ExamplePatient\"> </a><a name=\"hcExamplePatient\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Begnt Andersson  Male, Födelsedatum: 1964-08-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)</p><hr/></div>"
   },
   "identifier" : [{
     "system" : "urn:oid:1.2.752.129.2.1.3.1",
@@ -12,8 +12,8 @@
   }],
   "name" : [{
     "family" : "Andersson",
-    "given" : ["Anna"]
+    "given" : ["Begnt"]
   }],
-  "gender" : "female",
-  "birthDate" : "1978-05-23"
+  "gender" : "male",
+  "birthDate" : "1964-08-23"
 }

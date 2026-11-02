@@ -12,6 +12,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://fhir.inera.se/ig/careteam/StructureDefinition/available-time-period""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
 "Extension.value[x]","Extension.value[x]","","","",1,1,"Y","","","Period {[]} {[]}
-","Giltighetsperiod för tiderna","Datumperiod under vilken veckodagarna och tiderna gäller. Saknas perioden gäller tiderna tills vidare.","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ext-1
+","Giltighetsperiod för tiderna","Datumperiod under vilken veckodagarna och tiderna gäller.","Anges med datumprecision (ÅÅÅÅ-MM-DD). Start och slut ingår i perioden. Endast start innebär att tiderna gäller från och med det datumet tills vidare.","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ext-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"

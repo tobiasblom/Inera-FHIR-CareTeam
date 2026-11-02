@@ -63,7 +63,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
   "name" : "RIVContactPointAvailabilityExtension",
   "title" : "Tillgänglighet för kontaktväg",
   "status" : "draft",
-  "date" : "2026-10-28T12:18:22+00:00",
+  "date" : "2026-11-02T09:45:29+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -116,6 +116,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
       "short" : "Kontaktvägens tillgänglighet",
+      "comment" : "Om kontaktvägen alltid är tillgänglig utelämnas extensionen.",
       "min" : 1,
       "type" : [{
         "code" : "Availability"
@@ -126,8 +127,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "id" : "Extension.value[x].availableTime",
       "path" : "Extension.value[x].availableTime",
       "short" : "Tillgänglig tid",
-      "definition" : "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig.",
-      "comment" : "Saknas veckodagar, tider och period är kontaktvägen tillgänglig alla dagar, hela dygnet, tills vidare.",
+      "definition" : "Anger återkommande veckodagar och tider då kontaktvägen är tillgänglig. Flera tillgängliga tider kan anges, t.ex. ordinarie tider och tider för en viss period. Tider med angiven period har företräde framför tider utan period under den perioden. Tider med angivna perioder ska inte överlappa varandra.",
       "min" : 1,
       "mustSupport" : true
     },
@@ -151,8 +151,13 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-point-a
       "short" : "Veckodag",
       "definition" : "Veckodag då kontaktvägen är tillgänglig.",
       "comment" : "Saknas veckodag gäller tiderna alla dagar i veckan.",
-      "min" : 1,
       "mustSupport" : true
+    },
+    {
+      "id" : "Extension.value[x].availableTime.allDay",
+      "path" : "Extension.value[x].availableTime.allDay",
+      "comment" : "Används inte. Att kontaktvägen är tillgänglig hela dagen uttrycks genom att starttid och sluttid utelämnas.",
+      "max" : "0"
     },
     {
       "id" : "Extension.value[x].availableTime.availableStartTime",

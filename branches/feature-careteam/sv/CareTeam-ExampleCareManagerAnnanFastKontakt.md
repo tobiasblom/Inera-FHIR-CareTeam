@@ -8,7 +8,7 @@ Profil: [Fast kontakt](StructureDefinition-riv-care-manager-careteam.md)
 
 **category**: Fast kontakt
 
-**subject**: [Anna Andersson Female, Födelsedatum: 1978-05-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)](Patient-ExamplePatient.md)
+**subject**: [Begnt Andersson Male, Födelsedatum: 1964-08-23 ( urn:oid:1.2.752.129.2.1.3.1#196408233234)](Patient-ExamplePatient.md)
 
 ### Participants
 

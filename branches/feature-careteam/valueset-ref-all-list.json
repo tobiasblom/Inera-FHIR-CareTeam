@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.21"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-status",
@@ -28,8 +28,8 @@
     "2.16.840.1.113883.4.642.3.153"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -47,8 +47,8 @@
     "2.16.840.1.113883.4.642.2.115"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
@@ -62,8 +62,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.71"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -77,8 +77,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.73"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -96,9 +96,9 @@
     "2.16.840.1.113883.4.642.3.506"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
+    "StructureDefinition-contact-point-availability.html" : "Tillgänglighet för kontaktväg",
     "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
-    "StructureDefinition-contact-point-availability.html" : "Tillgänglighet för kontaktväg"
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -114,8 +114,8 @@
     "2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/participant-role",
@@ -145,8 +145,8 @@
     "systems" : ["https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",
