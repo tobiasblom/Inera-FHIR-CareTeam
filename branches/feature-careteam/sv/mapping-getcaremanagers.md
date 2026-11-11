@@ -1,6 +1,6 @@
-# Mappning från GetCareManagers - Inera FHIR CareTeam v0.9
+# Mappning mot GetCareManagers - Inera FHIR CareTeam v0.9
 
-## Mappning från GetCareManagers
+## Mappning mot GetCareManagers
 
 Denna sida beskriver hur tjänstekontraktet **GetCareManagers 1.0** motsvaras av FHIR-profilerna i denna IG. Sidan är avsedd för producenter och konsumenter som i dag använder tjänstekontraktet och behöver förstå var samma information finns i FHIR.
 

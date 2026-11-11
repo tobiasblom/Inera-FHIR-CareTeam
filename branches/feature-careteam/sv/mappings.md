@@ -1,6 +1,6 @@
-# Mappning till profiler - Inera FHIR CareTeam v0.9
+# Mappning mot informationsmodellen - Inera FHIR CareTeam v0.9
 
-## Mappning till profiler
+## Mappning mot informationsmodellen
 
 Denna sida beskriver hur informationsunderlaget för **Fasta kontakter** har realiserats med HL7 FHIR.
 

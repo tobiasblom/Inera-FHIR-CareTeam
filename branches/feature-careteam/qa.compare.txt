@@ -1,7 +1,7 @@
 IneraFHIRCareTeam : Validation Results
 =========================================
 
-err = 0, warn = 21, info = 37, broken links = 0
+err = 2, warn = 23, info = 36, broken links = 0
 $--
 Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 0 / 0 / 0
@@ -10,7 +10,7 @@ Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https:/
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleManagingTeam : 0 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-careteam-cs : 0 / 3 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CodeSystem-typ-av-fast-kontakt-cs : 0 / 2 / 3
- /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ImplementationGuide-inera.fhir.careteam : 0 / 2 / 20
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ImplementationGuide-inera.fhir.careteam : 2 / 2 / 19
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Organization-ExampleOrganization : 0 / 1 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Patient-ExamplePatient : 0 / 1 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/Practitioner-ExamplePractitioner : 0 / 1 / 1
@@ -18,8 +18,8 @@ Generated $--. FHIR version $-- for inera.fhir.careteam#$-- (canonical = https:/
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-available-time-period : 0 / 1 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-contact-point-availability : 0 / 1 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-contact-via-team : 0 / 1 / 3
- /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-riv-care-manager-careteam : 0 / 2 / 3
- /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-riv-managing-team-careteam : 0 / 1 / 3
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-riv-care-manager-careteam : 0 / 3 / 3
+ /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/StructureDefinition-riv-managing-team-careteam : 0 / 2 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ValueSet-typ-av-careteam-vs : 0 / 2 / 3
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/ValueSet-typ-av-fast-kontakt-vs : 0 / 2 / 3
 </table>
@@ -53,7 +53,8 @@ WARNING: CodeSystem/typ-av-fast-kontakt-cs: CodeSystem: Publicerade kodsystem B�
 
 == fsh-generated/resources/ImplementationGuide-inera.fhir.careteam.json ==
 WARNING: ImplementationGuide.version: The version 0.9 is not a valid semantic version and will not be acceptible to the ci-build, nor will it be a valid vesion in the NPM package system
-INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.language: Det angivna värdet ('sv') kunde inte valideras i avsaknad av en terminologiserver
+ERROR: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.language: The System URI could not be determined for the code 'sv' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|5.0.0': a definition for the CodeSystem 'urn:ietf:bcp:47' it includes could not be found
+ERROR: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.language: Det angivna värdet ('sv') hittades inte i värdemängden 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|5.0.0), och en kod krävs från denna värdemängd  (error message = The System URI could not be determined for the code 'sv' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|5.0.0': a definition for the CodeSystem 'urn:ietf:bcp:47' it includes could not be found)
 WARNING: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: ImplementationGuide/inera.fhir.careteam: ImplementationGuide.definition.parameter[7].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
@@ -110,6 +111,7 @@ INFORMATION: Resource: The resource StructureDefinition/contact-via-team could u
 
 
 == fsh-generated/resources/StructureDefinition-riv-care-manager-careteam.json ==
+WARNING: Fast kontakt.CareTeam.language: Binding http://hl7.org/fhir/ValueSet/all-languages|5.0.0 could not be expanded
 WARNING: StructureDefinition/riv-care-manager-careteam: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/riv-care-manager-careteam: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 WARNING: StructureDefinition/riv-care-manager-careteam: StructureDefinition.differential.element[28]: Constraint failed: eld-27: 'Mappings SHOULD be unique by key (mapping.select(identity).isDistinct())' at CareTeam.participant.member (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition)
@@ -117,6 +119,7 @@ INFORMATION: Resource: The resource StructureDefinition/riv-care-manager-caretea
 
 
 == fsh-generated/resources/StructureDefinition-riv-managing-team-careteam.json ==
+WARNING: Team.CareTeam.language: Binding http://hl7.org/fhir/ValueSet/all-languages|5.0.0 could not be expanded
 WARNING: StructureDefinition/riv-managing-team-careteam: StructureDefinition.jurisdiction[0].coding[0].system: En definition för CodeSystem 'urn:iso:std:iso:3166' kunde inte hittas, så koden kan inte valideras
 INFORMATION: StructureDefinition/riv-managing-team-careteam: StructureDefinition.jurisdiction[0]: Referens till föråldrad ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 INFORMATION: Resource: The resource StructureDefinition/riv-managing-team-careteam could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)

@@ -1,5 +1,20 @@
 {
   "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/all-languages",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "AllLanguages",
+    "title" : "All Languages",
+    "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.21"],
+    "sources" : ["2.16.840.1.113883.4.642.3.21"],
+    "uses" : {
+    },
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-status",
     "version" : "5.0.0",
     "status" : "draft",
@@ -13,8 +28,25 @@
     "2.16.840.1.113883.4.642.3.153"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.891",
+    "2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.891",
+    "2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs",
@@ -26,8 +58,8 @@
     "systems" : ["https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"],
     "uses" : {
     },
-    "StructureDefinition-riv-managing-team-careteam.html" : "Team",
-    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt"
+    "StructureDefinition-riv-care-manager-careteam.html" : "Fast kontakt",
+    "StructureDefinition-riv-managing-team-careteam.html" : "Team"
   },
   {
     "url" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-fast-kontakt-vs",

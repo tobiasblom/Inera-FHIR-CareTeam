@@ -73,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-11-02T10:32:25+00:00",
+  "date" : "2026-11-11T12:27:33+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -151,7 +151,23 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "id" : "CareTeam.language",
       "path" : "CareTeam.language",
       "short" : "Språk för resursens innehåll",
-      "definition" : "Det språk som resursens textinnehåll är skrivet på."
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "Language"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+          "valueBoolean" : true
+        }],
+        "strength" : "required",
+        "description" : "Språkkod enligt IETF BCP 47, till exempel sv eller sv-SE.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/all-languages|5.0.0",
+        "additional" : [{
+          "purpose" : "starter",
+          "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
+        }]
+      }
     },
     {
       "id" : "CareTeam.text",
@@ -186,7 +202,9 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
     {
       "id" : "CareTeam.status",
       "path" : "CareTeam.status",
-      "definition" : "Anger relationens status: active betyder att den fasta kontakten gäller, inactive att relationen har avslutats, suspended att den tillfälligt inte gäller, proposed att den är föreslagen men inte fastställd och entered-in-error att resursen har registrerats felaktigt och inte ska användas.",
+      "short" : "Status för relationen fast kontakt",
+      "definition" : "Anger relationens status enligt FHIR:s kodverk för CareTeam-status.",
+      "comment" : "Användningen av status är inte fastställd i denna version. Om status anges bör active användas för en gällande fast kontakt och entered-in-error för en felregistrerad resurs. Giltighetstiden uttrycks i period.",
       "binding" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
@@ -200,18 +218,15 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
     {
       "id" : "CareTeam.category",
       "path" : "CareTeam.category",
+      "short" : "Anger att resursen är en fast kontakt",
+      "definition" : "Anger vilken sorts information resursen innehåller. I denna profil är värdet alltid fast-kontakt, vilket skiljer en fast kontakt från ett team när båda uttrycks med CareTeam.",
+      "comment" : "Elementet används för att skilja profilerna Fast kontakt och Team åt, och kan användas vid sökning. En fast kontakt är en relation mellan invånare och personal, inte ett team i egentlig mening. CareTeam används eftersom resursen har både subject och participant.role.",
       "min" : 1,
       "max" : "1",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs",
-          "code" : "fast-kontakt"
-        }]
-      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
-        "description" : "Typ av CareTeam enligt Ineras kodverk.",
+        "description" : "Anger om resursen är en fast kontakt eller ett team.",
         "valueSet" : "https://fhir.inera.se/ig/careteam/ValueSet/typ-av-careteam-vs"
       }
     },
@@ -228,7 +243,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "path" : "CareTeam.category.coding.system",
       "short" : "Kodsystem",
       "definition" : "Identifierar det kodsystem som koden kommer från.",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"
     },
     {
       "id" : "CareTeam.category.coding.version",
@@ -241,7 +257,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "path" : "CareTeam.category.coding.code",
       "short" : "Kod",
       "definition" : "Koden för kategorin.",
-      "min" : 1
+      "min" : 1,
+      "patternCode" : "fast-kontakt"
     },
     {
       "id" : "CareTeam.category.coding.display",
