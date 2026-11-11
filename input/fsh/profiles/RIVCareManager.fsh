@@ -22,8 +22,9 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * identifier ^short = "Identifierare för relationen"
 * identifier ^definition = "Identifierare som källsystemet använder för relationen fast kontakt. Ingår inte i informationsmodellen."
 
-* status ^short = "proposed | active | suspended | inactive | entered-in-error"
-* status ^definition = "Anger relationens status: active betyder att den fasta kontakten gäller, inactive att relationen har avslutats, suspended att den tillfälligt inte gäller, proposed att den är föreslagen men inte fastställd och entered-in-error att resursen har registrerats felaktigt och inte ska användas."
+* status ^short = "Status för relationen fast kontakt"
+* status ^definition = "Anger relationens status enligt FHIR:s kodverk för CareTeam-status."
+* status ^comment = "Användningen av status är inte fastställd i denna version. Om status anges bör active användas för en gällande fast kontakt och entered-in-error för en felregistrerad resurs. Giltighetstiden uttrycks i period."
 * status ^binding.description = "Status för relationen fast kontakt."
 
 // I framtiden ska denna referera till en CorePatientProfil
@@ -34,12 +35,17 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 
 * category 1..1 MS
 * category from TypAvCareTeamVS (required)
-* category ^binding.description = "Typ av CareTeam enligt Ineras kodverk."
+* category ^short = "Anger att resursen är en fast kontakt"
+* category ^definition = "Anger vilken sorts information resursen innehåller. I denna profil är värdet alltid fast-kontakt, vilket skiljer en fast kontakt från ett team när båda uttrycks med CareTeam."
+* category ^comment = "Elementet används för att skilja profilerna Fast kontakt och Team åt, och kan användas vid sökning. En fast kontakt är en relation mellan invånare och personal, inte ett team i egentlig mening. CareTeam används eftersom resursen har både subject och participant.role."
+* category ^binding.description = "Anger om resursen är en fast kontakt eller ett team."
 * category.coding 1..1
 * category.coding.system 1..1
 * category.coding.code 1..1
-* category = TypAvCareTeamCS#fast-kontakt
+* category.coding.system = "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"
+* category.coding.code = #fast-kontakt
 * insert SvenskaKategoribeskrivningar
+
 
 * name ^short = "Namn"
 * name ^definition = "Används inte för fast kontakt. Namnet på den fasta kontakten framgår av den refererade personalen."

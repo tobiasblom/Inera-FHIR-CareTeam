@@ -23,9 +23,10 @@ Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vår
 * identifier ^short = "Teamets id"
 * identifier ^definition = "Unik identifierare för teamet."
 
-* status ^short = "proposed | active | suspended | inactive | entered-in-error"
-* status ^definition = "Anger teamets status: active betyder att teamet är aktuellt, inactive att det har upphört, suspended att det tillfälligt inte är aktuellt, proposed att det är föreslaget men inte fastställt och entered-in-error att resursen har registrerats felaktigt och inte ska användas."
-* status ^binding.description = "Status för teamet."
+* status ^short = "Status för teamet"
+* status ^definition = "Anger relationens status enligt FHIR:s kodverk för CareTeam-status."
+* status ^comment = "Användningen av status är inte fastställd i denna version. Om status anges bör active användas för ett gällande teamoch entered-in-error för en felregistrerad resurs. Giltighetstiden uttrycks i period."
+* status ^binding.description = "Status för teamet"
 
 * name 0..1 MS
 * name ^short = "Teamets namn"
@@ -38,13 +39,15 @@ Description:    "Profil som beskriver ett vård- eller omsorgsteam i svensk vår
 
 * category 1..1 MS
 * category from TypAvCareTeamVS (required)
-* category ^short = "Kategori: team"
-* category ^definition = "Anger att resursen beskriver ett team och skiljer den från andra användningar av CareTeam, till exempel fast kontakt. Värdet är fast och är alltid koden team."
-* category ^binding.description = "Typ av CareTeam enligt Ineras kodverk."
+* category ^short = "Anger att resursen är ett team"
+* category ^definition = "Anger vilken sorts information resursen innehåller. I denna profil är värdet alltid team, vilket skiljer ett team från en fast kontakt när båda uttrycks med CareTeam."
+* category ^comment = "Elementet används för att skilja profilerna Team och Fast kontakt åt, och kan användas vid sökning."
+* category ^binding.description = "Anger om resursen är en fast kontakt eller ett team."
 * category.coding 1..1
 * category.coding.system 1..1
 * category.coding.code 1..1
-* category = TypAvCareTeamCS#team
+* category.coding.system = "https://fhir.inera.se/ig/careteam/CodeSystem/typ-av-careteam-cs"
+* category.coding.code = #team
 * insert SvenskaKategoribeskrivningar
 
 * period MS

@@ -12,7 +12,7 @@ RuleSet: SvenskaBasbeskrivningar
 * implicitRules ^short = "Regler som innehållet skapats enligt"
 * implicitRules ^definition = "Referens till regler som följdes när resursen skapades och som mottagaren måste känna till för att tolka innehållet. Förväntas inte användas."
 * language ^short = "Språk för resursens innehåll"
-* language ^definition = "Det språk som resursens textinnehåll är skrivet på."
+* language ^binding.description = "Språkkod enligt IETF BCP 47, till exempel sv eller sv-SE."
 * text ^short = "Läsbar sammanfattning"
 * text ^definition = "Sammanfattning av resursens innehåll i läsbar form, avsedd för visning för människor."
 * contained ^short = "Inbäddade resurser"
