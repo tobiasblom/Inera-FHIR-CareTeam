@@ -11,7 +11,7 @@
 * Använd denna Extension: [Tillgänglighet för kontaktväg](StructureDefinition-contact-point-availability.md)
 * Exempel för denna Extension: [CareTeam/ExampleCareManagerAnnanFastKontakt](CareTeam-ExampleCareManagerAnnanFastKontakt.md)
 
-Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/available-time-period)
+Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/resource/inera.fhir.careteam|current/StructureDefinition/StructureDefinition-available-time-period.json)
 
 ### Formella vyer av extensioninnehåll
 
@@ -59,7 +59,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-available-time-
   "name" : "RIVAvailableTimePeriodExtension",
   "title" : "Period för tillgänglig tid",
   "status" : "draft",
-  "date" : "2026-11-11T12:27:33+00:00",
+  "date" : "2026-11-19T08:39:18+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

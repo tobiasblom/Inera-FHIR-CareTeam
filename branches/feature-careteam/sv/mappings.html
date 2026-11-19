@@ -196,8 +196,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Mappningarna syftar till att skapa spårbarhet mellan den informatiska modellen och de FHIR-profiler som används i informationsutbytet. De visar vilket FHIR-element som bär respektive informationsmängd och dokumenterar designval där FHIR-realiseringen inte direkt motsvarar strukturen i informationsmodellen.</p>
 
-<hr />
-
 <h3 id="omfattade-delar">Omfattade delar</h3>
 
 <p>Denna IG realiserar de delar av informationsmodellen som behövs för att tillhandahålla information om en persons fasta kontakter, inklusive:</p>
@@ -205,20 +203,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>den person som den fasta kontakten avser</li>
   <li>typ av fast kontakt</li>
-  <li>den person som är utsedd till fast kontakt</li>
+  <li>den personal som är utsedd till fast kontakt, och personalens befattning</li>
   <li>giltighetstid för den fasta kontakten</li>
   <li>kontaktvägar och kontakttider</li>
   <li>team som den fasta kontakten tillhör eller kan nås genom</li>
-  <li>relevanta organisationer och enheter</li>
+  <li>vård- och omsorgsgivare och de enheter där uppdraget som fast kontakt finns, med besöksadress</li>
 </ul>
 
-<p>Den centrala informationsmängden <strong>Fast kontakt</strong> realiseras genom profilen <code class="language-plaintext highlighter-rouge">RIVCareManager</code>.</p>
+<p>Den centrala informationsmängden <strong>Fast kontakt</strong> realiseras genom profilen <a href="StructureDefinition-riv-care-manager-careteam.html">Fast kontakt</a> (<code class="language-plaintext highlighter-rouge">RIVCareManager</code>).</p>
 
-<p>Information om ett team realiseras genom profilen <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
+<p>Information om ett team realiseras genom profilen <a href="StructureDefinition-riv-managing-team-careteam.html">Team</a> (<code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>).</p>
 
-<p>Information om personal och organisatorisk tillhörighet realiseras genom referenser till motsvarande FHIR-resurser, exempelvis <code class="language-plaintext highlighter-rouge">PractitionerRole</code> och <code class="language-plaintext highlighter-rouge">Organization</code>.</p>
-
-<hr />
+<p>Information om personal och organisationer realiseras genom referenser till FHIR-resurserna <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code> och <code class="language-plaintext highlighter-rouge">Organization</code>. Dessa resurser är inte profilerade i denna version.</p>
 
 <h3 id="avvikelser-och-designbeslut">Avvikelser och designbeslut</h3>
 
@@ -226,31 +222,47 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Informationsmodellen beskriver <strong>Fast kontakt</strong> som en relation mellan en invånare och en namngiven vård- eller omsorgspersonal med samordnande funktion.</p>
 
-<p>I denna IG realiseras relationen med FHIR-resursen <code class="language-plaintext highlighter-rouge">CareTeam</code>. Profilen <code class="language-plaintext highlighter-rouge">RIVCareManager</code> begränsar resursen så att den representerar en fast kontakt och inte ett generellt vård- eller omsorgsteam.</p>
+<p>I denna IG realiseras relationen med FHIR-resursen <code class="language-plaintext highlighter-rouge">CareTeam</code>. Resursen har valts eftersom den kan uttrycka både invånaren (<code class="language-plaintext highlighter-rouge">CareTeam.subject</code>) och personalens roll i relationen (<code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code>). <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, som annars ligger nära begreppet, beskriver personalens roll i en organisation men saknar koppling till en invånare.</p>
 
-<p><code class="language-plaintext highlighter-rouge">CareTeam.category</code> är därför fixerad till kategorin <code class="language-plaintext highlighter-rouge">fast-kontakt</code>. Typen av fast kontakt, exempelvis fast vårdkontakt eller fast omsorgskontakt, uttrycks separat med <code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code>.</p>
+<p>En fast kontakt är alltså inte ett team i egentlig mening. Profilen <code class="language-plaintext highlighter-rouge">RIVCareManager</code> begränsar resursen så att den representerar en fast kontakt och inte ett generellt vård- eller omsorgsteam. Varje resurs beskriver en fast kontakt. En invånare med flera fasta kontakter har därför flera resurser.</p>
+
+<p><code class="language-plaintext highlighter-rouge">CareTeam.category</code> är fixerad till kategorin <code class="language-plaintext highlighter-rouge">fast-kontakt</code>. Typen av fast kontakt, exempelvis fast vårdkontakt eller fast omsorgskontakt, uttrycks separat med <code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code>.</p>
+
+<h4 id="typ-av-fast-kontakt">Typ av fast kontakt</h4>
+
+<p>Informationsmodellen anger att andra typer av fasta kontakter än de som finns i kodverket kan anges som fritext. <code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code> har därför en bindning av styrkan extensible till kodverket Typ av fast kontakt, och en invariant kräver att typen anges med kod, text eller båda. Koder från andra kodverk tillåts inte.</p>
 
 <h4 id="den-fasta-kontakten-representeras-genom-practitionerrole">Den fasta kontakten representeras genom PractitionerRole</h4>
 
-<p>Den namngivna person som är fast kontakt representeras genom <code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code>, som refererar till <code class="language-plaintext highlighter-rouge">PractitionerRole</code>.</p>
+<p>Den namngivna personal som är fast kontakt representeras genom <code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code>, som refererar till <code class="language-plaintext highlighter-rouge">PractitionerRole</code>.</p>
 
 <p>Detta gör det möjligt att skilja mellan personen och den roll eller organisatoriska kontext som personen verkar inom.</p>
 
-<p>Personens namn och identifierare representeras genom den <code class="language-plaintext highlighter-rouge">Practitioner</code> som refereras från <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, medan exempelvis befattning kan uttryckas på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code>.</p>
+<p>Personens namn och identifierare representeras genom den <code class="language-plaintext highlighter-rouge">Practitioner</code> som refereras från <code class="language-plaintext highlighter-rouge">PractitionerRole.practitioner</code>.</p>
+
+<h4 id="befattning-uttrycks-på-practitionerrole">Befattning uttrycks på PractitionerRole</h4>
+
+<p>Befattning enligt KV Befattning uttrycks på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code> och inte på <code class="language-plaintext highlighter-rouge">Practitioner</code>. Befattning är knuten till personalens uppdrag i en organisation, vilket också är hur befattning hanteras i HSA. Tjänstekontraktet GetCareManagers har justerats på samma sätt. Ett legitimerat yrke kan vid behov uttryckas på <code class="language-plaintext highlighter-rouge">Practitioner.qualification</code>.</p>
+
+<h4 id="organisationer">Organisationer</h4>
+
+<p>Informationsmodellen beskriver flera organisationer kopplade till den fasta kontakten: vårdande enhet, vårdenhet och vårdgivare inom hälso- och sjukvård, samt omsorgsenhet och omsorgsgivare inom omsorg. Samtliga realiseras med <code class="language-plaintext highlighter-rouge">Organization</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> refererar till den mest specifika organisation där uppdraget som fast kontakt finns, i ordningen vårdande enhet, vårdenhet eller omsorgsenhet, och vårdgivare eller omsorgsgivare. Överordnade organisationer uttrycks med <code class="language-plaintext highlighter-rouge">Organization.partOf</code>. Vårdgivaren eller omsorgsgivaren nås därmed alltid genom att följa <code class="language-plaintext highlighter-rouge">partOf</code> uppåt.</p>
 
 <h4 id="startdatum-för-fast-kontakt">Startdatum för fast kontakt</h4>
 
 <p>Informationsmodellen anger <code class="language-plaintext highlighter-rouge">Fast kontakt.startdatum</code> som obligatoriskt. I källsystemen finns dock inte alltid information om när den fasta kontakten började gälla.</p>
 
-<p><code class="language-plaintext highlighter-rouge">CareTeam.period.start</code> har därför kardinaliteten <code class="language-plaintext highlighter-rouge">0..1</code> i <code class="language-plaintext highlighter-rouge">RIVCareManager</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">CareTeam.period.start</code> har därför kardinaliteten <code class="language-plaintext highlighter-rouge">0..1</code> i <code class="language-plaintext highlighter-rouge">RIVCareManager</code>. Tjänstekontraktet GetCareManagers har justerats på samma sätt.</p>
 
-<p>En producent ska tillhandahålla startdatum när uppgiften finns tillgänglig, men avsaknad av startdatum ska inte hindra att information om den fasta kontakten kan tillhandahållas.</p>
+<p>En producent SKA tillhandahålla startdatum när uppgiften finns tillgänglig, men avsaknad av startdatum ska inte hindra att information om den fasta kontakten kan tillhandahållas.</p>
 
-<h4 id="kontakt-via-team">Kontakt via team</h4>
+<h4 id="team-och-kontakt-via-team">Team och kontakt via team</h4>
 
-<p>En fast kontakt kan sakna en direkt kontaktväg och i stället nås genom ett team.</p>
+<p>Informationsmodellen beskriver team som det team som den fasta kontakten tillhör.</p>
 
-<p>Detta realiseras med extensionen <code class="language-plaintext highlighter-rouge">contactViaTeam</code> på <code class="language-plaintext highlighter-rouge">CareTeam.participant</code>. Extensionen refererar till ett <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>. Kontaktuppgifter för teamet uttrycks då på den refererade teamresursens <code class="language-plaintext highlighter-rouge">telecom</code>.</p>
+<p>Kontaktvägen BÖR anges direkt på den fasta kontakten (<code class="language-plaintext highlighter-rouge">CareTeam.telecom</code>), även när den går till ett team, till exempel ett gemensamt telefonnummer. Bara när det inte är möjligt anges kontaktvägen på teamet, och den fasta kontakten kopplas till teamet med extensionen <a href="StructureDefinition-contact-via-team.html">Kontakt via team</a> (<code class="language-plaintext highlighter-rouge">contactViaTeam</code>) på <code class="language-plaintext highlighter-rouge">CareTeam.participant</code>. Extensionen refererar till ett <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>, och kontaktuppgifterna hämtas då från teamets <code class="language-plaintext highlighter-rouge">telecom</code>.</p>
 
 <h4 id="team-representeras-som-en-separat-careteam">Team representeras som en separat CareTeam</h4>
 
@@ -264,17 +276,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="kontaktväg">Kontaktväg</h4>
 
-<p>Informationsmodellens <code class="language-plaintext highlighter-rouge">Kontaktväg</code> realiseras med <code class="language-plaintext highlighter-rouge">CareTeam.telecom</code> i både <code class="language-plaintext highlighter-rouge">RIVCareManager</code> och <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
+<p>Informationsmodellens <code class="language-plaintext highlighter-rouge">Kontaktväg</code> realiseras med <code class="language-plaintext highlighter-rouge">CareTeam.telecom</code> i både <code class="language-plaintext highlighter-rouge">RIVCareManager</code> och <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>, och med <code class="language-plaintext highlighter-rouge">Organization.contact.telecom</code> för organisationer.</p>
 
 <p>FHIR:s <code class="language-plaintext highlighter-rouge">ContactPoint.system</code> används för att ange kommunikationskanal, exempelvis <code class="language-plaintext highlighter-rouge">phone</code>, <code class="language-plaintext highlighter-rouge">email</code> eller <code class="language-plaintext highlighter-rouge">url</code>.</p>
 
-<p>Informationsmodellen möjliggör en mer detaljerad indelning av kontaktvägar, exempelvis publikt telefonnummer och direkttelefonnummer. Denna indelning realiseras inte i FHIR-profilerna eftersom skillnaden inte bedömts vara tillräckligt viktig för informationsutbytet för att motivera en egen extension.</p>
+<p>Informationsmodellen möjliggör en mer detaljerad indelning av kontaktvägar, exempelvis publikt telefonnummer och direkttelefonnummer. Denna indelning realiseras inte i FHIR-profilerna eftersom skillnaden inte bedömts vara tillräckligt viktig för informationsutbytet för att motivera en egen extension. Olika typer av telefonnummer representeras därför som <code class="language-plaintext highlighter-rouge">phone</code>.</p>
 
-<p>Olika typer av telefonnummer representeras därför som <code class="language-plaintext highlighter-rouge">phone</code>.</p>
+<h4 id="kontakttid">Kontakttid</h4>
 
-<p>Kontaktvägens tillgänglighet, exempelvis veckodagar och tider, uttrycks med extensionen <code class="language-plaintext highlighter-rouge">availability</code>.</p>
+<p>Kontaktvägens tillgänglighet, exempelvis veckodagar och tider, uttrycks med extensionen <a href="StructureDefinition-contact-point-availability.html">Tillgänglighet för kontaktväg</a> (<code class="language-plaintext highlighter-rouge">availability</code>), som har datatypen <code class="language-plaintext highlighter-rouge">Availability</code>.</p>
 
-<hr />
+<p>HL7:s extension <code class="language-plaintext highlighter-rouge">extended-contact-availability</code> har samma datatyp men får inte användas på <code class="language-plaintext highlighter-rouge">ContactPoint</code>, bara på <code class="language-plaintext highlighter-rouge">ExtendedContactDetail</code>, <code class="language-plaintext highlighter-rouge">ContactDetail</code> och <code class="language-plaintext highlighter-rouge">Address</code>. Eftersom <code class="language-plaintext highlighter-rouge">CareTeam.telecom</code> är av typen <code class="language-plaintext highlighter-rouge">ContactPoint</code> behövs en egen extension.</p>
+
+<p>För organisationer uttrycks kontakttider med HL7:s extension <code class="language-plaintext highlighter-rouge">extended-contact-availability</code> på <code class="language-plaintext highlighter-rouge">Organization.contact</code>.</p>
+
+<h4 id="adress">Adress</h4>
+
+<p>Adress kopplas till organisationen och inte till den fasta kontakten eller teamet. Informationsmodellens <code class="language-plaintext highlighter-rouge">Besöksadress</code> för den vårdande enheten realiseras med <code class="language-plaintext highlighter-rouge">Organization.contact.address</code>. Adressen har ingen kontakttid. Tjänstekontraktet GetCareManagers justeras på samma sätt.</p>
 
 <h3 id="syfte-med-mappningarna">Syfte med mappningarna</h3>
 
@@ -291,8 +309,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>Kardinaliteterna för informationsmodellen och FHIR-profilen redovisas separat när de skiljer sig åt.</p>
-
-<hr />
 
 <h3 id="mappningstabeller">Mappningstabeller</h3>
 
@@ -321,7 +337,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: right">1</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.role</code></td>
       <td style="text-align: right">1..1</td>
-      <td>Anger vilken typ av fast kontakt relationen avser. Bundet till <code class="language-plaintext highlighter-rouge">TypAvFastKontaktVS</code>.</td>
+      <td>Anger vilken typ av fast kontakt relationen avser. Kod från <code class="language-plaintext highlighter-rouge">TypAvFastKontaktVS</code>, text eller båda.</td>
     </tr>
     <tr>
       <td>Fast kontakt.kommentar</td>
@@ -356,7 +372,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: right">—</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.extension[contactViaTeam]</code></td>
       <td style="text-align: right">0..1</td>
-      <td>Referens till <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code> när den fasta kontakten nås genom ett team.</td>
+      <td>Referens till <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code> när kontaktvägen inte kan anges direkt på den fasta kontakten.</td>
     </tr>
     <tr>
       <td>Kontaktväg.kontaktvägstyp</td>
@@ -445,6 +461,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>En deltagare representeras med <code class="language-plaintext highlighter-rouge">PractitionerRole</code> eller <code class="language-plaintext highlighter-rouge">Practitioner</code>. <code class="language-plaintext highlighter-rouge">CareTeam.participant</code> kan upprepas för flera deltagare.</td>
     </tr>
     <tr>
+      <td>Vårdande enhet / Omsorgsenhet</td>
+      <td style="text-align: right">—</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.managingOrganization</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>Den enhet som teamet tillhör.</td>
+    </tr>
+    <tr>
       <td>Kontaktväg.kontaktvägstyp</td>
       <td style="text-align: right">1</td>
       <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom.system</code></td>
@@ -486,13 +509,125 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="personal--practitionerrole-och-practitioner">Personal → PractitionerRole och Practitioner</h4>
 
-<p>Information om personal representeras inte direkt som attribut på <code class="language-plaintext highlighter-rouge">RIVCareManager</code> eller <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">PractitionerRole</code> och <code class="language-plaintext highlighter-rouge">Practitioner</code> är inte profilerade i denna version. Kardinaliteterna i FHIR är basresursens.</p>
 
-<p>När <code class="language-plaintext highlighter-rouge">PractitionerRole</code> används representeras personens identifierare och namn genom den <code class="language-plaintext highlighter-rouge">Practitioner</code> som refereras från <code class="language-plaintext highlighter-rouge">PractitionerRole.practitioner</code>. Befattning kan uttryckas på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code>.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Modellelement</th>
+      <th style="text-align: right">Kard. IM</th>
+      <th>FHIR-element</th>
+      <th style="text-align: right">Kard. FHIR</th>
+      <th>Notering</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Personal.id</td>
+      <td style="text-align: right">1</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.identifier</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>HSA-id (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.1.4.1</code>) för hälso- och sjukvårdspersonal. För omsorgspersonal kan annan identifierare användas.</td>
+    </tr>
+    <tr>
+      <td>Personal.namn</td>
+      <td style="text-align: right">1</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.name</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>Fullständigt namn i <code class="language-plaintext highlighter-rouge">HumanName.text</code>, eller uppdelat i <code class="language-plaintext highlighter-rouge">given</code> och <code class="language-plaintext highlighter-rouge">family</code> om källsystemet har namnet uppdelat.</td>
+    </tr>
+    <tr>
+      <td>Personal.befattning</td>
+      <td style="text-align: right">0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.code</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>Kod enligt KV Befattning (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.2.1.4</code>).</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><code class="language-plaintext highlighter-rouge">RIVManagingTeam</code> tillåter även en direkt referens till <code class="language-plaintext highlighter-rouge">Practitioner</code> för en teamdeltagare.</p>
 
-<hr />
+<h4 id="organisationer--organization">Organisationer → Organization</h4>
+
+<p><code class="language-plaintext highlighter-rouge">Organization</code> är inte profilerad i denna version. Kardinaliteterna i FHIR är basresursens.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modellelement</th>
+      <th style="text-align: right">Kard. IM</th>
+      <th>FHIR-element</th>
+      <th style="text-align: right">Kard. FHIR</th>
+      <th>Notering</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Vårdande enhet</td>
+      <td style="text-align: right">—</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> → <code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td style="text-align: right">0..1</td>
+      <td>Den mest specifika organisationen för uppdraget som fast kontakt.</td>
+    </tr>
+    <tr>
+      <td>Vårdenhet, Vårdgivare</td>
+      <td style="text-align: right">—</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
+      <td style="text-align: right">0..1</td>
+      <td>Överordnade organisationer nås via <code class="language-plaintext highlighter-rouge">partOf</code>.</td>
+    </tr>
+    <tr>
+      <td>Omsorgsenhet, Omsorgsgivare</td>
+      <td style="text-align: right">—</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> respektive <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
+      <td style="text-align: right">0..1</td>
+      <td>Motsvarande struktur inom omsorg.</td>
+    </tr>
+    <tr>
+      <td>*.id</td>
+      <td style="text-align: right">1 / 0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.identifier</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>HSA-id (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.1.4.1</code>). Valfri för omsorgsenhet och omsorgsgivare i informationsmodellen.</td>
+    </tr>
+    <tr>
+      <td>*.namn</td>
+      <td style="text-align: right">1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.name</code></td>
+      <td style="text-align: right">0..1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Omsorgsenhet.ort</td>
+      <td style="text-align: right">0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.city</code></td>
+      <td style="text-align: right">0..1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Besöksadress.adress</td>
+      <td style="text-align: right">1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.line</code></td>
+      <td style="text-align: right">0..*</td>
+      <td><code class="language-plaintext highlighter-rouge">Address.type</code> = <code class="language-plaintext highlighter-rouge">physical</code>.</td>
+    </tr>
+    <tr>
+      <td>Besöksadress.ort</td>
+      <td style="text-align: right">1</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.city</code></td>
+      <td style="text-align: right">0..1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Kontaktväg</td>
+      <td style="text-align: right">—</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.telecom</code></td>
+      <td style="text-align: right">0..*</td>
+      <td>Kontakttider uttrycks med HL7:s extension <code class="language-plaintext highlighter-rouge">extended-contact-availability</code> på <code class="language-plaintext highlighter-rouge">Organization.contact</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="fhir-element-utan-direkt-motsvarighet-i-informationsmodellen">FHIR-element utan direkt motsvarighet i informationsmodellen</h3>
 
@@ -511,6 +646,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Skiljer en <code class="language-plaintext highlighter-rouge">RIVCareManager</code> från ett <code class="language-plaintext highlighter-rouge">RIVManagingTeam</code> genom de fixerade kategorierna <code class="language-plaintext highlighter-rouge">fast-kontakt</code> respektive <code class="language-plaintext highlighter-rouge">team</code>.</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.status</code></td>
+      <td>Användningen är inte fastställd i denna version. Giltighetstiden uttrycks med <code class="language-plaintext highlighter-rouge">period</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RIVCareManager.identifier</code></td>
+      <td>Identifierare som källsystemet använder för relationen fast kontakt.</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">RIVManagingTeam.period</code></td>
       <td>Kan beskriva under vilken period teamet är relevant i det aktuella sammanhanget.</td>
     </tr>
@@ -524,8 +667,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="omappade-element">Omappade element</h3>
 
@@ -551,10 +692,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Version</td>
       <td>Det finns i nuläget inte verksamhetsmässigt stöd för att strukturerat dokumentera versionen av den fasta kontakten.</td>
     </tr>
+    <tr>
+      <td>Person, utöver person-id</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code> är inte profilerad. Namn och kön hämtas från andra källor.</td>
+    </tr>
+    <tr>
+      <td>Person.sekretessmarkering, Person.skyddad folkbokföring</td>
+      <td>Hanteras inom frågan om åtkomst och spärr, som inte ingår i denna version.</td>
+    </tr>
+    <tr>
+      <td>Adress (personens kontaktadress)</td>
+      <td>Ingår inte i informationsutbytet om fasta kontakter.</td>
+    </tr>
+    <tr>
+      <td>Listning</td>
+      <td>Tillhör domänen Listning och realiseras inte i denna IG.</td>
+    </tr>
   </tbody>
 </table>
-
-<hr />
 
 
 
@@ -584,8 +739,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-11-11 12:27:00 +0000">
-    2026-11-11
+  <span title="2026-11-19 08:39:00 +0000">
+    2026-11-19
   </span>
 
           <br/>

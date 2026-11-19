@@ -7,7 +7,7 @@
 * Referera till denna Profil: [Kontakt via team](StructureDefinition-contact-via-team.md)
 * Exempel för denna Profil: [Norra teamet](CareTeam-ExampleManagingTeam.md)
 
-Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/riv-managing-team-careteam)
+Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/resource/inera.fhir.careteam|current/StructureDefinition/StructureDefinition-riv-managing-team-careteam.json)
 
 ### Formella vyer av profilinnehåll
 
@@ -70,7 +70,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-managing-te
   "name" : "RIVManagingTeam",
   "title" : "Team",
   "status" : "draft",
-  "date" : "2026-11-11T12:27:33+00:00",
+  "date" : "2026-11-19T08:39:18+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

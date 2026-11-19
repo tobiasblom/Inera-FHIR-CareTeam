@@ -195,15 +195,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#header-och-spärrinformation" id="markdown-toc-header-och-spärrinformation">Header och spärrinformation</a></li>
   <li><a href="#affärsregler" id="markdown-toc-affärsregler">Affärsregler</a></li>
   <li><a href="#avgränsningar" id="markdown-toc-avgränsningar">Avgränsningar</a></li>
-  <li><a href="#öppna-frågor" id="markdown-toc-öppna-frågor">Öppna frågor</a></li>
 </ul>
 
 </div>
-<p>Denna sida beskriver hur tjänstekontraktet <strong>GetCareManagers 1.0</strong> motsvaras av FHIR-profilerna i denna IG. Sidan är avsedd för producenter och konsumenter som i dag använder tjänstekontraktet och behöver förstå var samma information finns i FHIR.</p>
+<p>Denna sida beskriver hur tjänstekontraktet <strong>GetCareManagers</strong> motsvaras av FHIR-profilerna i denna IG. Sidan är avsedd för producenter och konsumenter som i dag använder tjänstekontraktet och behöver förstå var samma information finns i FHIR.</p>
 
-<p>Mappningen mot informationsmodellen beskrivs på sidan <a href="mappings.html">Mappning till profiler</a>.</p>
-
-<hr />
+<p>Mappningen utgår från tjänstekontraktet i den version som justerats efter avstämning med tjänstekontraktets förvaltning. Mappningen mot informationsmodellen beskrivs på sidan <a href="mappings.html">Mappning mot informationsmodellen</a>.</p>
 
 <h3 id="läsanvisning">Läsanvisning</h3>
 
@@ -219,19 +216,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td>OK</td>
-      <td>Motsvarighet finns.</td>
+      <td>Motsvarighet finns, eller elementet utgår ur tjänstekontraktet.</td>
     </tr>
     <tr>
       <td>Avvikelse</td>
       <td>Motsvarighet finns men avviker, till exempel i struktur eller kardinalitet.</td>
-    </tr>
-    <tr>
-      <td>Saknas</td>
-      <td>Motsvarighet saknas i nuvarande version.</td>
-    </tr>
-    <tr>
-      <td>Öppen fråga</td>
-      <td>Mappningen är inte fastställd. Se avsnittet Öppna frågor nedan.</td>
     </tr>
     <tr>
       <td>Avgränsning</td>
@@ -242,8 +231,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Sökvägar i tjänstekontraktet anges relativt svarets eller begärans rot. <code class="language-plaintext highlighter-rouge">*</code> står för samtliga tre organisationselement (<code class="language-plaintext highlighter-rouge">managingCareGiver</code>, <code class="language-plaintext highlighter-rouge">managingCareUnit</code> och <code class="language-plaintext highlighter-rouge">careProvidingCareUnit</code>).</p>
 
-<hr />
-
 <h3 id="övergripande-skillnader">Övergripande skillnader</h3>
 
 <p><strong>En resurs per fast kontakt.</strong> Varje <code class="language-plaintext highlighter-rouge">careManager</code> i svaret motsvaras av en instans av profilen <a href="StructureDefinition-riv-care-manager-careteam.html">Fast kontakt</a>. Ett sökresultat (<code class="language-plaintext highlighter-rouge">Bundle</code>) innehåller därför en resurs per fast kontakt.</p>
@@ -251,8 +238,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Fast kontakt och team skiljs åt med kategori.</strong> Båda profilerna bygger på <code class="language-plaintext highlighter-rouge">CareTeam</code>. <code class="language-plaintext highlighter-rouge">CareTeam.category</code> anger om resursen är en fast kontakt eller ett team. Kategorin saknar motsvarighet i tjänstekontraktet.</p>
 
 <p><strong>Personal och organisation är egna resurser.</strong> Information om medarbetare och organisation ligger i tjänstekontraktet direkt under <code class="language-plaintext highlighter-rouge">careManager</code>. I FHIR refererar Fast kontakt till en <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, som i sin tur refererar till <code class="language-plaintext highlighter-rouge">Practitioner</code> (personen) och <code class="language-plaintext highlighter-rouge">Organization</code> (enheten).</p>
-
-<hr />
 
 <h3 id="begäran">Begäran</h3>
 
@@ -271,8 +256,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">patientId</code></td>
       <td>1..1</td>
       <td>Sökning på <code class="language-plaintext highlighter-rouge">CareTeam</code> med <code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>Avvikelse</td>
-      <td>Kräver kedjad sökning (<code class="language-plaintext highlighter-rouge">subject:Patient.identifier</code>) eller uppslag av Patient följt av sökning med <code class="language-plaintext highlighter-rouge">subject=Patient/{id}</code>.</td>
+      <td>Avgränsning</td>
+      <td>Sökparametrar beskrivs i en senare version. Kräver kedjad sökning (<code class="language-plaintext highlighter-rouge">subject:Patient.identifier</code>) eller uppslag av Patient följt av sökning med <code class="language-plaintext highlighter-rouge">subject=Patient/{id}</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">patientId.root</code></td>
@@ -293,7 +278,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>0..1</td>
       <td>Ingen standardparameter</td>
       <td>Avgränsning</td>
-      <td>Sökparametrar beskrivs inte i denna version.</td>
+      <td>Sökparametrar beskrivs i en senare version.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careUnitId</code></td>
@@ -313,8 +298,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">careProcessId</code></td>
       <td>0..1</td>
       <td>Ingen motsvarighet</td>
-      <td>Saknas</td>
-      <td>Hälsoärende realiseras inte i denna version.</td>
+      <td>Avgränsning</td>
+      <td>Hälsoärende ingår inte i denna version.</td>
     </tr>
     <tr>
       <td>–</td>
@@ -325,8 +310,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="svar--fast-kontakt">Svar – fast kontakt</h3>
 
@@ -392,11 +375,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careManager.internalNotes</code></td>
-      <td>0..1</td>
-      <td>Förmedlas inte</td>
       <td>–</td>
-      <td>Avvikelse</td>
-      <td>Interna kommentarer ska inte kunna anges och förmedlas inte i FHIR.</td>
+      <td>–</td>
+      <td>–</td>
+      <td>OK</td>
+      <td>Utgår ur tjänstekontraktet. Interna kommentarer förmedlas inte.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careManager.contact</code></td>
@@ -404,7 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
       <td>0..*</td>
       <td>OK</td>
-      <td>Endast kontaktvägar (telecom). Adress, se avsnittet Kontaktväg.</td>
+      <td>Kontaktvägar. Adress hör till organisationen, se avsnittet Kontaktväg.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careManager.careTeam</code></td>
@@ -412,12 +395,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.extension[contactViaTeam]</code></td>
       <td>0..1</td>
       <td>OK</td>
-      <td>Referens till ett <a href="StructureDefinition-riv-managing-team-careteam.html">Team</a> som den fasta kontakten nås via.</td>
+      <td>Referens till ett <a href="StructureDefinition-riv-managing-team-careteam.html">Team</a> som den fasta kontakten nås via. Används när kontaktvägen inte kan anges direkt på den fasta kontakten.</td>
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="svar--medarbetare">Svar – medarbetare</h3>
 
@@ -458,19 +439,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Sträng i tjänstekontraktet, <code class="language-plaintext highlighter-rouge">HumanName</code> i FHIR.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">practitioner.qualification</code></td>
+      <td>Befattning på <code class="language-plaintext highlighter-rouge">careManager</code></td>
       <td>0..1</td>
       <td><code class="language-plaintext highlighter-rouge">PractitionerRole.code</code></td>
       <td>0..*</td>
-      <td>Öppen fråga</td>
-      <td>Befattning enligt KV Befattning (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.2.1.4</code>). Alternativet är <code class="language-plaintext highlighter-rouge">Practitioner.qualification.code</code>.</td>
+      <td>OK</td>
+      <td>Befattning enligt KV Befattning (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.129.2.2.1.4</code>). Befattningen har flyttats i tjänstekontraktet från medarbetaren till rollen, i linje med HSA.</td>
     </tr>
   </tbody>
 </table>
 
-<hr />
-
 <h3 id="svar--organisation">Svar – organisation</h3>
+
+<p><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> refererar till den mest specifika organisation som finns, i ordningen vårdutförande enhet, vård- eller omsorgsenhet och vård- eller omsorgsgivare. Överordnade organisationer nås via <code class="language-plaintext highlighter-rouge">Organization.partOf</code>.</p>
 
 <table>
   <thead>
@@ -485,28 +466,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">careManager.managingCareGiver</code></td>
-      <td>1..1</td>
-      <td><code class="language-plaintext highlighter-rouge">Organization</code> via <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> och <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
-      <td>–</td>
-      <td>Öppen fråga</td>
-      <td>Vård- eller omsorgsgivare.</td>
+      <td><code class="language-plaintext highlighter-rouge">careManager.careProvidingCareUnit</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Vårdutförande enhet.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careManager.managingCareUnit</code></td>
       <td>0..1</td>
-      <td><code class="language-plaintext highlighter-rouge">Organization</code> via <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> och <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code>, eller via <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
       <td>–</td>
-      <td>Öppen fråga</td>
-      <td>Vård- eller omsorgsenhet.</td>
+      <td>OK</td>
+      <td>Vård- eller omsorgsenhet. Refereras direkt när vårdutförande enhet saknas.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">careManager.careProvidingCareUnit</code></td>
-      <td>0..1</td>
-      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code></td>
+      <td><code class="language-plaintext highlighter-rouge">careManager.managingCareGiver</code></td>
+      <td>1..1</td>
+      <td>Via <code class="language-plaintext highlighter-rouge">Organization.partOf</code></td>
       <td>–</td>
-      <td>Öppen fråga</td>
-      <td>Vårdutförande enhet.</td>
+      <td>OK</td>
+      <td>Vård- eller omsorgsgivare. Refereras direkt när ingen underliggande enhet finns.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">*.hsaId</code></td>
@@ -534,8 +515,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="svar--team">Svar – team</h3>
 
@@ -577,11 +556,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careTeam.internalNotes</code></td>
-      <td>0..1</td>
-      <td>Förmedlas inte</td>
       <td>–</td>
-      <td>Avvikelse</td>
-      <td>Interna kommentarer ska inte kunna anges och förmedlas inte i FHIR.</td>
+      <td>–</td>
+      <td>–</td>
+      <td>OK</td>
+      <td>Utgår ur tjänstekontraktet. Interna kommentarer förmedlas inte.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">careTeam.contact</code></td>
@@ -589,14 +568,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
       <td>0..*</td>
       <td>OK</td>
-      <td>Endast kontaktvägar (telecom).</td>
+      <td>Kontaktvägar.</td>
     </tr>
   </tbody>
 </table>
 
-<hr />
-
 <h3 id="kontaktväg">Kontaktväg</h3>
+
+<p>Kontaktvägar kan anges för den fasta kontakten, teamet och organisationerna. Adress hör bara till organisationerna.</p>
 
 <table>
   <thead>
@@ -613,7 +592,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><code class="language-plaintext highlighter-rouge">contact.telecom</code></td>
       <td>0..*</td>
-      <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code></td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.telecom</code> eller <code class="language-plaintext highlighter-rouge">Organization.contact.telecom</code></td>
       <td>0..*</td>
       <td>OK</td>
       <td> </td>
@@ -639,16 +618,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>0..1</td>
       <td><code class="language-plaintext highlighter-rouge">ContactPoint.extension[availability]</code></td>
       <td>0..1</td>
-      <td>Avvikelse</td>
+      <td>OK</td>
       <td>Kontakttider uttrycks med extensionen <a href="StructureDefinition-contact-point-availability.html">Tillgänglighet för kontaktväg</a>. Se avsnittet Tillgänglighet.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">contact.address</code></td>
+      <td><code class="language-plaintext highlighter-rouge">*.contact.address</code></td>
       <td>0..1</td>
-      <td>Saknas på <code class="language-plaintext highlighter-rouge">CareTeam</code></td>
-      <td>–</td>
-      <td>Saknas</td>
-      <td>Adress till fast kontakt eller team kan inte förmedlas. Adressen finns på organisationen i <code class="language-plaintext highlighter-rouge">Organization.contact.address</code>.</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address</code></td>
+      <td>0..1</td>
+      <td>OK</td>
+      <td>Adress utgår för fast kontakt och team i tjänstekontraktet.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">address.type</code></td>
@@ -684,16 +663,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">address.period</code></td>
-      <td>0..1</td>
-      <td><code class="language-plaintext highlighter-rouge">Organization.contact.address.period</code></td>
-      <td>0..1</td>
+      <td>–</td>
+      <td>–</td>
+      <td>–</td>
       <td>OK</td>
-      <td><code class="language-plaintext highlighter-rouge">Period</code> kan bara uttrycka ett datumintervall, inte veckodagar och tider.</td>
+      <td>Utgår ur tjänstekontraktet. Adressen har ingen kontakttid.</td>
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="tillgänglighet">Tillgänglighet</h3>
 
@@ -745,11 +722,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">hoursOfService.month</code></td>
-      <td>0..*</td>
+      <td>–</td>
       <td>–</td>
       <td>–</td>
       <td>OK</td>
-      <td>Utgår ur tjänstekontraktet. Ingen mappning behövs.</td>
+      <td>Utgår ur tjänstekontraktet.</td>
     </tr>
   </tbody>
 </table>
@@ -764,8 +741,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>Se exemplet <a href="CareTeam-ExampleCareManagerAnnanFastKontakt.html">Fast kontakt med typ i klartext</a> för ordinarie tider kombinerade med sommartider.</p>
-
-<hr />
 
 <h3 id="header-och-spärrinformation">Header och spärrinformation</h3>
 
@@ -812,8 +787,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">accessControlHeader.careProcessId</code></td>
       <td>0..1</td>
       <td>–</td>
-      <td>Saknas</td>
-      <td>Hälsoärende realiseras inte i denna version.</td>
+      <td>Avgränsning</td>
+      <td>Hälsoärende ingår inte i denna version.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">accessControlHeader.blockComparisonTime</code></td>
@@ -825,14 +800,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<hr />
-
 <h3 id="affärsregler">Affärsregler</h3>
+
+<p>Regler som inte kan uttryckas i profilerna beskrivs på sidan <a href="roles-and-responsibilities.html">Roller och ansvar</a>. Följande motsvarar regler i tjänstekontraktet:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Regel</th>
+      <th>Regel i tjänstekontraktet</th>
       <th>Hantering i FHIR</th>
     </tr>
   </thead>
@@ -842,35 +817,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Gäller över flera resurser och kan inte uttryckas som invariant i profilen. Producenten ansvarar för att regeln följs.</td>
     </tr>
     <tr>
-      <td>Interna kommentarer</td>
-      <td>Förmedlas inte. Producenten ska endast ange kommentarer som får visas för invånaren i <code class="language-plaintext highlighter-rouge">note</code>.</td>
+      <td>Kontaktväg bör förmedlas på minst en nivå</td>
+      <td>Gäller oförändrat. Kontaktvägen bör dessutom anges direkt på den fasta kontakten.</td>
     </tr>
     <tr>
-      <td>Överlapp i tillgänglighet</td>
-      <td>Se tolkningsreglerna i avsnittet Tillgänglighet.</td>
+      <td>Sammanställt svar för sammanlänkade patientidentiteter</td>
+      <td>Gäller oförändrat.</td>
     </tr>
   </tbody>
 </table>
-
-<hr />
 
 <h3 id="avgränsningar">Avgränsningar</h3>
 
 <p>Följande hanteras inte i denna version av IG:n:</p>
 
 <ul>
-  <li><strong>Sökparametrar.</strong> Sökning på vårdgivare, vårdenhet och typ av fast kontakt kräver egna <code class="language-plaintext highlighter-rouge">SearchParameter</code>-resurser. De tas fram tillsammans med lösningsarkitekturen och beskrivs på sidan <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a>.</li>
+  <li><strong>Sökparametrar.</strong> Sökning på patient, vårdgivare, vårdenhet och typ av fast kontakt beskrivs i en senare version, tillsammans med övriga interaktioner.</li>
   <li><strong>Header- och spärrinformation.</strong> Hur personuppgiftsansvar och spärrkontroll uttrycks i FHIR är en gemensam fråga för samverkansinfrastrukturen och hanteras inte i denna IG.</li>
-</ul>
-
-<hr />
-
-<h3 id="öppna-frågor">Öppna frågor</h3>
-
-<ul>
-  <li><strong>Organisationsnivåer.</strong> Tjänstekontraktet anger tre organisationsnivåer per fast kontakt. Förslaget är att <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> pekar på den mest specifika organisationen och att hierarkin uttrycks med <code class="language-plaintext highlighter-rouge">Organization.partOf</code>.</li>
-  <li><strong>Befattning.</strong> Om befattning ska uttryckas på <code class="language-plaintext highlighter-rouge">PractitionerRole.code</code> eller <code class="language-plaintext highlighter-rouge">Practitioner.qualification.code</code> beslutas i ett större sammanhang än denna IG.</li>
-  <li><strong>Adress till fast kontakt och team.</strong> Tjänstekontraktets hantering av adress ses över. Mappningen kan komma att ändras.</li>
+  <li><strong>Hälsoärende.</strong> Filtrering på och koppling till hälsoärende ingår inte.</li>
 </ul>
 
 
@@ -901,8 +865,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-11-11 12:27:00 +0000">
-    2026-11-11
+  <span title="2026-11-19 08:39:00 +0000">
+    2026-11-19
   </span>
 
           <br/>

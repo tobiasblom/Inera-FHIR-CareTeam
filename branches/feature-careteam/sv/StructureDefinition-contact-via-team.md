@@ -11,7 +11,7 @@
 * Använd denna Extension: [Fast kontakt](StructureDefinition-riv-care-manager-careteam.md)
 * Exempel för denna Extension: [CareTeam/ExampleCareManager](CareTeam-ExampleCareManager.md)
 
-Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/contact-via-team)
+Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/resource/inera.fhir.careteam|current/StructureDefinition/StructureDefinition-contact-via-team.json)
 
 ### Formella vyer av extensioninnehåll
 
@@ -59,7 +59,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-contact-via-tea
   "name" : "RIVContactViaTeamExtension",
   "title" : "Kontakt via team",
   "status" : "draft",
-  "date" : "2026-11-11T12:27:33+00:00",
+  "date" : "2026-11-19T08:39:18+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",

@@ -2,8 +2,8 @@ IneraFHIRCareTeam : Validation Results
 =========================================
 
 err = 2, warn = 23, info = 36, broken links = 0
-IG Publisher Version: 3.0.3
-Generated Wed Nov 11 12:28:05 UTC 2026. FHIR version 5.0.0 for inera.fhir.careteam#0.9 (canonical = https://fhir.inera.se/ig/careteam)
+IG Publisher Version: 3.0.4
+Generated Thu Nov 19 08:39:55 UTC 2026. FHIR version 5.0.0 for inera.fhir.careteam#0.9 (canonical = https://fhir.inera.se/ig/careteam)
  Build Errors : 0 / 0 / 0
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManager : 0 / 0 / 1
  /home/runner/work/Inera-FHIR-CareTeam/Inera-FHIR-CareTeam/fsh-generated/resources/CareTeam-ExampleCareManagerAnnanFastKontakt : 0 / 0 / 1

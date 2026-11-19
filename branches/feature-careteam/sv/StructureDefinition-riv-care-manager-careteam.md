@@ -6,7 +6,7 @@
 
 * Exempel för denna Profil: [CareTeam/ExampleCareManager](CareTeam-ExampleCareManager.md) and [CareTeam/ExampleCareManagerAnnanFastKontakt](CareTeam-ExampleCareManagerAnnanFastKontakt.md)
 
-Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/inera.fhir.careteam|current/StructureDefinition/riv-care-manager-careteam)
+Du kan också kontrollera [användningar i FHIR IG-statistiken](https://packages2.fhir.org/xig/resource/inera.fhir.careteam|current/StructureDefinition/StructureDefinition-riv-care-manager-careteam.json)
 
 ### Formella vyer av profilinnehåll
 
@@ -73,7 +73,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
   "name" : "RIVCareManager",
   "title" : "Fast kontakt",
   "status" : "draft",
-  "date" : "2026-11-11T12:27:33+00:00",
+  "date" : "2026-11-19T08:39:18+00:00",
   "publisher" : "Inera AB",
   "contact" : [{
     "name" : "Inera AB",
@@ -358,7 +358,7 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
       "path" : "CareTeam.participant.extension",
       "sliceName" : "contactViaTeam",
       "short" : "Team som den fasta kontakten nås via",
-      "definition" : "Anger det team som den fasta kontakten kan nås via när det saknas kontaktvägar direkt till den namngivna personen. Kontaktvägarna hämtas då från det refererade teamets telecom.",
+      "definition" : "Anger det team som den fasta kontakten kan nås via, när kontaktvägen inte kan anges direkt på den fasta kontakten. Kontaktvägarna hämtas då från teamets telecom.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -446,8 +446,8 @@ Andra representationer av profilen: [CSV](../StructureDefinition-riv-care-manage
     {
       "id" : "CareTeam.telecom",
       "path" : "CareTeam.telecom",
-      "short" : "Kontaktväg till den fasta kontakten",
-      "definition" : "Kontaktväg som invånaren använder för att nå den fasta kontakten, till exempel ett telefonnummer eller en webbadress. Om den fasta kontakten nås via ett team kan teamet i stället anges i participant.extension[contactViaTeam], och kontaktvägen hämtas då från teamets telecom.",
+      "definition" : "Kontaktväg som invånaren använder för att nå den fasta kontakten, till exempel ett telefonnummer eller en webbadress. Kontaktvägen anges här även när den går till ett team, till exempel ett gemensamt telefonnummer.",
+      "comment" : "Bara när kontaktvägen inte kan anges här anges den på teamet, och den fasta kontakten kopplas till teamet med participant.extension[contactViaTeam].",
       "mustSupport" : true
     },
     {

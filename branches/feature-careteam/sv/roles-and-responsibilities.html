@@ -215,7 +215,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="informationsproducent">Informationsproducent</h4>
 
-<p>En informationsproducent ska:</p>
+<p>En informationsproducent SKA:</p>
 
 <ul>
   <li>kunna ta emot de förfrågningar som definieras för informationsutbytet</li>
@@ -227,9 +227,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>IG:n ställer inte krav på hur informationen lagras eller struktureras internt hos producenten.</p>
 
+<h4 id="regler-för-informationsproducenten">Regler för informationsproducenten</h4>
+
+<p>Följande regler kan inte uttryckas i profilerna och SKA följas av producenten:</p>
+
+<ul>
+  <li><strong>Fast läkarkontakt:</strong> En patient SKA ha högst en fast läkarkontakt i svaret från en producent.</li>
+  <li><strong>Sammanlänkade identiteter:</strong> Om producenten har information om samma person under flera sammanlänkade identiteter, till exempel personnummer och reservnummer, SKA svaret sammanställas till ett svar för personen.</li>
+  <li><strong>Skyddade personuppgifter:</strong> Producenten ansvarar för att information om medarbetare med skyddade personuppgifter inte lämnas ut när det inte är tillåtet.</li>
+  <li><strong>Organisation:</strong> <code class="language-plaintext highlighter-rouge">PractitionerRole.organization</code> SKA referera till den mest specifika organisation där uppdraget som fast kontakt finns, i ordningen vårdutförande enhet, vård- eller omsorgsenhet och vård- eller omsorgsgivare. Överordnade organisationer anges med <code class="language-plaintext highlighter-rouge">Organization.partOf</code>.</li>
+  <li><strong>Kontakttider:</strong> Tider som har en angiven period gäller före tider utan period. Angivna perioder för samma kontaktväg SKA inte överlappa.</li>
+  <li><strong>Kontaktvägar:</strong> Det är frivilligt att förmedla kontaktvägar för den fasta kontakten, teamet och organisationerna, men svaret BÖR innehålla minst en kontaktväg på någon av dessa nivåer. Kontaktvägen BÖR anges direkt på den fasta kontakten (<code class="language-plaintext highlighter-rouge">CareTeam.telecom</code>), även när den går till ett team, till exempel ett gemensamt telefonnummer för teamet. Bara när det inte är möjligt BÖR kontaktvägen anges på teamet och den fasta kontakten kopplas till teamet med extensionen <a href="StructureDefinition-contact-via-team.html">Kontakt via team</a>.</li>
+</ul>
+
 <h4 id="informationskonsument">Informationskonsument</h4>
 
-<p>En informationskonsument ska:</p>
+<p>En informationskonsument SKA:</p>
 
 <ul>
   <li>kunna begära information om fasta kontakter enligt de interaktioner som definieras i denna IG</li>
@@ -245,8 +258,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Konsumenten skickar en förfrågan till producenten. Producenten identifierar relevant information och returnerar ett svar enligt profilerna i denna IG. Konsumenten kan därefter använda informationen i sitt eget sammanhang, exempelvis för presentation i en användartjänst.</p>
 
-<p>Se <a href="use-cases.html">Användningsfall</a> för den funktionella beskrivningen av flödet och <a href="rest-interactions.html">REST-interaktioner och sökparametrar</a> för den tekniska realiseringen.</p>
-
+<p>Förfrågan kommer troligen att föregås av en fråga till ett index som anger vilka producenter som har information om personen, och svaren från flera producenter kommer att sammanställas innan de används. Vilka tjänster som har de rollerna är ännu inte fastställt. Se <a href="use-cases.html">Användningsfall</a> för den funktionella beskrivningen av flödet. Den tekniska realiseringen beskrivs i en senare version av implementationsguiden.</p>
 
 
 
@@ -275,8 +287,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
           Paket inera.fhir.careteam#0.9 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Genererad 
-  <span title="2026-11-11 12:27:00 +0000">
-    2026-11-11
+  <span title="2026-11-19 08:39:00 +0000">
+    2026-11-19
   </span>
 
           <br/>
