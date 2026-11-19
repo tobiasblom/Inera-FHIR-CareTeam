@@ -8,12 +8,15 @@ De fullständiga begrepps- och informationsmodellerna återges inte i denna IG. 
 |---|---|---|
 | **Fasta kontakter – Begrepps- och informationsmodell** | 1.1, 2025-12-04 | Begreppsmodell, definitioner samt informationsmodell med klasser, attribut, datatyper, identifierare och kodverk. |
 | **Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering** | 1.1, 2025-12-04 | Bakgrund, beskrivning av olika typer av fasta kontakter, informationsbehov, kartläggning av regional förmåga och övergripande teknisk inriktning. |
+| **Tjänstekontraktsbeskrivning GetCareManagers** (riv:coreprocess:residentparticipation:residentparticipation) | 1.0 | Tjänstekontrakt för att hämta en patients fasta kontakter enligt RIV-TA, med meddelandemodell och fältregler. |
 
 ### Källor
 
-Båda dokumenten nedan finns publicerade på Ineras samarbetsyta för **Fasta kontakter**:
+Informationsmodellen och det sammanfattande dokumentet finns publicerade på Ineras samarbetsyta för [Fasta kontakter](https://inera.atlassian.net/wiki/spaces/SP1177/pages/5323817048/Fasta+kontakter).
 
-- [Fasta kontakter – Begrepps- och informationsmodell](https://inera.atlassian.net/wiki/spaces/SP1177/pages/5323817048/Fasta+kontakter)
-- [Fasta kontakter – Sammanfattande dokument för informatikarbetet i projekt Sammanhållen planering](https://inera.atlassian.net/wiki/spaces/SP1177/pages/5323817048/Fasta+kontakter)
+Tjänstekontraktsbeskrivningen kommer att publiceras på [rivta.se](https://rivta.se). Länk till dokumentet läggs till när det är publicerat.
 
-Se [Mappning till profiler](mappings.html) för hur informationsunderlaget har realiserats med FHIR-resurser och profiler samt för dokumentation av relevanta designbeslut och avvikelser.
+### Hur underlaget används
+
+- [Mappning mot informationsmodellen](mappings.html) beskriver hur informationsmodellen har realiserats med FHIR-resurser och profiler, samt designbeslut och avvikelser.
+- [Mappning mot GetCareManagers](mapping-getcaremanagers.html) beskriver hur tjänstekontraktet motsvaras av profilerna.

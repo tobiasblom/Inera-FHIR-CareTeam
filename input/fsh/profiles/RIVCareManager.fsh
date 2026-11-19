@@ -67,7 +67,7 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * participant.extension contains RIVContactViaTeamExtension named contactViaTeam 0..1
 * participant.extension[contactViaTeam] MS
 * participant.extension[contactViaTeam] ^short = "Team som den fasta kontakten nås via"
-* participant.extension[contactViaTeam] ^definition = "Anger det team som den fasta kontakten kan nås via när det saknas kontaktvägar direkt till den namngivna personen. Kontaktvägarna hämtas då från det refererade teamets telecom."
+* participant.extension[contactViaTeam] ^definition = "Anger det team som den fasta kontakten kan nås via, när kontaktvägen inte kan anges direkt på den fasta kontakten. Kontaktvägarna hämtas då från teamets telecom."
 
 * participant.member 1..1 MS
 * participant.member only Reference(PractitionerRole)
@@ -96,8 +96,8 @@ Description:    "Profil som beskriver relationen Fast kontakt som kan finnas mel
 * telecom.system MS
 * telecom.value MS
 * telecom.extension contains RIVContactPointAvailabilityExtension named availability 0..1 MS
-* telecom ^short = "Kontaktväg till den fasta kontakten"
-* telecom ^definition = "Kontaktväg som invånaren använder för att nå den fasta kontakten, till exempel ett telefonnummer eller en webbadress. Om den fasta kontakten nås via ett team kan teamet i stället anges i participant.extension[contactViaTeam], och kontaktvägen hämtas då från teamets telecom."
+* telecom ^definition = "Kontaktväg som invånaren använder för att nå den fasta kontakten, till exempel ett telefonnummer eller en webbadress. Kontaktvägen anges här även när den går till ett team, till exempel ett gemensamt telefonnummer."
+* telecom ^comment = "Bara när kontaktvägen inte kan anges här anges den på teamet, och den fasta kontakten kopplas till teamet med participant.extension[contactViaTeam]."
 * insert SvenskaKontaktvagsbeskrivningar
 
 * note MS
